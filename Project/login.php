@@ -142,3 +142,5 @@ if(isset($_POST['create_account'])){
 					<a href="#0" class="cd-close-form">Close</a>
 				</div> <!-- cd-user-modal-container -->
 			</div> <!-- cd-user-modal -->
+<script src="js/jquery.js"></script>
+<script src="js/validation.js"></script>
