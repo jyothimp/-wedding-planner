@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<html><head>
+
+<meta charset="UTF-8" />
+<title> - Premium Wedding Planners in Kerala</title>
+<link rel="stylesheet" type="text/css" href="http://tamarindweddings.com/blog/wp-content/themes/blankslate/css/style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="http://tamarindweddings.com/blog/wp-content/themes/blankslate/css/wp-paginate.css" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Premium Wedding and Party Planner based in Cochin.
+Use Tamarind Weddings to make your life easy and your Weddings memorable." />
+<meta name="keywords" content="Kerala wedding planner, wedding planners, wedding
+planning ideas, ideas for wedding, Cochin weddings planner, wedding decorators, wedding
+event planners,destination wedding planners, wedding venues, wedding locations,
+marriage decoration, flower stage decoration, wedding mandap, mandap decorators,
+gate decoration, wedding stages, wedding coordinators kerala, wedding coordinators
+Cochin, wedding arrangements, wedding coordination, wedding management, wedding
+photography, wedding videography, destination weddings, wedding invitation cards,cards
+printing, wedding catering,wedding flower decoration, trousseau packing, hospitality,
+transportation,wedding music and entertainment,wedding lighting, beach weddings kerala"
+/>
+
+    
+
+
+<!--tooltip-->
+ <link rel="stylesheet" href="http://tamarindweddings.com/blog/wp-content/themes/blankslate/css/jquery-ui.css">
+  <script src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/jquery-1.9.1.js"></script>
+  <script src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( document ).tooltip();
+  });
+  </script>
+  <style>
+  	.ui-tooltip{
+		background:#ef373f;
+		border:none;
+		-webkit-box-shadow: 0px 0px 0px #000000;
+		-moz-box-shadow: 0px 0px 0px #000000;
+		box-shadow: 0px 0px 0px #000000;
+		color:#FFFFFF;
+		font-size:11px;
+		
+
+	}
+	.ui-tooltip-0{
+		position:relative;
+		top:10px !important;
+	}
+  </style>
+
+<!-- Camera slider-->
+<link rel="stylesheet" id="camera-css" href="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/css/camera.css" type="text/css" media="all">
+<script type="text/javascript" src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/scripts/jquery.mobile.customized.min.js"></script>
+<script type="text/javascript" src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/scripts/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/scripts/camera.js"></script> 
+<script>
+	jQuery(function(){
+		jQuery('#camera_wrap_1').camera({
+			thumbnails: false,
+			pagination: false
+		});
+	});
+</script>
+
+
+<link rel="stylesheet" href="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/ScrollReveal/style.css">
+<script src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/ScrollReveal/js/scrollReveal.js"></script>
+
+<script type="text/javascript">
+var fb_param = {};
+fb_param.pixel_id = '6012074762953';
+fb_param.value = '0.00';
+fb_param.currency = 'INR';
+(function(){
+  var fpw = document.createElement('script');
+  fpw.async = true;
+  fpw.src = '//connect.facebook.net/en_US/fp.js';
+  var ref = document.getElementsByTagName('script')[0];
+  ref.parentNode.insertBefore(fpw, ref);
+})();
+</script>
+<!--Google Analytics code STARTS here-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33449839-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link rel="stylesheet" href="http://tamarindweddings.com/blog/wp-content/themes/blankslate/css/blog.css">
+<!--Google Analytics code ENDS here-->
+</head>
+
+<body>
+
+<div class="wrapper1366">
+
+
+<div class="camera_wrap camera_azure_skin" id="camera_wrap_1" style="height:500px;">
+      <div data-thumb="http://tamarindweddings.com/blog/wp-content/themes/blankslate/images/slides/thumbs/bridge.jpg" data-src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/images/banner1.jpg">
+          <div class="camera_caption fadeFromBottom">
+              Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>          </div>
+      </div>
+      <div data-thumb="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/images/slides/thumbs/leaf.jpg" data-src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/images/banner2.jpg">
+          <div class="camera_caption fadeFromBottom">
+              It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>          </div>
+      </div>
+      <div data-thumb="http://tamarindweddings.com/blog/wp-content/themes/blankslate/js/Camera-master/images/slides/thumbs/road.jpg" data-src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/images/banner3.jpg">
+          <div class="camera_caption fadeFromBottom">
+              <em>It's completely free</em> (even if a donation is appreciated)          </div>
+      </div>
+  </div>
+
+
+    
+    <!--Header-->
+    <div class="headerFixed" data-scrollreveal="enter top">
+    	<div class="wrapPadding84084">
+            	<a href="#"><img src="http://tamarindweddings.com/blog/wp-content/themes/blankslate/images/logo.png" alt="Tamarind Wedding" class="logo"></a>
+            <div class="socilaIcons">
+                <a id="ui-id-1" href="https://www.facebook.com/TamarindEventsandWeddings" target="_blank" title="Facebook"><img src="http://www.tamarindweddings.com/images/fb.png" alt="Facebook" title="Facebook"></a> 
+<a href="http://www.tamarindweddings.com/blog" target="_blank"><img src="http://www.tamarindweddings.com/images/blog.png" alt="blog" title="Blog"></a> 
+<a href="http://www.pinterest.com/tamarindwedding/" target="_blank"><img src="http://www.tamarindweddings.com/images/pin.png" alt="Pinterest" title="Pinterest"></a> 
+<a href="http://www.vimeo.com/tamarindweddings" target="_blank"><img src="http://www.tamarindweddings.com/images/v.png" alt="Vimeo" title="Vimeo"></a> 
+<a href="https://www.behance.net/Tamarind-Weddings" target="_blank"><img src="http://www.tamarindweddings.com/images/be.png" alt="Behance" title="Behance"></a> 
+<a href="http://www.youtube.com/channel/UCGHUGEGk1vkpBpqzIMtdsrA" target="_blank"><img src="http://www.tamarindweddings.com/images/youtube.png" alt="You Tube" title="You Tube"></a> 
+<a href="http://www.linkedin.com/company/3487214?trk=tyah&amp;trkInfo=tas%3ATamarind%20Weddings%2Cidx%3A1-1-1" target="_blank"><img src="http://www.tamarindweddings.com/images/in.png" alt="Linkedin" title="Linkedin"></a> 
+<a href="https://twitter.com/TamarindWedding" title="Twitter" target="_blank"><img src="http://www.tamarindweddings.com/images/social.png" alt=""></a> 
+<a href="https://plus.google.com/u/4/100797003568196161557/posts" title="Google +" target="_blank"><img src="http://www.tamarindweddings.com/images/gplus.png" alt=""></a> 
+<a href="http://instagram.com/tamarindweddings?ref=badge" title="Instagram" target="_blank"><img src="http://www.tamarindweddings.com/images/instagram.png" alt="Instagram" title="Instagram"></a>          </div>
+    	</div>
+    </div>
+   <div class="menuMain" data-scrollreveal="enter top">
+    <div class="wrapPadding84084">
+    	<ul>
+        	<li><a href="http://www.tamarindweddings.com/index.html">Home</a></li>    
+            <li><a href="http://www.tamarindweddings.com/about.html">About</a></li>      
+            <li><a href="http://www.tamarindweddings.com/services.html">Services</a>
+            	<ul>
+        	<li><a href="http://www.tamarindweddings.com/invitation-card.html">Invitation Designing</a></li>
+            <li><a href="http://www.tamarindweddings.com/design-decors.html">Design and Decor</a></li>
+            <li><a href="http://www.tamarindweddings.com/wedding-stageSpecial.html">Stage Specials</a></li>
+            <li><a href="http://www.tamarindweddings.com/designer-cakes.html">Designer Cakes</a></li>
+            <li><a href="http://www.tamarindweddings.com/hospitality.html">Hospitality</a></li>
+            <li><a href="http://www.tamarindweddings.com/wedding-transportation.html">Transportation Facilities</a></li>
+            <li><a href="http://www.tamarindweddings.com/destination.php">Venues &amp; Resorts</a></li>
+            <li><a href="http://www.tamarindweddings.com/destination-weddings.html">Destination Weddings</a></li>
+			<li><a href="http://www.tamarindweddings.com/shopping-assistance.html">Shopping Assistance</a></li>
+            <li><a href="http://www.tamarindweddings.com/entertainment.html">Entertainment</a></li>
+            <li><a href="http://www.tamarindweddings.com/wedding-favours.html">Wedding Favours</a></li>
+            <li><a href="http://www.tamarindweddings.com/weddingSurprises.html">Wedding Surprises</a></li>
+            <li><a href="http://www.tamarindweddings.com/photography.html">Photography</a></li>
+            <li><a href="http://www.tamarindweddings.com/videography.html">Videography</a></li>
+            <li><a href="http://www.tamarindweddings.com/website-social-media.html">Website and Social Media</a></li>
+            <li><a href="http://www.tamarindweddings.com/theBigFatIndianWedding.html">The Big Fat Indian Wedding</a></li>
+		</ul>
+            </li>        
+            <li><a href="http://www.tamarindweddings.com/wedding-gallery.html">Gallery</a></li>    
+            <li><a href="http://www.tamarindweddings.com/wedding-testimonial.html">Testimonials</a></li>          
+            <li><a href="http://www.tamarindweddings.com/faq.html">FAQ</a></li>
+            <li><a href="http://tamarindweddings.com/blog/">Blog</a></li>     
+            <li><a href="http://www.tamarindweddings.com/contact-wedding-planner.html">Contact</a></li>
+		</ul>
+    </div>
+    </div>
+    
+   
+
+    <div class="clear"></div>
+    
+    <div class="bannerBelow wrapPadding84084">
+    	Blog
+    </div>
+    
+    <div class="wrapper2 ">
+    	<div class="wrapPadding84084">
+        	<div class="blogcontent"><section id="content" role="main">
+<article id="post-3198" class="post-3198 post type-post status-publish format-standard has-post-thumbnail hentry category-wedding tag-managing-stress tag-wedding-stress">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/manage-wedding-stress/" title="How To Manage Wedding Stress" rel="bookmark">How To Manage Wedding Stress</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2017/03/wedding-stress-e1490193881576.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>A wedding is ideally a dreamy and elegant affair where glasses clink towards happiness, sparkling guests greet and meet and you dance away under the shining limelight with your better-half, all in the haze of love. But of course, this is only the ideal image of the wedding! What goes underneath all the planning for this mega event is sure to burn anybody out! So, if you are the bride or groom, wedding stress should come as no surprise to you!   Why does wedding stress happen? In Indian weddings, so many factors such as numerous pre-wedding traditions, people factors, [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/manage-wedding-stress/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/manage-wedding-stress/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3220" class="post-3220 post type-post status-publish format-standard has-post-thumbnail hentry category-wedding-decor tag-hindu-wedding tag-hindu-wedding-ceremony tag-hindu-wedding-stage tag-traditional-hindu-wedding tag-traditional-hindu-wedding-stage">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/traditional-hindu-wedding-decor/" title="Traditional Hindu Wedding Decor" rel="bookmark">Traditional Hindu Wedding Decor</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2017/03/diya-e1490199082584.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>A Hindu wedding is a celebration of rituals and traditions. Hence, it is mandatory to have certain elements such as the thalam platters on the mandap. Let’s see how some non-ritualistic items can lend a complete traditional feel to your wedding function without the hassle of elaborate arrangements. Hindu wedding decor ideas Using tender coconut leaves: Tender coconut leaves find their way into the celebrations of many South Indian weddings and social events such as church and temple festivals. These green shoots can line walkways or hang in tussles from the mandap ceiling. They can even be recreated to mimic [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/traditional-hindu-wedding-decor/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/traditional-hindu-wedding-decor/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3233" class="post-3233 post type-post status-publish format-standard has-post-thumbnail hentry category-wedding tag-e-invites tag-social-media tag-technology tag-wedding-planner-apps tag-wedding-planning-apps tag-wedsites">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/technology-tech-savvy-bride/" title="Technology for the tech-savvy bride" rel="bookmark">Technology for the tech-savvy bride</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2017/03/technology1-e1490232249772.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>When technology was invented to make life easier, why not use it effectively to plan the biggest event of your life? – Your wedding! Wedding planning apps Plan the entire wedding ceremony with handy wedding planner applications available for iOS and androids. These wedding planning assistants can send you reminders, provide storages spaces for ideas (for all those long Pinterest pins!), manage checklists, bookings, vendor details and guest lists. They often have the option to send e-invites also. These apps can list the tasks you have pending before the big day, share your ideas and timelines with your spouse and [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/technology-tech-savvy-bride/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/technology-tech-savvy-bride/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3240" class="post-3240 post type-post status-publish format-standard has-post-thumbnail hentry category-places category-uncategorized tag-aranmula-kannadi tag-kerala tag-kerala-gift-items tag-kerala-souvenirs tag-kerala-tradition tag-kerala-traditional-items tag-nilavilakku">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/kerala-souvenirs-aranmula-kannadi-nilavilakku/" title="Kerala Souvenirs – From The Heart Of The Malayalee" rel="bookmark">Kerala Souvenirs – From The Heart Of The Malayalee</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2017/03/aranmula-kannadi5-e1490906081579.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>Shopping for authentic Kerala souvenirs to gift your friends and family? Let Tamarind give you some ideas regarding what you could buy! Kerala souvenirs or gift items native to the state Kasavu sari: Silk (kasavu) adorned saris suit every woman at every age and with any complexion. The crisp whiteness along with silky golden border gives another worldly appeal to the lady wearing it. Authentic silk looms from mills are pricey, but often worthy investments. Nowadays, kasavu products are designed to suit tastes of working women and teenagers. Since kasavu is always in fashion, men have had their own share [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/kerala-souvenirs-aranmula-kannadi-nilavilakku/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/kerala-souvenirs-aranmula-kannadi-nilavilakku/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3182" class="post-3182 post type-post status-publish format-standard has-post-thumbnail hentry category-destination-wedding category-places category-uncategorized category-wedding tag-destination-wedding-ceremony tag-hindu-wedding-ceremony tag-indian-wedding tag-vow-renewal tag-vow-renewal-ceremony tag-wedding-celebration">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/vow-renewal-celebrations-ceremonies/" title="Delightful Celebrations by Tamarind Weddings &#8211; Making every day special" rel="bookmark">Delightful Celebrations by Tamarind Weddings &#8211; Making every day special</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2017/03/EEP9488JPG-e1490064070554.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>Tamarind Weddings believes that celebrations can occur anywhere anytime. We had the opportunity to rekindle the flames of a beautiful British couple on the shores of the Arabian Sea. Stuart and Sandra chose to vacation in India in March this year. Their vacation dates coincided with their 51st wedding anniversary and Sandra’s 70th birthday. So, to honor this couple who had spent more than half their life together, their daughter Stephanie and Stuart’s brother Ian Mason teamed up with us. They briefed us on their idea for a live event to resanctify Stuart&#8217;s and Sandra&#8217;s vows and love for each other. [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/vow-renewal-celebrations-ceremonies/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/vow-renewal-celebrations-ceremonies/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3148" class="post-3148 post type-post status-publish format-standard has-post-thumbnail hentry category-destination-wedding category-places category-uncategorized tag-honeymoon tag-honeymoon-checklist tag-honeymoon-destinations tag-honeymoon-destinations-in-kerala">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/honeymoon-checklist-for-foreign-country/" title="Honeymoon Checklist – What To Know When Visiting A Foreign Country" rel="bookmark">Honeymoon Checklist – What To Know When Visiting A Foreign Country</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2017/01/honeymoon-checklist2-e1485796910440.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>After a bustling wedding, filled with festive celebration, every couple needs to relax and get away on an unforgettable honeymoon. Let your wedding bliss translate into fond memories in this quality time you both spend together. If you are travelling abroad for the first time, planning a honeymoon might be a challenge. Consult with couples or friends who have visited foreign countries to gauge a fair idea about the place, cuisine, transport facilities and laws. A travel agent can also help you aplenty. If you are a frequent traveller, you may already be familiar with many procedures related to foreign [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/honeymoon-checklist-for-foreign-country/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/honeymoon-checklist-for-foreign-country/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3157" class="post-3157 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-wedding-news category-wedding-style tag-gold-plated-wedding-cakes tag-most-expensive-wedding-cake tag-most-expensive-wedding-cakes tag-wedding-cake tag-wedding-cakes">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/worlds-expensive-wedding-cakes/" title="World’s Most Expensive Wedding Cakes" rel="bookmark">World’s Most Expensive Wedding Cakes</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2012/12/14-e1466424886266.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>Designer Wedding Cakes Designer wedding cakes are just a fabulous way of saying that you’re having a grand party at your wedding. Cakes with diamonds and gems, gold-plated icing, rare varieties of cocoa and preserves, even some outlined with platinum chains and pendants; Wedding cakes can go to any level in terms of flamboyance and style. Tamarind Weddings showcases some of the world’s favorite and most celebrated wedding cakes: &nbsp; Designer Engagement Cake by Debbie Wingham &#8211; $75 million Created by: Debbie Wingham What’s special: Inspired by a fashion runway, this 450 kilo engagement cake has a 5.2 carat pink [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/worlds-expensive-wedding-cakes/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/worlds-expensive-wedding-cakes/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-3114" class="post-3114 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-kicha tag-kichatube">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/special-message-parents-kicha-kichatube/" title="A Special Message to Parents" rel="bookmark">A Special Message to Parents</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2016/11/Kicha3.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>Weddings bring up those treasured memories of your son or daughter’s childhood in the most heart-warming way. But with the pain of loss comes the hope for a bright future. A wedding also brings together a family like never before. The hidden wedding planners within our family arise to complete brilliance when the occasion comes around! Also, relatives from far-off places fly in to join in the joyous celebrations. The dreams of a new life awake in your child from the time of the wedding, making it a most cherished memory. A child is born with certain innate gifts. They [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/special-message-parents-kicha-kichatube/#respond" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/special-message-parents-kicha-kichatube/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-2971" class="post-2971 post type-post status-publish format-standard has-post-thumbnail hentry category-destination-wedding category-places category-wedding category-wedding-entertainment category-wedding-photos category-wedding-planner-2 tag-destination-wedding-2 tag-destination-wedding-in-india tag-destination-wedding-in-kerala tag-destination-wedding-venues tag-destination-weddings-in-kerala tag-intercultural-wedding tag-kerala-intercultural-wedding">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/kerala-destination-wedding-deepti-anthony/" title="A Blissful Kerala Destination Wedding &#8211; Deepti + Anthony" rel="bookmark">A Blissful Kerala Destination Wedding &#8211; Deepti + Anthony</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2016/09/DA-e1473163706153.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>&#8220;Every love story is beautiful, but ours is my favourite” – This is something every dreamy-eyed, love-struck couple would say. At the end of Deepti and Anthony’s Kerala destination wedding celebrations, we at Tamarind realized that this love story is definitely going to be one amongst our favourites! Deepti and Anthony both have amazing personalities! You can easily fall in love with their enchanting styles of interaction! Deepti is quirky, fun and ever so beautiful! On the other hand, Anthony is a man of few words whose charm you cannot ignore. Maybe its these surprising differences that made them hit [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/kerala-destination-wedding-deepti-anthony/#comments" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/kerala-destination-wedding-deepti-anthony/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+<article id="post-2941" class="post-2941 post type-post status-publish format-standard has-post-thumbnail hentry category-shopping-assistance category-wedding-style tag-althea-bridals tag-althea-bridals-and-bespoke tag-althea-dcouto tag-christian-wedding-gown tag-designer-gown tag-wedding-2 tag-wedding-gown tag-wedding-gown-designers tag-wedding-gown-designers-kochi">
+<div class="row"> <!--row opens-->
+<header>
+<h3>	<a href="http://tamarindweddings.com/blog/althea-bridals-bespoke-wedding-gowns/" title="Althea Bridals &#038; Bespoke: Crafting Fairytales Into Bridal Gowns" rel="bookmark">Althea Bridals &#038; Bespoke: Crafting Fairytales Into Bridal Gowns</a></h3> </header>
+<section class="entry-summary">
+<div class="col1">
+   <a href="#"><img src="http://tamarindweddings.com/blog/wp-content/uploads/2016/10/1X3A4053.jpg-2-e1475644963286.jpg" border="0" ></a> </div>
+<div class="col2">
+<p>The first thing that strikes you when you walk into Althea Bridals &amp; Bespoke is the store&#8217;s elegant ambience! The attention to detail, the exquisite gowns on mannequins, bejewelled shoes and charming curios, are all hallmarks of Althea. And when you speak to Althea Dcouto, the lead designer at Althea Bridals, you realise that she is one designer who is ever ready to go the extra mile to put a smile on her client’s face. Our designer, Althea is a champion of sorts when it comes to wedding gowns. She loves challenging her creativity with designs. “It is the dress that [&hellip;]</p>
+<div class="clear"></div>
+</div>
+</section>
+<footer class="entry-footer">
+<div class="botomright">						<a href="http://tamarindweddings.com/blog/althea-bridals-bespoke-wedding-gowns/#comments" class="bgchat">Leave a Comment</a>						<a href="http://tamarindweddings.com/blog/althea-bridals-bespoke-wedding-gowns/" class="bgplus">Read More</a>					
+
+						</div>
+						
+</footer>
+	
+<div class="clear"></div>
+				</div>  <!--row ends-->				
+
+</article>
+
+</section>
+<div class="pagi"> <!--row opens-->
+<ol class="wp-paginate"><li><span class='page current'>1</span></li><li><a href='http://tamarindweddings.com/blog/page/2/' title='2' class='page'>2</a></li><li><a href='http://tamarindweddings.com/blog/page/3/' title='3' class='page'>3</a></li><li><a href='http://tamarindweddings.com/blog/page/4/' title='4' class='page'>4</a></li><li><a href='http://tamarindweddings.com/blog/page/5/' title='5' class='page'>5</a></li><li><a href='http://tamarindweddings.com/blog/page/6/' title='6' class='page'>6</a></li><li><a href='http://tamarindweddings.com/blog/page/7/' title='7' class='page'>7</a></li><li><span class='gap'>...</span></li><li><a href='http://tamarindweddings.com/blog/page/15/' title='15' class='page'>15</a></li><li><a href="http://tamarindweddings.com/blog/page/2/" class="next">>></a></li></ol> 
+					<div class="clear"></div>
+				</div>
+</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="wrapper1366">
+	<div class="wrapPadding84084" style="padding-top:15px; padding-bottom:15px; color:#999999; font-size:12px;">
+    Tamarind Weddings, a division of Tamarind Event Management Solutions Pvt. Ltd. @ 2013.    </div>
+</div>
+
+
+</body></html>
