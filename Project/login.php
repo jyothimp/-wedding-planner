@@ -1,10 +1,12 @@
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <?php
 if(isset($_POST['login_submit'])){
 	$un=$_POST['signin-username'];
 	$pw=$_POST['signin-password'];
 	$query=mysqli_query($con,"select * from wp_login where login_username='$un' and login_password='$pw' and login_status=1");
-	if(mysqli_num_rows($query)>0){
+	while ($row=mysqli_fetch_array($query)) {
+		$_SESSION['user']=$row['login_id'];
 		header('location: ./get-a-quote.php');
 	}
 }
