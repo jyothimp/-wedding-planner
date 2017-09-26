@@ -7,7 +7,13 @@ if(isset($_POST['login_submit'])){
 	$query=mysqli_query($con,"select * from wp_login where login_username='$un' and login_password='$pw' and login_status=1");
 	while ($row=mysqli_fetch_array($query)) {
 		$_SESSION['user']=$row['login_id'];
-		header('location: ./get-a-quote.php');
+		$_SESSION['user_role']=$row['login_role'];
+		if($row['login_role']==1){
+			header('location: ./design-stage.php');
+		}
+		else {
+			header('location: ./admin.php');
+		}
 	}
 }
 if(isset($_POST['create_account'])){
