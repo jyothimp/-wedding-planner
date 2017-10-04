@@ -1,6 +1,6 @@
 <?php
 include_once 'db_connect.php';
-include_once 'check_logout.php';
+//include_once 'check_logout.php';
 ?>
 <!doctype html>
 <html>
@@ -123,9 +123,10 @@ include_once 'check_logout.php';
 
                       <ul>
 
-                        <li><a href="decoration.php">Decoration</a></li>
-                        <li><a href="light.php">Light System</a></li>
-                        <li><a href="cake.php">Designer Cakes</a></li>
+                        <li><a href="design-stage.php">Stage Decoration</a></li>
+                        <li><a href="design-decor.php">Hall Decoration</a></li>
+                         <li><a href="light.php">Light System</a></li>
+                         <li><a href="cake.php">Designer Cakes</a></li>
                       </ul>
 
                     </div><!-- section -->
@@ -230,7 +231,7 @@ include_once 'check_logout.php';
 
                   <h2>Design and Decor - Hall Decoration</h2>
 
-                  <p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
+                  <p>Each wedding hall decoration is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding hall decoration will be customized. Images below show a few of the hall decoration done by us for our customers.</p>
                 </div><!-- col -->
               </div><!-- row -->
             </div><!-- container -->
@@ -254,7 +255,7 @@ include_once 'check_logout.php';
                           <div class="social-media">
 
                             <a ><?php echo $row['hall_name'] ?><br>  <a ><?php echo "₹ ".$row['hall_price'] ?></a></a>
-                            <center><input type="submit"  name="hall_submit" id="hall_submit" value="Book"></center>
+                            <center><input type="submit"  name="hall_submit" id="hall_submit" value="Add to cart"></center>
                           </div>
                         </div>
                       </form>

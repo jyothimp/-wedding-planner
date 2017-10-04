@@ -75,7 +75,7 @@
             <div class="row">
 
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a></div>
             <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
@@ -85,7 +85,7 @@
 
                         <!-- LOGO -->
                         <a id="logo" href="index.php">
-                            <img src="images/backgrounds/logo.png" alt="Destination wedding in Kerala" width="165">
+                            <img src="images/icons/logo1.png" alt="Destination wedding in Kerala" width="165">
                         </a>
 
                     </div><!-- col -->
@@ -109,79 +109,66 @@
 
                                 <li class="megamenu ">
 
-                                    <a href="#">Services</a>
+																	<div class="dropdown">
+																		<button class="dropbtn">ITEMS</button>
+																		<style>
+.dropbtn {
+    background-color:white;
+    color: orange;
+    padding: 9px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
 
-                                    <div class="megamenu-container col-4">
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-                                    	<div class="section">
-											<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
-										</div><!-- section -->
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-                                        <div class="section">
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-                                            <h5>Designing</h5>
+.dropdown-content a:hover {background-color: #f1f1f1}
 
-                                            <ul>
-                                            	<li><a href="invitation.php">Invitation Designing</a></li>
-                                                <li><a href="design.php">Design and Decor</a></li>
-                                                <li><a href="stage.php">Stage Specials</a></li>
-                                                <li><a href="cakes.php">Designer Cakes</a></li>
-                                                <li><a href="website-social-media.php">Website & SocialMedia</a></li>
-                                                <li><a href="beach.php">Beach Weddings</a></li>
-                                            </ul>
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-                                        </div><!-- section -->
+.dropdown:hover .dropbtn {
+    background-color: white;
+}
+</style>
+</head>
+<body>
 
-                                        <div class="section">
 
-                                            <h5>Management</h5>
+  <div class="dropdown-content">
+    <a href="stage.php">Stages</a>
+    <a href="hall.php">Hall</a>
+		<a href="light.php">Light</a>
+		<a href="sound.php">Sound</a>
+    <a href="food.php">Food</a>
+  </div>
+</div>
 
-                                            <ul>
-                                            	<li><a href="hospitality.php">Hospitality</a></li>
-                                                <li><a href="transportation.php">Transportation Facilities</a></li>
-                                                <li><a href="venues.php">Venues &amp; Resorts</a></li>
-                                                <li><a href="destination.php">Destination Weddings</a></li>
-                                                <li><a href="shopping.php">Shopping Assistance</a></li>
 
-                                            </ul>
 
-                                        </div><!-- section -->
 
-                                        <div class="section">
 
-                                            <h5>Media & Entertainment</h5>
-
-                                            <ul>
-                                            	<li><a href="entertainment.php">Entertainment</a></li>
-                                                <li><a href="wedding-favours.php">Wedding Favours</a></li>
-                                                <li><a href="wedding-surprises.php">Wedding Surprises</a></li>
-                                                <li><a href="photography.php">Photography</a></li>
-                                                 <li><a href="videography.php">Videography</a></li>
-                                            </ul>
-
-                                        </div><!-- section -->
-
-                                    </div><!-- megamenu-container -->
-
-                                </li>
-
-                                <li>
-                                	<a href="get-a-quote.php">Get a Quote</a>
-
-                                </li>
-
-                                <li>
-                                	<a href="gallery.php">Gallery</a>
-
-                                </li>
-                                <li>
-                                	<a href="testimonial.php">Testimonials</a>
-
-                                </li>
-                                <li >
-                                	<a href="Checklist.php">CheckList</a>
-
-                                </li>
                                 <li >
                                 	<a href="contact-us.php">Contact</a>
 
@@ -220,7 +207,7 @@
                     <div class="row">
                         <div class="col-sm-6">
 
-                            <h4>Destination Wedding</h4>
+                            <h4>Admin Page</h4>
 
 
                         </div><!-- col -->
@@ -250,7 +237,7 @@
                 <div class="row">
                     <div class="col-sm-12">
 
-                        <h2>Destination Wedding in Kerala</h2>
+                        <h2>Welcome Admin</h2>
 
                         <p>The ‘Destination Wedding’ in Kerala is an evolving concept. Across the world, foreign wedding travellers have been enchanted by the rich cultural heritage of Kerala. Kerala holds much to see and experience for the destination wedding traveller – starting from white sands and beautiful beaches to sparkling bay waters to high mountain ranges and other tropical habitats! Bestowed by its inherent beauty, Kerala is considered a natural choice for a destination wedding.</p>
 

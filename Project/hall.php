@@ -1,37 +1,28 @@
 <?php
 	include_once 'db_connect.php';
+	//include_once 'check_logout.php';
 ?>
-
 ﻿<!doctype html>
 <html>
-<head>
+
+
+ <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
-    <meta name="keywords" content="Wedding Planner in Bolgatty Palace,Wedding Planner in Bolgatty Palace Kochi,Wedding Planner in Bolgatty Palace in Cochin,Wedding Planners in Bolgatty Palace ">
-    <meta name="description" content="Scenario Wedding Company is one of the top wedding designing companies in Kerala. We have a team of impressive creative designers with extreme themes and classic ideas. We provide all kind of wedding services like invitation designing, stage specials, vehicle decor, residential décor, shopping assistance etc. Contact us : scenariowedding@gmail.com, +91 99464 90001">
-    <meta name="author" content="Innovosome">
+    <meta name="keywords" content="Catering Services in Kochi,Catering Services in Kerala,Catering Service in Kochi,Catering Service in Kerala,Catering Services in Kochi Kerala,Catering Service">
+    <meta name="description" content="Scenario wedding company provides the facility of hospitality for your guests. We have the catering service also that gives you the delicious food in your wedding. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="author" content="Invosome">
 
-    <title>Wedding Planner in Bolgatty Palace | Scenario </title>
+    <title>Catering Services in Kochi | Scenario Wedding Company </title>
 
     <!-- FAVICON AND APPLE TOUCH -->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="images/icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="images/icons/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-57x57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-72x72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-144x144.png">
 
     <!-- FONTS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
@@ -64,6 +55,9 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/pages-style.css">
 
+    <!-- STYLE SWITCHER -->
+    <link rel="stylesheet" href="assets/js/style-switcher/style-switcher.css">
+
     <!-- ALTERNATIVE STYLES -->
     <link rel="stylesheet" href="#" data-style="styles">
 
@@ -72,8 +66,8 @@
 
 <body>
 
-	<div id="page-wrapper">
 
+	<div id="page-wrapper">
 
         <!-- HEADER -->
         <header>
@@ -113,86 +107,80 @@
                                 </li>
                                  <li><a href="about-us.php">About</a></li>
 
-                                 <li class="megamenu ">
+                                <li class="megamenu ">
 
-                                     <a href="#">Add-ons</a>
+                                  <a href="#">Add-ons</a>
 
-                                     <div class="megamenu-container col-4">
+                                  <div class="megamenu-container col-4">
 
-                                       <div class="section">
-                       <img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
-                     </div><!-- section -->
+                                    <div class="section">
+                                      <img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
+                                    </div><!-- section -->
 
-                                         <div class="section">
+                                    <div class="section">
 
-                                             <h5>Designing</h5>
+                                      <h5>Designing</h5>
 
-                                             <ul>
+                                      <ul>
 
-                                                 <li><a href="design-stage.php">Stage Decoration</a></li>
-                                                 <li><a href="design-decor.php">Hall Decoration</a></li>
-                                                  <li><a href="light.php">Light System</a></li>
-                                                  <li><a href="cake.php">Designer Cakes</a></li>
-                                             </ul>
+                                        <li><a href="design-stage.php">Stage Decoration</a></li>
+                                        <li><a href="design-decor.php">Hall Decoration</a></li>
+                                         <li><a href="light.php">Light System</a></li>
+                                         <li><a href="cake.php">Designer Cakes</a></li>
+                                      </ul>
 
-                                         </div><!-- section -->
+                                    </div><!-- section -->
 
-                                         <div class="section">
+                                    <div class="section">
 
-                                             <h5>Management</h5>
+                                      <h5>Management</h5>
 
-                                             <ul>
-                                               <li><a href="soundsystem.php">Sound System</a></li>
-                                             </ul>
-                                         </div><!-- section -->
+                                      <ul>
+                                        <li><a href="soundsystem.php">Sound System</a></li>
+                                      </ul>
+                                    </div><!-- section -->
 
-                                         <div class="section">
+                                    <div class="section">
 
-                                             <h5>Catering Services</h5>
+                                      <h5>Catering Services</h5>
 
-                                             <ul>
-                                               <li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-                                                 <li><a href="vegetarian.php">Vegetarian</a></li>
-                                                 <li><a href="snacks.php">Snacks</a></li>
+                                      <ul>
+                                        <li><a href="nonvegetarian.php">Nonvegetarian</a></li>
+                                        <li><a href="vegetarian.php">Vegetarian</a></li>
+                                        <li><a href="snacks.php">Snacks</a></li>
 
-                                             </ul>
-                                             </div>
-                                        <div class="section">
+                                      </ul>
+                                    </div>
+                                    <div class="section">
 
-                                             <h5>Media&Entertainment</h5>
+                                      <h5>Media&Entertainment</h5>
 
-                                             <ul>
-                                               <li><a href="entertainment.php">Entertainment</a></li>
-                                                 <li><a href="videography.php">Videography</a></li>
-                                                 <li><a href="photography.php">Photography</a></li>
+                                      <ul>
+                                        <li><a href="entertainment.php">Entertainment</a></li>
+                                        <li><a href="videography.php">Videography</a></li>
+                                        <li><a href="photography.php">Photography</a></li>
 
-                                             </ul>
+                                      </ul>
 
-                                      </div><!-- section -->
+                                    </div><!-- section -->
 
-                                     </div><!-- megamenu-container -->
+                                  </div><!-- megamenu-container -->
 
-                                 </li>
+                                </li>
 
-                                  <li>
-                                   <a href="contact-us.php">Contact</a>
-                                 </li>
-                                             <li>
-                              <a href="logout.php">Logout</a>
-                                     </li>
-                                     </ul></div>
-                                 </li>
-                             </ul>
+                                <li>
+                                  <a href="contact.php">Contact</a>
+                                </li>
+                                <li>
+                                  <a href="logout.php">Logout</a>
+                                </nav>
 
-                       </nav>
+                              </div><!-- col -->
+                            </div><!-- row -->
+                          </div><!-- container -->
 
-                     </div><!-- col -->
-                 </div><!-- row -->
-             </div><!-- container -->
-
-         </header><!-- HEADER -->
-    <style>
-
+                        </header><!-- HEADER -->
+                        <style>
 
 		@media (min-width:992px) and (max-width:1199px){
 			   .col-sm-10{
@@ -200,7 +188,10 @@
                    margin-top: -4%;}
 
 				}
-
+        			.stage_button{
+        				display: inline-block;
+        				background-color: orange;
+        			}
 
 		</style>
         <!-- CONTENT -->
@@ -211,14 +202,15 @@
                     <div class="row">
                         <div class="col-sm-6">
 
-                            <h4>Contact</h4>
+                          <h4>Add hall</h4>
+
 
                         </div><!-- col -->
                         <div class="col-sm-6">
 
                             <ol class="breadcrumb">
                                 <li><a href="index.php">Home</a></li>
-                                <li class="active">Contact</li>
+                                <li class="active">Services</li>
                             </ol>
 
                         </div><!-- col -->
@@ -230,135 +222,73 @@
                 <div class="row">
                     <div class="col-sm-12">
 
-                        <div class="headline style-3">
-
-                            <h5>Say hello</h5>
-                            <h2>Contact our team</h2>
-                            <p> </p>
-
-                        </div><!-- headline -->
+                        <!-- headline -->
 
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- container -->
 
             <div class="container">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+    					<form action="design-stage.php" method="post">
+    					<input type="submit"  class="stage_button" name="button" id="button" style="color:black;float:right" value="Add">
+    	</form>
+              <div class="row">
+                <div class="col-sm-12">
+                        <h2>Hall Decoration</h2>
 
-                        <div class="row">
-                        	<div class="col-sm-4">
+                        <p>Each wedding hall decoration is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding hall decoration will be customized. Images below show a few of the hall decoration done by us for our customers.</p>
+                      </div><!-- col -->
+                      </div><!-- row -->
+                      </div><!-- container -->
 
-                                <div class="widget widget-contact">
+                      <div class="container">
+                      <div class="row">
 
-                                    <ul>
-                                        <li>
-                                            <span>Kerala</span>
-                                           Priyadarshini Complex,<br>
-                                           Behind Hotel Airlink Castle.<br>
-                                           Athani, Nedumbassery P.O - 683585.
-                                        </li>
-                                    </ul>
+                        <?php
+                            $query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE `hall_status`=1");
+                            while ($row=mysqli_fetch_array($query)) {
+                              ?>
+                              <div class="col-sm-4">
 
-                                </div><!-- widget-contact -->
+                                <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+                               <form action="design-decor.php" method="post">
+                                  <div class="about-me-thumbnail">
 
-                            </div><!-- col -->
+                                    <img style="height:215px !important"src="images/hall/<?php echo $row['hall_image'] ?>" alt="best wedding planner in cochin">
 
+                                    <div class="social-media">
 
-                            </div><!-- col -->
-                        </div><!-- row -->
+                                      <a ><?php echo $row['hall_name'] ?><br> </a>
 
-                    </div><!-- col -->
+                        								<left><input type="submit"  class="stage_button" name="button" id="button" value="Edit"></left>
+                        								<right><input type="submit" class="stage_button"  name="button" id="button" value="Delete"></right>
+                                    </div>
+                                  </div>
+                        				</form>
+                                </div>
+                              </div>
 
-                    <div class="col-md-offset-2 col-md-8 col-sm-12">
-
-                        <div class="row">
-                        	<div class="col-sm-4">
-
-                                <div class="widget widget-contact">
-
-                                    <ul>
-                                        <li>
-                                            <span>Phone</span>
-
-                                           +91 8547855652<br>
-+91 9946490001<br>
-                                            +91 9946490003
-
-                                        </li>
-                                    </ul>
-
-                                </div><!-- widget-contact -->
-
-                            </div><!-- col -->
-                            <div class="col-sm-4">
-
-                                <div class="widget widget-contact">
-
-                                    <ul>
-                                        <li>
-                                            <span>Email</span>
-                                          <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
-                                        </li>
-                                    </ul>
-
-                                </div><!-- widget-contact -->
-
-                            </div><!-- col -->
-                            <div class="col-sm-4">
-
-                                <div class="widget widget-contact">
-
-                                    <ul>
-                                        <li>
-
-                                        </li>
-                                    </ul>
-
-                                </div><!-- widget-contact -->
-
-                            </div><!-- col -->
-                        </div><!-- row -->
-
-                    </div>
-
-                </div><!-- row -->
-            </div><!-- container -->
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8 col-sm-12">
-
-                        <form  name="contact-form" action="#" method="post">
-                            <fieldset>
-
-                                <div id="alert-area"></div>
-
-                                <input class="col-xs-12" id="name" type="text" name="name" placeholder="Name" required>
-
-                                <input class="col-xs-12" id="email" type="text" name="email" placeholder="Email" required>
-
-                                <input class="col-xs-12" id="subject" type="text" name="subject" placeholder="Subject">
-
-                                <textarea class="col-xs-12" id="message" name="message" rows="8" cols="25" placeholder="Message" required></textarea>
-
-                                <input class="btn btn-default" id="submit" type="submit" name="submit" value="Submit">
-
-                            </fieldset>
-                        </form>
-
+                              <?php
+                            }
+                         ?>
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- container -->
 
-            <div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d125672.18743348769!2d76.399558!3d10.159846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080625cfebb7d1%3A0x89bcd5a211b5e7e6!2sNedumbassery%2C+Kerala%2C+India!5e0!3m2!1sen!2sin!4v1428744496883" width="100%" height="400" frameborder="0" style="border:0"></iframe></div>
+
+
+
+
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div>
+
 
         </div><!-- CONTENT -->
 
 
         <!-- FOOTER -->
-
-        <footer>
+          	<footer>
 
             <div id="footer-top">
 
@@ -432,9 +362,10 @@
                          <div class="social-media abc">
 
 
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
-                                    <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                           <a ><?php echo $row['hall_name'] ?><br> </a>
+
+                             <left><input type="submit"  class="stage_button" name="button" id="button" value="Edit"></left>
+                             <right><input type="submit" class="stage_button"  name="button" id="button" value="Delete"></right>
 
 								</div>
                         </div><!-- col -->
@@ -464,7 +395,7 @@
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+                                        <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>
@@ -511,7 +442,8 @@
 	.abc
 	{
 		padding-left:70px;
-	}</style>
+	}</style><!-- FOOTER -->
+
     </div><!-- PAGE-WRAPPER -->
 
 
@@ -519,6 +451,8 @@
     <a id="go-top"><i class="miu-icon-circle_arrow-up_glyph"></i></a>
 
 
+    <!-- STYLE SWITCHER -->
+    <div id="style-switcher"></div>
 
 
     <!-- jQUERY -->
@@ -559,6 +493,7 @@
     <script src="assets/js/submit/jquery.form.min.js"></script>
 
     <!-- GOOGLE MAPS -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="assets/js/googlemaps/jquery.gmap.min.js"></script>
 
     <!-- CHARTS -->
@@ -571,6 +506,8 @@
     <!-- YOUTUBE PLAYER -->
     <script src="assets/js/ytplayer/jquery.mb.YTPlayer.js"></script>
 
+	<!-- TWITTER -->
+    <script src="assets/js/twitter/twitterfetcher.js"></script>
 
     <!-- ANIMATIONS -->
     <script src="assets/js/animations/wow.min.js"></script>
@@ -578,6 +515,7 @@
     <!-- CUSTOM JS -->
     <script src="assets/js/custom.js"></script>
 
+    <!-- STYLE SWITCHER -->
 
 </body>
 </html>

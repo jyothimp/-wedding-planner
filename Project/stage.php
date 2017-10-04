@@ -1,7 +1,16 @@
 <?php
 	include_once 'db_connect.php';
-	include_once 'check_logout.php';
+	//include_once 'check_logout.php';
 ?>
+<?php
+
+if(isset($_POST['Submit'])) {
+	 $adminadd_id = $_POST['adminadd_id'];
+	 $adminadd_name = $_POST['adminadd_name'];
+	 $adminadd_price = $_POST['adminadd_price'];
+   $result = mysqli_query($mysqli, "INSERT INTO wp_adminadd(adminadd_name,adminadd_price) VALUES('$adminadd_name','$adminadd_price',)");
+}
+ ?>
 <!doctype html>
 <html>
 
@@ -109,79 +118,78 @@
 
 								<li class="megamenu ">
 
-										<a href="#">Add-ons</a>
+									<a href="#">Add-ons</a>
 
-										<div class="megamenu-container col-4">
+									<div class="megamenu-container col-4">
 
-											<div class="section">
-							<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
-							</div><!-- section -->
+										<div class="section">
+											<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
+										</div><!-- section -->
 
-												<div class="section">
+										<div class="section">
 
-														<h5>Designing</h5>
+											<h5>Designing</h5>
 
-														<ul>
+											<ul>
 
-																<li><a href="design-stage.php">Stage Decoration</a></li>
-																<li><a href="design-decor.php">Hall Decoration</a></li>
-																 <li><a href="light.php">Light System</a></li>
-																 <li><a href="cake.php">Designer Cakes</a></li>
-														</ul>
+												<li><a href="design-stage.php">Stage Decoration</a></li>
+												<li><a href="design-decor.php">Hall Decoration</a></li>
+												 <li><a href="light.php">Light System</a></li>
+												 <li><a href="cake.php">Designer Cakes</a></li>
+											</ul>
 
-												</div><!-- section -->
+										</div><!-- section -->
 
-												<div class="section">
+										<div class="section">
 
-														<h5>Management</h5>
+											<h5>Management</h5>
 
-														<ul>
-															<li><a href="soundsystem.php">Sound System</a></li>
-														</ul>
-												</div><!-- section -->
+											<ul>
+												<li><a href="soundsystem.php">Sound System</a></li>
+											</ul>
+										</div><!-- section -->
 
-												<div class="section">
+										<div class="section">
 
-														<h5>Catering Services</h5>
+											<h5>Catering Services</h5>
 
-														<ul>
-															<li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-																<li><a href="vegetarian.php">Vegetarian</a></li>
-																<li><a href="snacks.php">Snacks</a></li>
+											<ul>
+												<li><a href="nonvegetarian.php">Nonvegetarian</a></li>
+												<li><a href="vegetarian.php">Vegetarian</a></li>
+												<li><a href="snacks.php">Snacks</a></li>
 
-														</ul>
-														</div>
-											 <div class="section">
+											</ul>
+										</div>
+										<div class="section">
 
-														<h5>Media&Entertainment</h5>
+											<h5>Media&Entertainment</h5>
 
-														<ul>
-															<li><a href="entertainment.php">Entertainment</a></li>
-																<li><a href="videography.php">Videography</a></li>
-																<li><a href="photography.php">Photography</a></li>
+											<ul>
+												<li><a href="entertainment.php">Entertainment</a></li>
+												<li><a href="videography.php">Videography</a></li>
+												<li><a href="photography.php">Photography</a></li>
 
-														</ul>
+											</ul>
 
-										 </div><!-- section -->
+										</div><!-- section -->
 
-										</div><!-- megamenu-container -->
+									</div><!-- megamenu-container -->
 
 								</li>
 
-								 <li>
-									<a href="contact-us.php">Contact</a>
+								<li>
+									<a href="contact.php">Contact</a>
 								</li>
-							<li>
+								<li>
 									<a href="logout.php">Logout</a>
-							</nav>
+								</nav>
 
 							</div><!-- col -->
-							</div><!-- row -->
-							</div><!-- container -->
+						</div><!-- row -->
+					</div><!-- container -->
 
-							</header><!-- HEADER -->
-							<style>
-
+				</header><!-- HEADER -->
+				<style>
 
     @media (min-width:992px) and (max-width:1199px){
       .col-sm-10{
@@ -189,6 +197,10 @@
         margin-top: -4%;}
 
       }
+			.stage_button{
+				display: inline-block;
+				background-color: orange;
+			}
 
 
       </style>
@@ -200,7 +212,7 @@
             <div class="row">
               <div class="col-sm-6">
 
-                <h4>Design and Decor</h4>
+                <h4>Add Stages</h4>
 
               </div><!-- col -->
               <div class="col-sm-6">
@@ -226,6 +238,9 @@
         </div><!-- container -->
 
         <div class="container">
+					<form action="design-stage.php" method="post">
+					<input type="submit"  class="stage_button" name="button" id="button" style="color:black;float:right" value="Add">
+	</form>
           <div class="row">
             <div class="col-sm-12">
 
@@ -233,9 +248,8 @@
 
               <p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
             </div><!-- col -->
-3          </div><!-- row -->
+         </div><!-- row -->
         </div><!-- container -->
-
 
         <div class="container">
           <div class="row">
@@ -254,9 +268,10 @@
 
             <div class="social-media">
 
-              <a ><?php echo $row['stage_name'] ?><br>  <a ><?php echo "₹ ".$row['stage_price'] ?></a></a>
+              <a ><?php echo $row['stage_name'] ?><br> </a>
 
-								<center><input type="submit"  name="button" id="button" value="Add to cart"></center>
+								<left><input type="submit"  class="stage_button" name="button" id="button" value="Edit"></left>
+								<right><input type="submit" class="stage_button"  name="button" id="button" value="Delete"></right>
             </div>
           </div>
 				</form>
@@ -376,7 +391,7 @@
                       </li>
                       <li>
                         <span>E-mail</span>
-                        <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
+                        <a href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a>
                       </li>
                       <li>
                         <a href="faq.php"> <span>FAQ</span></a>
@@ -503,8 +518,5 @@
         <script src="assets/js/custom.js"></script>
 
         <!-- STYLE SWITCHER -->
-
       </body>
-
-
       </html>

@@ -154,7 +154,8 @@ ga('send', 'pageview');
 
                                             <ul>
 
-                                                <li><a href="decoration.php">Decoration</a></li>
+                                                <li><a href="design-stage.php">Stage Decoration</a></li>
+																								<li><a href="design-decor.php">Hall Decoration</a></li>
                                                  <li><a href="light.php">Light System</a></li>
                                                  <li><a href="cake.php">Designer Cakes</a></li>
                                             </ul>
@@ -199,7 +200,7 @@ ga('send', 'pageview');
                                 </li>
 
                                  <li>
-                                	<a href="contact.php">Contact</a>
+                                	<a href="contact-us.php">Contact</a>
                                 </li>
                                             <li>
                                <div class="login-nav" >
