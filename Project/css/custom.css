@@ -1,0 +1,40 @@
+
+@media (min-width:992px) and (max-width:1199px){
+  .col-sm-10{
+    width: 100.333%;
+    margin-top: -4%;}
+
+  }
+  .stage_button{
+    display: inline-block;
+    background-color: orange;
+  }
+
+#pass_change_form{
+  padding: 10px;
+}
+#pass_change_form input,textarea{
+  width: 100%;
+  margin-bottom: 16px !important;
+}
+#submit_stage{
+  width: 223px !important;
+  background-color: blue;
+  color: white;
+}
+#pass_change_form{
+  text-align: -webkit-center;
+}
+hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.hall_button{
+  display: inline-block;
+  background-color: orange;
+}
+#submit_hall{
+  width: 223px !important;
+  background-color: blue;
+  color: white;
+}

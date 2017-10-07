@@ -4,35 +4,11 @@ include_once 'db_connect.php';
 ?>
 <?php
 
-if(isset($_POST['submit_hall'])) {
-	$image = $_POST['hall_image'];
-	//Stores the filename as it was on the client computer.
-	$imagename = $_FILES['hall_image']['name'];
-	//Stores the filetype e.g image/jpeg
-	$imagetype = $_FILES['hall_image']['type'];
-	//Stores any error codes from the upload.
-	$imageerror = $_FILES['hall_image']['error'];
-	//Stores the tempname as it is given by the host when uploaded.
-	$imagetemp = $_FILES['hall_image']['tmp_name'];
-
-	//The path you wish to upload the image to
-	$imagePath = "./images/hall/";
-
-	if(is_uploaded_file($imagetemp)) {
-			if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
-					echo "Sussecfully uploaded your image.";
-			}
-			else {
-					echo "Failed to move your image.";
-			}
-	}
-	else {
-			echo "Failed to upload your image.";
-	}
-	$hall_name= $_POST['hall_name'];
-	$hall_description = $_POST['hall_description'];
-	$hall_price = $_POST['hall_price'];
-	$result = mysqli_query($con, "INSERT INTO wp_hall(hall_name,hall_image,hall_description,hall_price) VALUES('$hall_name','$imagename','$hall_description','$hall_price')") or die(mysqli_error($con));
+if(isset($_POST['Submit'])) {
+	$adminadd_id = $_POST['adminadd_id'];
+	$adminadd_name = $_POST['adminadd_name'];
+	$adminadd_price = $_POST['adminadd_price'];
+	$result = mysqli_query($mysqli, "INSERT INTO wp_adminadd(adminadd_name,adminadd_price) VALUES('$adminadd_name','$adminadd_price',)");
 }
 ?>
 <!doctype html>
@@ -81,13 +57,11 @@ if(isset($_POST['submit_hall'])) {
 	<!-- YOUTUBE PLAYER -->
 	<link rel="stylesheet" href="assets/js/ytplayer/css/YTPlayer.css">
 
-
 	<!-- ANIMATIONS -->
 	<link rel="stylesheet" href="assets/js/animations/animate.min.css">
 
 	<!-- CUSTOM & PAGES STYLE -->
 	<link rel="stylesheet" href="assets/css/custom.css">
-	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="assets/css/pages-style.css">
 
 	<!-- STYLE SWITCHER -->
@@ -215,7 +189,21 @@ if(isset($_POST['submit_hall'])) {
 					</div><!-- container -->
 
 				</header><!-- HEADER -->
+				<style>
 
+				@media (min-width:992px) and (max-width:1199px){
+					.col-sm-10{
+						width: 100.333%;
+						margin-top: -4%;}
+
+					}
+					.stage_button{
+						display: inline-block;
+						background-color: orange;
+					}
+
+
+					</style>
 					<!-- CONTENT -->
 					<div class="content">
 
@@ -224,7 +212,7 @@ if(isset($_POST['submit_hall'])) {
 								<div class="row">
 									<div class="col-sm-6">
 
-										<h4>Add Halls</h4>
+										<h4>Add Food Items</h4>
 
 									</div><!-- col -->
 									<div class="col-sm-6">
@@ -250,13 +238,13 @@ if(isset($_POST['submit_hall'])) {
 						</div><!-- container -->
 
 						<div class="container">
-								<input type="submit"  class="hall_button" name="button" id="hall_add_button" style="color:black;float:right" value="Add New Hall "
+								<input type="submit"  class="stage_button" name="button" id="stage_add_button" style="color:black;float:right" value="Add New Food Items"
 							<div class="row">
 								<div class="col-sm-12">
 
-									<h2>Design and Decor - Wedding Hall</h2>
+									<h2>Wedding Catering</h2>
 
-									<p>Each wedding hall is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding hall decoration will be customized. Images below show a few of the hall decoration done by us for our customers.</p>
+									<p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
 								</div><!-- col -->
 							</div><!-- row -->
 						</div><!-- container -->
@@ -265,7 +253,7 @@ if(isset($_POST['submit_hall'])) {
 							<div class="row">
 
 								<?php
-								$query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE `hall_status`=1");
+								$query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_status`=1");
 								while ($row=mysqli_fetch_array($query)) {
 									?>
 									<div class="col-sm-4">
@@ -274,14 +262,14 @@ if(isset($_POST['submit_hall'])) {
 											<form action="design-decor.php" method="post">
 												<div class="about-me-thumbnail">
 
-													<img style="height:215px !important"src="images/hall/<?php echo $row['hall_image'] ?>" alt="best wedding planner in cochin">
+													<img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
 
 													<div class="social-media">
 
-														<a ><?php echo $row['hall_name'] ?><br> </a>
+														<a ><?php echo $row['stage_name'] ?><br> </a>
 
-														<left><input type="submit"  class="hall_button" name="button" id="button" value="Edit"></left>
-														<right><input type="submit" class="hall_button"  name="button" id="button" value="Delete"></right>
+														<left><input type="submit"  class="stage_button" name="button" id="button" value="Edit"></left>
+														<right><input type="submit" class="stage_button"  name="button" id="button" value="Delete"></right>
 													</div>
 												</div>
 											</form>
@@ -442,20 +430,14 @@ if(isset($_POST['submit_hall'])) {
 
 							<div class="flyout" style="position: fixed; left: -5000px; top: - 5000px; color:#f5f5f5;"><h1><b>Wedding Planner in Cochin</b></h1><h1><b>Wedding planner in Kochi</b></h1><h1><b>Cochin weddings planners</b></h1><h1><b>cochin wedding planners</b></h1><h1><b>kochi weddings planner</b></h1><h1><b>kochi wedding planners</b></h1><h1><b>Wedding Planner in Ernakulam</b></h1><h1><b>wedding planner in angamaly</b></h1><h1><b>wedding planner in CIAL</b></h1><h1><b>Wedding planner in Bolgatty palace</b></h1><h1><b>Adlux wedding planner</b></h1><h1><b>Wedding planner in Kerala</b></h1><h1><b>best wedding planner in cochin</b></h1><h1><b>Best wedding planner in kochi</b></h1><h1><b>best wedding planner in kerala</b></h1><h1><b>Best wedding planners in cochin</b></h1><h1><b>Best wedding planners in kochi</b></h1><h1><b>best wedding planners in kerala</b></h1><h1><b>wedding company in kochi</b></h1><h1><b>wedding company in kerala</b></h1><h1><b>which is the number one wedding company in kerala</b></h1><h1><b>Beach wedding in Kochi</b></h1><h1><b>Beach weddings in Kochi</b></h1><h1><b>Wedding entertainment in Kochi</b></h1><h1><b>wedding planners in kochi</b></h1><h1><b>Wedding planners in Kerala</b></h1><h1><b>Wedding planners in ernakulam</b></h1><h1><b>destination wedding in kochi</b></h1><h1><b>Destination Weddings in Kochi</b></h1><h1><b>Destination wedding in Kerala</b></h1><h1><b>Destination weddings in Kerala</b></h1><h1><b>Best wedding event management companies in Cochin</b></h1><h1><b>Event Management Kochi</b></h1><h1><b>Event management ernakulam</b></h1><h1><b>Event Management Kerala</b></h1><h1><b>Wedding planners kochi</b></h1><h1><b>Wedding planners ernakulam</b></h1><h1><b>Wedding planners kerala</b></h1><h1><b>kerala wedding planners</b></h1><h1><b>Wedding venues in Kerala</b></h1><h1><b>Stage decoration in Kochi</b></h1><h1><b>Wedding stage decoration in kochi</b></h1><h1><b>wedding decorators in kochi</b></h1><h1><b>wedding decoration in kochi</b></h1><h1><b>Wedding Design and Decor in Kochi</b></h1><h1><b>Stage Design and Decor in Kochi</b></h1><h1><b>Invitation designing in Kochi</b></h1><h1><b>Invitation designing in Kerala</b></h1><h1><b>Catering services in Kochi</b></h1><h1><b>Catering service in Kochi</b></h1><h1><b>Wedding Photography in Kochi</b></h1><h1><b>Wedding videography in Kochi</b></h1><h1><b>wedding shopping assistance</b></h1><h1><b>wedding shopping assistance in kochi</b></h1>
 							</div>
-							<div class="cd-popup" id="hall_add_popup" role="alert">
+							<div class="cd-popup" id="stage_add_popup" role="alert">
 							  <div class="cd-popup-container">
-							    <h3>New Halls</h3>
+							    <h3>Add Stages</h3>
 
 							      <hr>
-							    <form action="" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true">
-										<input type="text" name="hall_name" id="hall_name"  placeholder="Name">
-										<input type="file" name="hall_image" id="hall_image" placeholder="Imagefile">
-										<input type="number" name="hall_price" id="hall_price" placeholder="Price">
-										<textarea name="hall_description" rows="3" id="hall_description" placeholder="Description"></textarea>
-										<input type="submit" name="submit_hall" id="submit_hall" Value="Submit">
-
+							    <form method="post" id="pass_change_form" onsubmit="return false">
+										AJ
 							  </form>
-								<a href="#0" class="cd-popup-close img-replace">Close</a>
 							</div> <!-- cd-popup -->
 							</div>
 

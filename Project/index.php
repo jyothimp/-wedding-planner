@@ -18,7 +18,7 @@
     <title>  Best Wedding Planner in cochin - Kerala</title>
     	<link rel="stylesheet" href="css/login_css.css">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
