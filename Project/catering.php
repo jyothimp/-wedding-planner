@@ -4,11 +4,35 @@ include_once 'db_connect.php';
 ?>
 <?php
 
-if(isset($_POST['Submit'])) {
-	$adminadd_id = $_POST['adminadd_id'];
-	$adminadd_name = $_POST['adminadd_name'];
-	$adminadd_price = $_POST['adminadd_price'];
-	$result = mysqli_query($mysqli, "INSERT INTO wp_adminadd(adminadd_name,adminadd_price) VALUES('$adminadd_name','$adminadd_price',)");
+if(isset($_POST['submit_food'])) {
+	$image = $_POST['food_image'];
+	//Stores the filename as it was on the client computer.
+	$imagename = $_FILES['food_image']['name'];
+	//Stores the filetype e.g image/jpeg
+	$imagetype = $_FILES['food_image']['type'];
+	//Stores any error codes from the upload.
+	$imageerror = $_FILES['food_image']['error'];
+	//Stores the tempname as it is given by the host when uploaded.
+	$imagetemp = $_FILES['food_image']['tmp_name'];
+
+	//The path you wish to upload the image to
+	$imagePath = "./images/stage/";
+
+	if(is_uploaded_file($imagetemp)) {
+			if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
+					echo "Sussecfully uploaded your image.";
+			}
+			else {
+					echo "Failed to move your image.";
+			}
+	}
+	else {
+			echo "Failed to upload your image.";
+	}
+	$food_name= $_POST['food_name'];
+	$food_description = $_POST['food_description'];
+	$food_price = $_POST['food_price'];
+	$result = mysqli_query($con, "INSERT INTO wp_food(food_name,food_image,food_description,food_price) VALUES('$food_name','$imagename','$food_description','$food_price')") or die(mysqli_error($con));
 }
 ?>
 <!doctype html>
@@ -57,11 +81,13 @@ if(isset($_POST['Submit'])) {
 	<!-- YOUTUBE PLAYER -->
 	<link rel="stylesheet" href="assets/js/ytplayer/css/YTPlayer.css">
 
+
 	<!-- ANIMATIONS -->
 	<link rel="stylesheet" href="assets/js/animations/animate.min.css">
 
 	<!-- CUSTOM & PAGES STYLE -->
 	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="assets/css/pages-style.css">
 
 	<!-- STYLE SWITCHER -->
@@ -134,19 +160,8 @@ if(isset($_POST['Submit'])) {
 
 												<li><a href="design-stage.php">Stage Decoration</a></li>
 												<li><a href="design-decor.php">Hall Decoration</a></li>
-												<li><a href="light.php">Light System</a></li>
-												<li><a href="cake.php">Designer Cakes</a></li>
 											</ul>
 
-										</div><!-- section -->
-
-										<div class="section">
-
-											<h5>Management</h5>
-
-											<ul>
-												<li><a href="soundsystem.php">Sound System</a></li>
-											</ul>
 										</div><!-- section -->
 
 										<div class="section">
@@ -189,21 +204,7 @@ if(isset($_POST['Submit'])) {
 					</div><!-- container -->
 
 				</header><!-- HEADER -->
-				<style>
 
-				@media (min-width:992px) and (max-width:1199px){
-					.col-sm-10{
-						width: 100.333%;
-						margin-top: -4%;}
-
-					}
-					.stage_button{
-						display: inline-block;
-						background-color: orange;
-					}
-
-
-					</style>
 					<!-- CONTENT -->
 					<div class="content">
 
@@ -238,11 +239,23 @@ if(isset($_POST['Submit'])) {
 						</div><!-- container -->
 
 						<div class="container">
-								<input type="submit"  class="stage_button" name="button" id="stage_add_button" style="color:black;float:right" value="Add New Food Items"
+								<input type="submit"  class="food_button" name="button" id="food_add_button" style="color:black;float:right" value="Add New Food Items"
 							<div class="row">
 								<div class="col-sm-12">
 
-									<h2>Wedding Catering</h2>
+									<div class="tab">
+									  <button class="tablinks" onclick="openFood(event, 'Vegetarian')">Vegetarian</button>
+									  <button class="tablinks" onclick="openFood(event, 'Non-Vegetarian')">Non-Vegetarian</button>
+									  <button class="tablinks" onclick="openFood(event, 'Snacks')">Snacks</button>
+									</div>
+
+									<div id="Vegetarian" class="tabcontent">
+									</div>
+									<div id="Non-Vegetarian" class="tabcontent">
+									</div>
+									<div id="Snacks" class="tabcontent">
+									</div>
+									<h2> Wedding Catering</h2>
 
 									<p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
 								</div><!-- col -->
@@ -253,23 +266,23 @@ if(isset($_POST['Submit'])) {
 							<div class="row">
 
 								<?php
-								$query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_status`=1");
+								$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1");
 								while ($row=mysqli_fetch_array($query)) {
 									?>
 									<div class="col-sm-4">
 
 										<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-											<form action="design-decor.php" method="post">
+											<form action="editstage.php" method="post">
 												<div class="about-me-thumbnail">
 
-													<img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
+													<img style="height:215px !important"src="images/stage/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 
 													<div class="social-media">
 
-														<a ><?php echo $row['stage_name'] ?><br> </a>
-
-														<left><input type="submit"  class="stage_button" name="button" id="button" value="Edit"></left>
-														<right><input type="submit" class="stage_button"  name="button" id="button" value="Delete"></right>
+														<a ><?php echo $row['food_name'] ?><br> </a>
+														<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
+														<left><input type="submit"  class="stage_button" name="button_edit" id="button" value="Edit"></left>
+														<right><input type="submit" class="stage_button"  name="button_edit" id="button" value="Delete"></right>
 													</div>
 												</div>
 											</form>
@@ -432,12 +445,18 @@ if(isset($_POST['Submit'])) {
 							</div>
 							<div class="cd-popup" id="stage_add_popup" role="alert">
 							  <div class="cd-popup-container">
-							    <h3>Add Stages</h3>
+							    <h3>New Stage</h3>
 
 							      <hr>
-							    <form method="post" id="pass_change_form" onsubmit="return false">
-										AJ
+							    <form action="" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true">
+										<input type="text" name="stage_name" id="stage_name"  placeholder="Name">
+										<input type="file" name="stage_image" id="stage_image" placeholder="Imagefile">
+										<input type="number" name="stage_price" id="stage_price" placeholder="Price">
+										<textarea name="stage_description" rows="3" id="stage_description" placeholder="Description"></textarea>
+										<input type="submit" name="submit_stage" id="submit_stage" Value="Submit">
+
 							  </form>
+								<a href="#0" class="cd-popup-close img-replace">Close</a>
 							</div> <!-- cd-popup -->
 							</div>
 

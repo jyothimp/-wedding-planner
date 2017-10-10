@@ -160,19 +160,8 @@ if(isset($_POST['submit_hall'])) {
 
 												<li><a href="design-stage.php">Stage Decoration</a></li>
 												<li><a href="design-decor.php">Hall Decoration</a></li>
-												<li><a href="light.php">Light System</a></li>
-												<li><a href="cake.php">Designer Cakes</a></li>
 											</ul>
 
-										</div><!-- section -->
-
-										<div class="section">
-
-											<h5>Management</h5>
-
-											<ul>
-												<li><a href="soundsystem.php">Sound System</a></li>
-											</ul>
 										</div><!-- section -->
 
 										<div class="section">
@@ -271,7 +260,7 @@ if(isset($_POST['submit_hall'])) {
 									<div class="col-sm-4">
 
 										<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-											<form action="design-decor.php" method="post">
+											<form action="edithall.php" method="post">
 												<div class="about-me-thumbnail">
 
 													<img style="height:215px !important"src="images/hall/<?php echo $row['hall_image'] ?>" alt="best wedding planner in cochin">
@@ -279,7 +268,7 @@ if(isset($_POST['submit_hall'])) {
 													<div class="social-media">
 
 														<a ><?php echo $row['hall_name'] ?><br> </a>
-
+														<input type="hidden" name="item_id" value="<?php echo $row['hall_id'] ?>"
 														<left><input type="submit"  class="hall_button" name="button" id="button" value="Edit"></left>
 														<right><input type="submit" class="hall_button"  name="button" id="button" value="Delete"></right>
 													</div>

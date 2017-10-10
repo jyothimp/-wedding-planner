@@ -160,19 +160,8 @@ if(isset($_POST['submit_stage'])) {
 
 												<li><a href="design-stage.php">Stage Decoration</a></li>
 												<li><a href="design-decor.php">Hall Decoration</a></li>
-												<li><a href="light.php">Light System</a></li>
-												<li><a href="cake.php">Designer Cakes</a></li>
 											</ul>
 
-										</div><!-- section -->
-
-										<div class="section">
-
-											<h5>Management</h5>
-
-											<ul>
-												<li><a href="soundsystem.php">Sound System</a></li>
-											</ul>
 										</div><!-- section -->
 
 										<div class="section">
@@ -204,7 +193,7 @@ if(isset($_POST['submit_stage'])) {
 								</li>
 
 								<li>
-									<a href="contact.php">Contact</a>
+									<a href="contact-us.php">Contact</a>
 								</li>
 								<li>
 									<a href="logout.php">Logout</a>
@@ -271,7 +260,7 @@ if(isset($_POST['submit_stage'])) {
 									<div class="col-sm-4">
 
 										<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-											<form action="design-decor.php" method="post">
+											<form action="editstage.php" method="post">
 												<div class="about-me-thumbnail">
 
 													<img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
@@ -279,9 +268,9 @@ if(isset($_POST['submit_stage'])) {
 													<div class="social-media">
 
 														<a ><?php echo $row['stage_name'] ?><br> </a>
-
-														<left><input type="submit"  class="stage_button" name="button" id="button" value="Edit"></left>
-														<right><input type="submit" class="stage_button"  name="button" id="button" value="Delete"></right>
+														<input type="hidden" name="item_id" value="<?php echo $row['stage_id'] ?>"
+														<left><input type="submit"  class="stage_button" name="button_edit" id="button" value="Edit"></left>
+														<right><input type="submit" class="stage_button"  name="button_edit" id="button" value="Delete"></right>
 													</div>
 												</div>
 											</form>

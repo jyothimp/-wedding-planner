@@ -159,9 +159,7 @@ include_once 'check_logout.php';
 										<div class="dropdown-content">
 											<a href="stage.php">Stages</a>
 											<a href="hall.php">Hall</a>
-											<a href="light.php">Light</a>
-											<a href="sound.php">Sound</a>
-											<a href="food.php">Food</a>
+											<a href="catering.php">Food</a>
 										</div>
 									</div>
 
