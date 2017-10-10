@@ -239,7 +239,7 @@ if(isset($_POST['submit_food'])) {
 						</div><!-- container -->
 
 						<div class="container">
-								<input type="submit"  class="food_button" name="button" id="food_add_button" style="color:black;float:right" value="Add New Food Items"
+								<input type="submit"  class="food_button" name="button" id="food_add_button" style="color:black;float:right" value="Add New Food Items">
 							<div class="row">
 								<div class="col-sm-12">
 
@@ -272,10 +272,10 @@ if(isset($_POST['submit_food'])) {
 									<div class="col-sm-4">
 
 										<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-											<form action="editstage.php" method="post">
+											<form action="editcatering.php" method="post">
 												<div class="about-me-thumbnail">
 
-													<img style="height:215px !important"src="images/stage/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+													<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 
 													<div class="social-media">
 
