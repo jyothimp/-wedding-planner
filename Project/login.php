@@ -44,18 +44,18 @@ if(isset($_POST['create_account'])){
 		</ul>
 
 		<div id="cd-login"> <!-- log in form -->
-			<form class="cd-form" action="#" method="post">
+			<form class="cd-form" id="signin_form" action="#" method="post">
 				<p class="fieldset">
 					<label class="image-replace cd-username" for="signin-username"> Username</label>
 					<input class="full-width has-padding has-border" name="signin-username" id="signin-username" type="text" placeholder="Username">
-					<span class="cd-error-message" >Error message here!</span>
+					<span class="cd-error-message" id="name_error" >Error message here!</span>
 				</p>
 
 				<p class="fieldset">
 					<label class="image-replace cd-password" for="signin-password">Password</label>
 					<input class="full-width has-padding has-border" name="signin-password" id="signin-password" type="password"  placeholder="Password">
 					<a href="#0" class="hide-password">Show</a>
-					<span class="cd-error-message">Error message here!</span>
+					<span class="cd-error-message" id="password_error">Error message here!</span>
 				</p>
 
 				<p class="fieldset">
@@ -77,13 +77,14 @@ if(isset($_POST['create_account'])){
 							<p class="fieldset">
 								<label class="image-replace cd-username" for="signup-fullname">FullName</label>
 								<input class="full-width has-padding has-border" name="signup-flname" id="signup-fullname" type="text" placeholder="Full Name">
+								<span class="cd-error-message" id="name_error">Username already registerd</span>
 							</p>
 						</td>
 						<td>
 							<p class="fieldset frm_right">
 								<label class="image-replace cd-username" for="signup-username">Username</label>
 								<input class="full-width has-padding has-border" name="signup-un" id="signup-username" type="text" placeholder="Username">
-								<span class="cd-error-message" id="signup-username-error">Username already registerd</span>
+								<span class="cd-error-message" id="username_error">Username already registerd</span>
 							</p>
 						</td>
 					</tr>
@@ -92,14 +93,14 @@ if(isset($_POST['create_account'])){
 							<p class="fieldset">
 								<label class="image-replace cd-phone" for="signup-phone">Phone</label>
 								<input class="full-width has-padding has-border" name="signup-phn" id="signup-phone" type="text" placeholder="Phone">
-								<span class="cd-error-message" id="signup-phone-error" >Phone already taken</span>
+								<span class="cd-error-message" id="phone_error" >Phone already taken</span>
 							</p>
 						</td>
 						<td>
 							<p class="fieldset frm_right">
 								<label class="image-replace cd-email" for="signup-email">Email</label>
 								<input class="full-width has-padding has-border" name="signup-email" id="signup-email" type="email" placeholder="E-mail">
-								<span class="cd-error-message" id="signup-email-error">Email already registerd</span>
+								<span class="cd-error-message" id="email_error">Email already registerd</span>
 							</p>
 						</td></tr>
 
@@ -108,6 +109,7 @@ if(isset($_POST['create_account'])){
 								<p class="fieldset">
 									<label class="image-replace cd-address" for="signup-address_line1">AddressLine-1</label>
 									<input class="full-width has-padding has-border "name="signup-add1" id="signup-address_line1" type="text" placeholder="Address">
+									<span class="cd-error-message" id="address_error">Address already registerd</span>
 								</p>
 							</td>
 
@@ -116,7 +118,7 @@ if(isset($_POST['create_account'])){
 										<label class="image-replace cd-password" for="signup-password">Password</label>
 										<input class="full-width has-padding has-border" name="signup-pwd" id="signup-password" type="password"  placeholder="Password">
 										<a href="#0" class="hide-password">Show</a>
-										<span class="cd-error-message" id="signup-password-error" style="z-index: 3 !important;">Password must be 6-30 charactors</span>
+										<span class="cd-error-message" id="password_error" style="z-index: 3 !important;">Password must be 6-30 charactors</span>
 									</p>
 								</td></tr>
 

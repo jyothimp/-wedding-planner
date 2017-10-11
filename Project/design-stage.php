@@ -125,21 +125,9 @@
 
 																<li><a href="design-stage.php">Stage Decoration</a></li>
 																<li><a href="design-decor.php">Hall Decoration</a></li>
-																 <li><a href="light.php">Light System</a></li>
-																 <li><a href="cake.php">Designer Cakes</a></li>
 														</ul>
 
 												</div><!-- section -->
-
-												<div class="section">
-
-														<h5>Management</h5>
-
-														<ul>
-															<li><a href="soundsystem.php">Sound System</a></li>
-														</ul>
-												</div><!-- section -->
-
 												<div class="section">
 
 														<h5>Catering Services</h5>

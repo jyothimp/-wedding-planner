@@ -1,13 +1,12 @@
-<!doctype html>
 <?php
 include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
+
+<!doctype html>
 <html>
-
-
 <head>
-
+	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">

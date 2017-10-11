@@ -173,7 +173,7 @@ if(isset($_POST['stage_edit_submit'])){
 
                         <li><a href="design-stage.php">Stage Decoration</a></li>
                         <li><a href="design-decor.php">Hall Decoration</a></li>
-            
+
                       </ul>
 
                     </div><!-- section -->
@@ -292,7 +292,7 @@ if(isset($_POST['stage_edit_submit'])){
                       <div class="col-lg-6">
                         <input type="text" name="stage_name" id="stage_name" value="<?php echo $row['stage_name'] ?>"  placeholder="Name">
                         <textarea name="stage_description" rows="3" id="stage_description" placeholder="Description"><?php echo $row['stage_description'] ?>"</textarea>
-                          <input type="number" name="stage_price" id="stage_price" value="<?php echo $row['stage_price'] ?>" placeholder="Price">
+                        <input type="number" name="stage_price" id="stage_price" value="<?php echo $row['stage_price'] ?>" placeholder="Price">
                         <input type="file" name="stage_image" id="stage_image" value="<?php echo $row['stage_image'] ?>" placeholder="Imagefile">
                         <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
                       <input type="submit" name="stage_edit_submit" id="submit_stage" Value="Submit">
