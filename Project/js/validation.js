@@ -61,7 +61,7 @@ $(document).ready(function() {
     }
   });
   $("#signup-username").focusout(function() {
-  var val_username= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_username= /^[A-Za-z0-9_.]{3,30}$/;
     $username = $(this).val();
     if(!val_username.test($username)){
       $(this).focus();
@@ -78,7 +78,7 @@ $(document).ready(function() {
     }
   });
   $("#signup-phone").focusout(function() {
-   var val_phone= /^[0-9]{9,12}$/;
+    var val_phone= /^[0-9]{9,12}$/;
     $phone = $(this).val();
     if(!val_phone.test($phone)){
       $(this).focus();
@@ -95,7 +95,7 @@ $(document).ready(function() {
     }
   });
   $("#signup-email").focusout(function() {
-  var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
     $email = $(this).val();
     if(!val_email.test($email)){
       $(this).focus();
@@ -113,7 +113,7 @@ $(document).ready(function() {
   });
   $("#signup-address_line1").focusout(function() {
     var val_address_line1= /^[^&]{10,300}$/;
-  $address_line1 = $(this).val();
+    $address_line1 = $(this).val();
     if(!val_email.test($address_line1)){
       $(this).focus();
       $(this).css('border','1px solid red');
@@ -131,7 +131,7 @@ $(document).ready(function() {
   $("#signup-password").focusout(function() {
     var val_password= /^[^&]{6,30}$/;
     $password  = $(this).val();
-    if(!val_email.test($password )){
+    if(!val_password.test($password )){
       $(this).focus();
       $(this).css('border','1px solid red');
       $('#password_error').html("Invalid password");
@@ -145,7 +145,8 @@ $(document).ready(function() {
       return true;
     }
   });
-})
+
+
   $("#signin_form").on("submit", function(){
     var val_username= /^[A-Za-z0-9_.]{3,30}$/;
     var val_password= /^[^&]{6,30}$/;
@@ -156,7 +157,7 @@ $(document).ready(function() {
       return false;
     }
     else if(!val_password.test($password)){
-      $("#signin-password"),focusout();
+      $("#signin-password").focusout();
       return false;
     }
     else {
@@ -164,36 +165,134 @@ $(document).ready(function() {
     }
   });
   $("#signin-username").focusout(function() {
-  var val_username= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_username= /^[A-Za-z0-9_.]{3,30}$/;
     $username = $(this).val();
     if(!val_username.test($username)){
       $(this).focus();
       $(this).css('border','1px solid red');
-      $('#username_error').html("Invalid Username");
-      $('#username_error').addClass('is-visible');
+      $('#signin-username_error').html("Invalid Username");
+      $('#signin-username_error').addClass('is-visible');
       return false;
     }
     else {
       $(this).css('border','NONE');
-      $('#username_error').html("");
-      $('#username_error').removeClass('is-visible');
+      $('#signin-username_error').html("");
+      $('#signin-username_error').removeClass('is-visible');
       return true;
     }
   });
   $("#signin-password").focusout(function() {
     var val_password= /^[^&]{6,30}$/;
     $password  = $(this).val();
-    if(!val_email.test($password )){
+    if(!val_password.test($password )){
       $(this).focus();
       $(this).css('border','1px solid red');
-      $('#password_error').html("Invalid password");
-      $('#password_error').addClass('is-visible');
+      $('#signin-password_error').html("Invalid password");
+      $('#signin-password_error').addClass('is-visible');
       return false;
     }
     else {
       $(this).css('border','NONE');
-      $('#password_error').html("");
-      $('#password_error').removeClass('is-visible');
+      $('#signin-password_error').html("");
+      $('#signin-password_error').removeClass('is-visible');
       return true;
     }
   });
+  // $("#stage_add_form").on("submit", function(){
+  //   var val_name= /^[A-Za-z0-9_.]{3,30}$/;
+  //   var val_image=/\.(jpe?g|png|gif|bmp)$/i
+  //   var val_price= ^([0-9]{0,2}((.)[0-9]{0,2}))$
+  //   var val_description= /^[^&]{10,300}$/;
+  //   $name = $('#stage_name').val();
+  //   $image = $('#stage_image').val();
+  //   $price= $('#stage_price').val();
+  //   $description = $('#stage_description').val();
+  //
+  //  if(!val_name.test($name)){
+  //     $("#stage_name").focusout();
+  //     return false;
+  //   }
+  //   else if(!val_image.test($image)){
+  //     $("#stage_image").focusout();
+  //     return false;
+  //   }
+  //   else if(!val_price.test($price)){
+  //     $("#stage_price").focusout();
+  //     return false;
+  //   }
+  //   else if(!val_description.test($description)){
+  //     $("#stage_description"),focusout();
+  //     return false;
+  //   }
+  //   else {
+  //     return true;
+  //   }
+  // });
+
+    $("#stage_image").change(function() {
+      var val = $(this).val();
+      switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
+        case 'gif': case 'jpg': case 'png':
+          $('#stage_image_error').html("");
+          $('#stage_image_error').removeClass('is-visible');
+          return true;
+          break;
+        default:
+          $("#stage_image_error").html("Invalid image");
+          $('#stage_image_error').addClass('is-visible');
+          return false;
+          break;
+      }
+    });
+    $("#stage_name").focusout(function() {
+      var val_name=  /^[A-Za-z0-9_.]{3,30}$/;
+      $name = $(this).val();
+      if(!val_name.test($name)){
+        $(this).focus();
+        $(this).css('border','1px solid red');
+        $('#stage_name_error').html("Invalid name");
+        $('#stage_name_error').addClass('is-visible');
+        return false;
+      }
+      else {
+        $(this).css('border','NONE');
+        $('#stage_name_error').html("");
+        $('#stage_name_error').removeClass('is-visible');
+        return true;
+      }
+    });
+    $("#stage_price").focusout(function() {
+      var val_price= /^[0-9.]{1,30}$/
+        $price = $(this).val();
+        if(!val_price.test($price)){
+          $(this).focus();
+          $(this).css('border','1px solid red');
+          $('#stage_price_error').html("Invalid price");
+          $('#stage_price_error').addClass('is-visible');
+          return false;
+        }
+        else {
+          $(this).css('border','NONE');
+          $('#stage_price_error').html("");
+          $('#stage_price_error').removeClass('is-visible');
+          return true;
+        }
+      });
+      $("#stage_description").focusout(function() {
+        var val_description= /^[^\*]{5,300}$/
+          $description = $(this).val();
+          if(!val_description.test($description)){
+            $(this).focus();
+            $(this).css('border','1px solid red');
+            $('#stage_description_error').html("Invalid description");
+            $('#stage_description_error').addClass('is-visible');
+            return false;
+          }
+          else {
+            $(this).css('border','NONE');
+            $('#stage_description_error').html("");
+            $('#stage_description_error').removeClass('is-visible');
+            return true;
+          }
+        });
+})

@@ -63,6 +63,7 @@ if(isset($_POST['submit_stage'])) {
 	<!-- BOOTSTRAP CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/login_css.css">
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
 
@@ -436,12 +437,16 @@ if(isset($_POST['submit_stage'])) {
 							    <h3>New Stage</h3>
 
 							      <hr>
-							    <form action="" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true">
+							    <form action="" class="form-pop" method="post" id="stage_add_form" enctype="multipart/form-data" onsubmit="return">
 										<input type="text" name="stage_name" id="stage_name"  placeholder="Name">
-										<input type="file" name="stage_image" id="stage_image" placeholder="Imagefile">
+										<span class="pop-error-message" id="stage_name_error">Error message here!</span>
+											<input type="file" name="stage_image" id="stage_image" placeholder="Imagefile">
+											<span class="pop-error-message" id="stage_image_error">Error message here!</span>
 										<input type="number" name="stage_price" id="stage_price" placeholder="Price">
+										<span class="pop-error-message" id="stage_price_error">Error message here!</span>
 										<textarea name="stage_description" rows="3" id="stage_description" placeholder="Description"></textarea>
-										<input type="submit" name="submit_stage" id="submit_stage" Value="Submit">
+										<span class="pop-error-message" id="stage_description_error">Error message here!</span>
+											<input type="submit" name="submit_stage" id="submit_stage" Value="Submit">
 
 							  </form>
 								<a href="#0" class="cd-popup-close img-replace">Close</a>
@@ -478,6 +483,7 @@ if(isset($_POST['submit_stage'])) {
 						<!-- BOOTSTRAP JS -->
 						<script src="assets/js/bootstrap.min.js"></script>
 						<script src="js/popup.js"></script>
+						<script src="js/validation.js"></script>
 
 						<!-- VIEWPORT -->
 						<script src="assets/js/viewport/jquery.viewport.js"></script>

@@ -33,7 +33,19 @@ if(isset($_POST['create_account'])){
 		$result = mysqli_query($con, $query) or die(mysqli_error());
 		?> <script>alert("Success");</script><?php
 	}
+}
 
+if(isset($_POST['reset_password'])){
+
+	// $email=$_POST['reset_email'];
+	// $query2="select * from `wp_login` where login_username='$un' and login_password='$pwd'";
+	// $id_query=mysqli_query($con,$query2) or die(mysqli_error());
+	// while($row2=mysqli_fetch_array($id_query)){
+	// 	$id=$row2['login_id'];
+	// 	$query= "INSERT INTO `wp_registration` (login_id,registration_name,registration_address,registration_phone,registration_email) VALUES($id,'$flname','$add','$phn','$email')";
+	// 	$result = mysqli_query($con, $query) or die(mysqli_error());
+	// 	?> <script>alert("Success");</script><?php
+	// }
 }
 ?>
 <div class="cd-user-modal" style="z-index: 300;"> <!-- this is the entire modal form, including the background -->
@@ -48,14 +60,14 @@ if(isset($_POST['create_account'])){
 				<p class="fieldset">
 					<label class="image-replace cd-username" for="signin-username"> Username</label>
 					<input class="full-width has-padding has-border" name="signin-username" id="signin-username" type="text" placeholder="Username">
-					<span class="cd-error-message" id="name_error" >Error message here!</span>
+					<span class="cd-error-message" id="signin-username_error" >Error message here!</span>
 				</p>
 
 				<p class="fieldset">
 					<label class="image-replace cd-password" for="signin-password">Password</label>
 					<input class="full-width has-padding has-border" name="signin-password" id="signin-password" type="password"  placeholder="Password">
 					<a href="#0" class="hide-password">Show</a>
-					<span class="cd-error-message" id="password_error">Error message here!</span>
+					<span class="cd-error-message" id="signin-password_error">Error message here!</span>
 				</p>
 
 				<p class="fieldset">
@@ -135,15 +147,15 @@ if(isset($_POST['create_account'])){
 					<div id="cd-reset-password"> <!-- reset password form -->
 						<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
 
-						<form class="cd-form">
+						<form class="cd-form" method="post" action="">
 							<p class="fieldset">
 								<label class="image-replace cd-email" for="reset-email">E-mail</label>
-								<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
-								<span class="cd-error-message">Error message here!</span>
+								<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail" name="reset_email">
+								<b class="cd-error-message" id="reset_password_error">Error message here!</b>
 							</p>
 
 							<p class="fieldset">
-								<input class="full-width has-padding" type="submit" value="Reset password">
+								<input name="reset_password" class="full-width has-padding" type="submit" value="Reset password">
 							</p>
 						</form>
 
