@@ -123,7 +123,7 @@ if(isset($_POST['stage_edit_submit'])){
         <div class="row">
 
           <div class="col-lg-6"></div>
-          <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
+          <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a></div>
           <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
         </div>
       </div>
@@ -286,19 +286,23 @@ if(isset($_POST['stage_edit_submit'])){
               $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
-                <form action="" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true" >
+                <form action="" method="post" id="stage_edit_form" enctype="multipart/form-data" onsubmit="return true" >
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
                       <img src="images/stage/<?php echo $row['stage_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
                     </div>
                     <div class="col-lg-6">
-                      <input type="text" name="stage_name" id="stage_name" value="<?php echo $row['stage_name'] ?>"  placeholder="Name">
-                      <textarea name="stage_description" rows="3" id="stage_description" placeholder="Description"><?php echo $row['stage_description'] ?></textarea>
-                      <input type="number" name="stage_price" id="stage_price" value="<?php echo $row['stage_price'] ?>" placeholder="Price">
-                      <input type="file" name="stage_image" id="stage_image" placeholder="Imagefile">
+                      <input type="text" name="stage_name" id="stage_editname" value="<?php echo $row['stage_name'] ?>"  placeholder="Name">
+                      <span class="pop-error-message" id="stage_ename_error"></span>
+                      <textarea name="stage_description" rows="3" id="stage_editdescription" placeholder="Description"><?php echo $row['stage_description'] ?></textarea>
+                      <span class="pop-error-message" id="stage_edescription_error"></span>
+                      <input type="number" name="stage_price" id="stage_editprice" value="<?php echo $row['stage_price'] ?>" placeholder="Price">
+                      <span class="pop-error-message" id="stage_eprice_error"></span>
+                      <input type="file" name="stage_image" id="stage_editimage" placeholder="Imagefile">
+                      <span class="pop-error-message" id="stage_eimage_error"></span>
                       <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
                       <input type="hidden" name="temp_pic" value="<?php echo $row['stage_image'] ?>">
-                      <input type="submit" name="stage_edit_submit" id="submit_stage" Value="Submit">
+                      <input type="submit" name="stage_edit_submit" id="submit_editstage" Value="Submit">
                     </div>
                   </div>
                 </form>
@@ -406,7 +410,7 @@ if(isset($_POST['stage_edit_submit'])){
               </li>
               <li>
                 <span>E-mail</span>
-                <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
+                <a href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a>
               </li>
               <li>
                 <a href="faq.php"> <span>FAQ</span></a>
@@ -465,6 +469,8 @@ if(isset($_POST['stage_edit_submit'])){
 
 <!-- jQUERY -->
 <script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="js/validation.js"></script>
+
 
 <!-- BOOTSTRAP JS -->
 <script src="assets/js/bootstrap.min.js"></script>

@@ -114,7 +114,7 @@ $(document).ready(function() {
   $("#signup-address_line1").focusout(function() {
     var val_address_line1= /^[^&]{10,300}$/;
     $address_line1 = $(this).val();
-    if(!val_email.test($address_line1)){
+    if(!val_address_line1.test($address_line1)){
       $(this).focus();
       $(this).css('border','1px solid red');
       $('#address_error').html("Invalid address");
@@ -198,36 +198,36 @@ $(document).ready(function() {
       return true;
     }
   });
-  // $("#stage_add_form").on("submit", function(){
-  //   var val_name= /^[A-Za-z0-9_.]{3,30}$/;
-  //   var val_image=/\.(jpe?g|png|gif|bmp)$/i
-  //   var val_price= ^([0-9]{0,2}((.)[0-9]{0,2}))$
-  //   var val_description= /^[^&]{10,300}$/;
-  //   $name = $('#stage_name').val();
-  //   $image = $('#stage_image').val();
-  //   $price= $('#stage_price').val();
-  //   $description = $('#stage_description').val();
-  //
-  //  if(!val_name.test($name)){
-  //     $("#stage_name").focusout();
-  //     return false;
-  //   }
-  //   else if(!val_image.test($image)){
-  //     $("#stage_image").focusout();
-  //     return false;
-  //   }
-  //   else if(!val_price.test($price)){
-  //     $("#stage_price").focusout();
-  //     return false;
-  //   }
-  //   else if(!val_description.test($description)){
-  //     $("#stage_description"),focusout();
-  //     return false;
-  //   }
-  //   else {
-  //     return true;
-  //   }
-  // });
+   $("#stage_add_form").on("submit", function(){
+     var val_name= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_image=/\.(jpe?g|png|gif|bmp)$/i;
+      var val_price= /^[0-9.]{1,30}$/;
+      var val_description= /^[^\*]{5,300}$/;
+    $name = $('#stage_name').val();
+     $image = $('#stage_image').val();
+     $price= $('#stage_price').val();
+     $description = $('#stage_description').val();
+
+    if(!val_name.test($name)){
+       $("#stage_name").focusout();
+       return false;
+     }
+     else if(!val_image.test($image)){
+       $("#stage_image").focusout();
+       return false;
+      }
+     else if(!val_price.test($price)){
+       $("#stage_price").focusout();
+      return false;
+     }
+     else if(!val_description.test($description)){
+       $("#stage_description").focusout();
+     return false;
+     }
+     else {
+     return true;
+     }
+    });
 
     $("#stage_image").change(function() {
       var val = $(this).val();
@@ -295,4 +295,102 @@ $(document).ready(function() {
             return true;
           }
         });
+        $("#stage_edit_form").on("submit", function(){
+          var val_ename= /^[A-Za-z0-9_.]{3,30}$/;
+          var val_edescription= /^[^\*]{5,300}$/;
+          var val_eprice= /^[0-9.]{1,30}$/;
+          var val_eimage=/\.(jpe?g|png|gif|bmp)$/i;
+         $ename = $('#stage_editname').val();
+         $edescription = $('#stage_editdescription').val();
+         $eprice= $('#stage_editprice').val();
+         $eimage = $('#stage_editimage').val();
+         
+         if(!val_ename.test($ename)){
+            $("#stage_editname").focusout();
+            return false;
+          }
+          else if(!val_edescription.test($edescription)){
+            $("#stage_editdescription").focusout();
+          return false;
+          }
+
+          else if(!val_eprice.test($eprice)){
+            $("#stage_editprice").focusout();
+           return false;
+          }
+          else if(!val_eimage.test($eimage)){
+            $("#stage_editimage").focusout();
+            return false;
+           }
+          else {
+          return true;
+          }
+         });
+         $("#stage_editimage").change(function() {
+           var val = $(this).val();
+           switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
+             case 'gif': case 'jpg': case 'png':
+               $('#stage_eimage_error').html("");
+               $('#stage_eimage_error').removeClass('is-visible');
+               return true;
+               break;
+             default:
+               $("#stage_eimage_error").html("Invalid image");
+               $('#stage_eimage_error').addClass('is-visible');
+               return false;
+               break;
+           }
+         });
+         $("#stage_editname").focusout(function() {
+           var val_ename=  /^[A-Za-z0-9_.]{3,30}$/;
+           $ename = $(this).val();
+           if(!val_name.test($ename)){
+             $(this).focus();
+             $(this).css('border','1px solid red');
+             $('#stage_ename_error').html("Invalid name");
+             $('#stage_ename_error').addClass('is-visible');
+             return false;
+           }
+           else {
+             $(this).css('border','NONE');
+             $('#stage_ename_error').html("");
+             $('#stage_ename_error').removeClass('is-visible');
+             return true;
+           }
+         });
+         $("#stage_editprice").focusout(function() {
+           var val_eprice= /^[0-9.]{1,30}$/
+             $eprice = $(this).val();
+             if(!val_eprice.test($eprice)){
+               $(this).focus();
+               $(this).css('border','1px solid red');
+               $('#stage_eprice_error').html("Invalid price");
+               $('#stage_eprice_error').addClass('is-visible');
+               return false;
+             }
+             else {
+               $(this).css('border','NONE');
+               $('#stage_eprice_error').html("");
+               $('#stage_eprice_error').removeClass('is-visible');
+               return true;
+             }
+           });
+           $("#stage_editdescription").focusout(function() {
+             var val_edescription= /^[^\*]{5,300}$/
+               $edescription = $(this).val();
+               if(!val_edescription.test($description)){
+                 $(this).focus();
+                 $(this).css('border','1px solid red');
+                 $('#stage_edescription_error').html("Invalid description");
+                 $('#stage_edescription_error').addClass('is-visible');
+                 return false;
+               }
+               else {
+                 $(this).css('border','NONE');
+                 $('#stage_edescription_error').html("");
+                 $('#stage_edescription_error').removeClass('is-visible');
+                 return true;
+               }
+             });
+
 })

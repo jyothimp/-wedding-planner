@@ -29,6 +29,21 @@
     margin-top: 0px;
     margin-bottom: 0px;
   }
+  #stage_edit_form{
+    padding: 10px;
+  }
+  #stage_edit_form input,textarea{
+    width: 100%;
+    margin-bottom: 16px !important;
+  }
+  #submit_editstage{
+    width: 223px !important;
+    background-color: blue;
+    color: white;
+  }
+  #stage_edit_form{
+    text-align: -webkit-center;
+  }
   .hall_button{
     display: inline-block;
     background-color: orange;
