@@ -271,7 +271,7 @@ if(isset($_POST['submit_stage'])) {
 														<a ><?php echo $row['stage_name'] ?><br> </a>
 														<input type="hidden" name="item_id" value="<?php echo $row['stage_id'] ?>"
 														<left><input type="submit"  class="stage_button" name="button_edit" id="button" value="Edit"></left>
-														<right><input type="submit" class="stage_button"  name="button_edit" id="button" value="Delete"></right>
+														<right><input type="submit" class="stage_button"  name="button_delete" id="button" value="Delete"></right>
 													</div>
 												</div>
 											</form>

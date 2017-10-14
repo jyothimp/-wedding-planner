@@ -436,11 +436,15 @@ if(isset($_POST['submit_hall'])) {
 							    <h3>New Halls</h3>
 
 							      <hr>
-							    <form action="" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true">
+							    <form action="" method="post" id="hall_add_form" enctype="multipart/form-data" onsubmit="return true">
 										<input type="text" name="hall_name" id="hall_name"  placeholder="Name">
+										<span class="pop-error-message" id="hall_name_error"></span>
 										<input type="file" name="hall_image" id="hall_image" placeholder="Imagefile">
+										<span class="pop-error-message" id="hall_image_error"></span>
 										<input type="number" name="hall_price" id="hall_price" placeholder="Price">
+										<span class="pop-error-message" id="hall_price_error"></span>
 										<textarea name="hall_description" rows="3" id="hall_description" placeholder="Description"></textarea>
+										<span class="pop-error-message" id="hall_description_error"></span>
 										<input type="submit" name="submit_hall" id="submit_hall" Value="Submit">
 
 							  </form>

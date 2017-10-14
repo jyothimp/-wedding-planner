@@ -2,6 +2,11 @@
 include_once 'db_connect.php';
 //include_once 'check_logout.php';
 $item_id=0;
+if(isset($_POST['button_delete'])){
+  $item_id=$_POST['item_id'];
+  mysqli_query($con,"UPDATE wp_stage SET stage_status=0 WHERE stage_id=$item_id");
+  header('location:./stage.php');
+}
 if(!(isset($_POST['item_id']) || isset($_POST['stage_edit_submit']))){
   header('location:./');
 }
@@ -76,6 +81,7 @@ if(isset($_POST['stage_edit_submit'])){
 
   <!-- FONTS -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+  <link rel="stylesheet" href="css/login_css.css">
 
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -286,7 +292,7 @@ if(isset($_POST['stage_edit_submit'])){
               $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
-                <form action="" method="post" id="stage_edit_form" enctype="multipart/form-data" onsubmit="return true" >
+                <form action="" method="post" id="stage_edit_form" class="form-pop" enctype="multipart/form-data" onsubmit="return">
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
                       <img src="images/stage/<?php echo $row['stage_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
