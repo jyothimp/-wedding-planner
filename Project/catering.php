@@ -19,15 +19,15 @@ if(isset($_POST['submit_food'])) {
 	$imagePath = "./images/food/";
 
 	if(is_uploaded_file($imagetemp)) {
-			if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
-					echo "Sussecfully uploaded your image.";
-			}
-			else {
-					echo "Failed to move your image.";
-			}
+		if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
+			echo "Sussecfully uploaded your image.";
+		}
+		else {
+			echo "Failed to move your image.";
+		}
 	}
 	else {
-			echo "Failed to upload your image.";
+		echo "Failed to upload your image.";
 	}
 	$food_name= $_POST['food_name'];
 	$food_description = $_POST['food_description'];
@@ -247,26 +247,31 @@ if(isset($_POST['submit_food'])) {
 								<h2> Wedding Catering</h2>
 
 								<p> wedding catering is one of the importent thing. Images below show a few of the food items done by us for our customers.</p>
-
 								<div class="tab">
-									<button class="tablinks" onclick="openFood(event, 'Vegetarian')">Vegetarian</button>
-									<button class="tablinks" onclick="openFood(event, 'Non-Vegetarian')">Non-Vegetarian</button>
-									<button class="tablinks" onclick="openFood(event, 'Snacks')">Snacks</button>
+									<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Vegitarian</button>
+									<button class="tablinks" onclick="openCity(event, 'Paris')">Non-Vegitarian</button>
+									<button class="tablinks" onclick="openCity(event, 'Tokyo')">Snacks</button>
 								</div>
 
-								<div id="Vegetarian" class="tabcontent">
-									<h3>Vegetarian</h3>
-									<p>London is the capital city of England.</p>
+								<div id="London" class="tabcontent">
+									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
+									<p>
+											<!-- //veg -->
+									</p>
 								</div>
 
-								<div id="Non-Vegetarian" class="tabcontent">
-									<h3>Non-Vegetarian</h3>
-									<p>Paris is the capital of France.</p>
+								<div id="Paris" class="tabcontent">
+									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
+									<p>
+											<!-- non-veg -->
+									</p>
 								</div>
 
-								<div id="Snacks" class="tabcontent">
-									<h3>Snacks</h3>
-									<p>Tokyo is the capital of Japan.</p>
+								<div id="Tokyo" class="tabcontent">
+									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
+									<p>
+										<!-- snacks -->
+									</p>
 								</div>
 
 							</div><!-- col -->
@@ -508,7 +513,24 @@ if(isset($_POST['submit_food'])) {
 					<!-- MENU -->
 					<script src="assets/js/menu/hoverIntent.js"></script>
 					<script src="assets/js/menu/superfish.js"></script>
+					<script>
+					function openCity(evt, cityName) {
+						var i, tabcontent, tablinks;
+						tabcontent = document.getElementsByClassName("tabcontent");
+						for (i = 0; i < tabcontent.length; i++) {
+							tabcontent[i].style.display = "none";
+						}
+						tablinks = document.getElementsByClassName("tablinks");
+						for (i = 0; i < tablinks.length; i++) {
+							tablinks[i].className = tablinks[i].className.replace(" active", "");
+						}
+						document.getElementById(cityName).style.display = "block";
+						evt.currentTarget.className += " active";
+					}
 
+					// Get the element with id="defaultOpen" and click on it
+					document.getElementById("defaultOpen").click();
+					</script>
 					<!-- FANCYBOX -->
 					<script src="assets/js/fancybox/jquery.fancybox.pack.js"></script>
 
