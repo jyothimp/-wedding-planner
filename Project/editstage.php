@@ -224,7 +224,7 @@ if(isset($_POST['stage_edit_submit'])){
                 </li>
 
                 <li>
-                  <a href="contact.php">Contact</a>
+                  <a href="contact-us.php">Contact</a>
                 </li>
                 <li>
                   <a href="logout.php">Logout</a>

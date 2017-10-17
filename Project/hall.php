@@ -63,6 +63,7 @@ if(isset($_POST['submit_hall'])) {
 	<!-- BOOTSTRAP CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/login_css.css">
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
 
@@ -191,9 +192,64 @@ if(isset($_POST['submit_hall'])) {
 									</div><!-- megamenu-container -->
 
 								</li>
+								<li class="megamenu ">
+
+									<div class="dropdown">
+										<button class="dropbtn">ITEMS</button>
+										<style>
+										.dropbtn {
+											background-color:white;
+											color: orange;
+											padding: 9px;
+											font-size: 14px;
+											border: none;
+											cursor: pointer;
+										}
+
+										.dropdown {
+											position: relative;
+											display: inline-block;
+										}
+
+										.dropdown-content {
+											display: none;
+											position: absolute;
+											background-color: #f9f9f9;
+											min-width: 160px;
+											box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+											z-index: 1;
+										}
+
+										.dropdown-content a {
+											color: black;
+											padding: 12px 16px;
+											text-decoration: none;
+											display: block;
+										}
+
+										.dropdown-content a:hover {background-color: #f1f1f1}
+
+										.dropdown:hover .dropdown-content {
+											display: block;
+										}
+
+										.dropdown:hover .dropbtn {
+											background-color: white;
+										}
+										</style>
+									</head>
+									<body>
+
+
+										<div class="dropdown-content">
+											<a href="stage.php">Stages</a>
+											<a href="hall.php">Hall</a>
+											<a href="catering.php">Food</a>
+										</div>
+									</div>
 
 								<li>
-									<a href="contact.php">Contact</a>
+									<a href="contact-us.php">Contact</a>
 								</li>
 								<li>
 									<a href="logout.php">Logout</a>
@@ -239,13 +295,13 @@ if(isset($_POST['submit_hall'])) {
 						</div><!-- container -->
 
 						<div class="container">
-								<input type="submit"  class="hall_button" name="button" id="hall_add_button" style="color:black;float:right" value="Add New Hall "
+								<input type="submit"  class="hall_button" name="button" id="hall_add_button" style="color:black;float:right" value="Add New Hall"
 							<div class="row">
 								<div class="col-sm-12">
 
-									<h2>Design and Decor - Wedding Hall</h2>
+									<h2>Design and Decor - Wedding Halls</h2>
 
-									<p>Each wedding hall is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding hall decoration will be customized. Images below show a few of the hall decoration done by us for our customers.</p>
+									<p>Each wedding hall decoration is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding hall decoration will be customized. Images below show a few of the hall done by us for our customers.</p>
 								</div><!-- col -->
 							</div><!-- row -->
 						</div><!-- container -->
@@ -269,8 +325,8 @@ if(isset($_POST['submit_hall'])) {
 
 														<a ><?php echo $row['hall_name'] ?><br> </a>
 														<input type="hidden" name="item_id" value="<?php echo $row['hall_id'] ?>"
-														<left><input type="submit"  class="hall_button" name="button" id="button" value="Edit"></left>
-														<right><input type="submit" class="hall_button"  name="button" id="button" value="Delete"></right>
+														<left><input type="submit"  class="hall_button" name="button_edit" id="button" value="Edit"></left>
+														<right><input type="submit" class="hall_button"  name="button_delete" id="button" value="Delete"></right>
 													</div>
 												</div>
 											</form>
@@ -433,19 +489,19 @@ if(isset($_POST['submit_hall'])) {
 							</div>
 							<div class="cd-popup" id="hall_add_popup" role="alert">
 							  <div class="cd-popup-container">
-							    <h3>New Halls</h3>
+							    <h3>New Hall</h3>
 
 							      <hr>
-							    <form action="" method="post" id="hall_add_form" enctype="multipart/form-data" onsubmit="return true">
+							    <form action="" class="form-pop" method="post" id="hall_add_form" enctype="multipart/form-data" onsubmit="return">
 										<input type="text" name="hall_name" id="hall_name"  placeholder="Name">
-										<span class="pop-error-message" id="hall_name_error"></span>
-										<input type="file" name="hall_image" id="hall_image" placeholder="Imagefile">
-										<span class="pop-error-message" id="hall_image_error"></span>
+										<span class="pop-error-message" id="hall_name_error">Error message here!</span>
+											<input type="file" name="hall_image" id="hall_image" placeholder="Imagefile">
+											<span class="pop-error-message" id="hall_image_error">Error message here!</span>
 										<input type="number" name="hall_price" id="hall_price" placeholder="Price">
-										<span class="pop-error-message" id="hall_price_error"></span>
+										<span class="pop-error-message" id="hall_price_error">Error message here!</span>
 										<textarea name="hall_description" rows="3" id="hall_description" placeholder="Description"></textarea>
-										<span class="pop-error-message" id="hall_description_error"></span>
-										<input type="submit" name="submit_hall" id="submit_hall" Value="Submit">
+										<span class="pop-error-message" id="hall_description_error">Error message here!</span>
+											<input type="submit" name="submit_hall" id="submit_hall" Value="Submit">
 
 							  </form>
 								<a href="#0" class="cd-popup-close img-replace">Close</a>
@@ -482,6 +538,7 @@ if(isset($_POST['submit_hall'])) {
 						<!-- BOOTSTRAP JS -->
 						<script src="assets/js/bootstrap.min.js"></script>
 						<script src="js/popup.js"></script>
+						<script src="js/validation.js"></script>
 
 						<!-- VIEWPORT -->
 						<script src="assets/js/viewport/jquery.viewport.js"></script>

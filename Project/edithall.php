@@ -2,6 +2,11 @@
 include_once 'db_connect.php';
 //include_once 'check_logout.php';
 $item_id=0;
+if(isset($_POST['button_delete'])){
+  $item_id=$_POST['item_id'];
+  mysqli_query($con,"UPDATE wp_hall SET hall_status=0 WHERE hall_id=$item_id");
+  header('location:./hall.php');
+}
 if(!(isset($_POST['item_id']) || isset($_POST['hall_edit_submit']))){
   header('location:./');
 }
@@ -53,6 +58,7 @@ if(isset($_POST['hall_edit_submit'])){
   <meta name="keywords" content="Destination Weddings in Kerala, Destination Weddings in Kochi, Kochi Wedding Planners, Wedding Planners in Kochi, Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Wedding Planners Kochi, Wedding Planners Ernakulam, Wedding Planners Kerala ">
   <meta name="description" content="Scenario Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : scenariowedding@gmail.com, +91 99464 90001">
   <meta name="author" content="Innovosome">
+
   <title>Wedding Planner in Kerala | Event Management Kerala | Destination Weddings in Kerala | Kochi Wedding Planners</title>
 
   <!-- FAVICON AND APPLE TOUCH -->
@@ -75,6 +81,7 @@ if(isset($_POST['hall_edit_submit'])){
 
   <!-- FONTS -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+  <link rel="stylesheet" href="css/login_css.css">
 
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -122,7 +129,7 @@ if(isset($_POST['hall_edit_submit'])){
         <div class="row">
 
           <div class="col-lg-6"></div>
-          <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
+          <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a></div>
           <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
         </div>
       </div>
@@ -172,19 +179,8 @@ if(isset($_POST['hall_edit_submit'])){
 
                         <li><a href="design-stage.php">Stage Decoration</a></li>
                         <li><a href="design-decor.php">Hall Decoration</a></li>
-                        <li><a href="light.php">Light System</a></li>
-                        <li><a href="cake.php">Designer Cakes</a></li>
                       </ul>
 
-                    </div><!-- section -->
-
-                    <div class="section">
-
-                      <h5>Management</h5>
-
-                      <ul>
-                        <li><a href="soundsystem.php">Sound System</a></li>
-                      </ul>
                     </div><!-- section -->
 
                     <div class="section">
@@ -198,6 +194,7 @@ if(isset($_POST['hall_edit_submit'])){
 
                       </ul>
                     </div>
+
                     <div class="section">
 
                       <h5>Media&Entertainment</h5>
@@ -216,7 +213,7 @@ if(isset($_POST['hall_edit_submit'])){
                 </li>
 
                 <li>
-                  <a href="contact.php">Contact</a>
+                  <a href="contact-us.php">Contact</a>
                 </li>
                 <li>
                   <a href="logout.php">Logout</a>
@@ -258,7 +255,7 @@ if(isset($_POST['hall_edit_submit'])){
         <div class="row">
           <div class="col-sm-6">
 
-            <h4>Edit Items</h4>
+            <h4>Edit Hall Items</h4>
 
           </div><!-- col -->
           <div class="col-sm-6">
@@ -284,19 +281,23 @@ if(isset($_POST['hall_edit_submit'])){
               $query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE `hall_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
-                <form action="" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true" >
+                <form action="" method="post" id="hall_edit_form" class="form-pop" enctype="multipart/form-data" onsubmit="return">
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
                       <img src="images/hall/<?php echo $row['hall_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
                     </div>
                     <div class="col-lg-6">
-                      <input type="text" name="hall_name" id="hall_name" value="<?php echo $row['hall_name'] ?>"  placeholder="Name">
-                      <textarea name="hall_description" rows="3" id="hall_description" placeholder="Description"><?php echo $row['hall_description'] ?></textarea>
-                      <input type="number" name="hall_price" id="hall_price" value="<?php echo $row['hall_price'] ?>" placeholder="Price">
-                      <input type="file" name="hall_image" id="hall_image" placeholder="Imagefile">
+                      <input type="text" name="hall_name" id="hall_editname" value="<?php echo $row['hall_name'] ?>"  placeholder="Name">
+                      <span class="pop-error-message" id="hall_ename_error"></span>
+                      <textarea name="hall_description" rows="3" id="hall_editdescription" placeholder="Description"><?php echo $row['hall_description'] ?></textarea>
+                      <span class="pop-error-message" id="hall_edescription_error"></span>
+                      <input type="number" name="hall_price" id="hall_editprice" value="<?php echo $row['hall_price'] ?>" placeholder="Price">
+                      <span class="pop-error-message" id="hall_eprice_error"></span>
+                      <input type="file" name="hall_image" id="hall_editimage" placeholder="Imagefile">
+                      <span class="pop-error-message" id="hall_eimage_error"></span>
                       <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
                       <input type="hidden" name="temp_pic" value="<?php echo $row['hall_image'] ?>">
-                      <input type="submit" name="hall_edit_submit" id="submit_hall" Value="Submit">
+                      <input type="submit" name="hall_edit_submit" id="submit_edithall" Value="Submit">
                     </div>
                   </div>
                 </form>
@@ -404,7 +405,7 @@ if(isset($_POST['hall_edit_submit'])){
               </li>
               <li>
                 <span>E-mail</span>
-                <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
+                <a href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a>
               </li>
               <li>
                 <a href="faq.php"> <span>FAQ</span></a>
@@ -463,6 +464,8 @@ if(isset($_POST['hall_edit_submit'])){
 
 <!-- jQUERY -->
 <script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="js/validation.js"></script>
+
 
 <!-- BOOTSTRAP JS -->
 <script src="assets/js/bootstrap.min.js"></script>

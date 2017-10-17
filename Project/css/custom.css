@@ -48,20 +48,70 @@
     display: inline-block;
     background-color: orange;
   }
+  #hall_add_form{
+    padding: 10px;
+  }
+  #hall_add_form input,textarea{
+    width: 100%;
+    margin-bottom: 16px !important;
+  }
   #submit_hall{
     width: 223px !important;
     background-color: blue;
     color: white;
+  }
+  #hall_add_form{
+    text-align: -webkit-center;
+  }
+  #hall_edit_form{
+    padding: 10px;
+  }
+  #hall_edit_form input,textarea{
+    width: 100%;
+    margin-bottom: 16px !important;
+  }
+  #submit_edithall{
+    width: 223px !important;
+    background-color: blue;
+    color: white;
+  }
+  #hall_edit_form{
+    text-align: -webkit-center;
   }
   .food_button{
     display: inline-block;
     background-color: orange;
     margin-bottom: inherit   10px;
   }
+  #food_add_form{
+    padding: 10px;
+  }
+  #food_add_form input,textarea{
+    width: 100%;
+    margin-bottom: 16px !important;
+  }
   #submit_food{
     width: 223px !important;
     background-color: blue;
     color: white;
+  }
+  #food_add_form{
+    text-align: -webkit-center;
+  }
+  #food_edit_form{
+    padding: 10px;
+  }
+  #food_edit_form input,textarea{
+    width: 100%;
+    margin-bottom: 16px !important;
+  }
+  #submit_editfood{
+    width: 223px !important;
+    background-color: blue;
+    color: white;
+  }
+  #food_edit_form{
+    text-align: -webkit-center;
   }
   /* Style the tab */
   div.tab {
@@ -98,5 +148,7 @@
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
+    overflow: auto;
+    margin-bottom: 25px;
     border-top: none;
   }

@@ -84,7 +84,8 @@
           <div class="col-sm-2">
 
             <!-- LOGO -->
-            <a id="logo" href="index.php">
+            <a id="logo" href="
+						">
               <img src="images/icons/logo1.png" alt="Destination wedding in Kerala" width="165">
             </a>
 
