@@ -63,6 +63,7 @@ if(isset($_POST['submit_food'])) {
 	<!-- BOOTSTRAP CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/login_css.css">
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
 
@@ -92,7 +93,6 @@ if(isset($_POST['submit_food'])) {
 
 	<!-- STYLE SWITCHER -->
 	<link rel="stylesheet" href="assets/js/style-switcher/style-switcher.css">
-	<link rel="stylesheet" href="js/tab.css">
 
 	<!-- ALTERNATIVE STYLES -->
 	<link rel="stylesheet" href="#" data-style="styles">
@@ -192,9 +192,64 @@ if(isset($_POST['submit_food'])) {
 									</div><!-- megamenu-container -->
 
 								</li>
+								<li class="megamenu ">
+
+									<div class="dropdown">
+										<button class="dropbtn">ITEMS</button>
+										<style>
+										.dropbtn {
+											background-color:white;
+											color: orange;
+											padding: 9px;
+											font-size: 14px;
+											border: none;
+											cursor: pointer;
+										}
+
+										.dropdown {
+											position: relative;
+											display: inline-block;
+										}
+
+										.dropdown-content {
+											display: none;
+											position: absolute;
+											background-color: #f9f9f9;
+											min-width: 160px;
+											box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+											z-index: 1;
+										}
+
+										.dropdown-content a {
+											color: black;
+											padding: 12px 16px;
+											text-decoration: none;
+											display: block;
+										}
+
+										.dropdown-content a:hover {background-color: #f1f1f1}
+
+										.dropdown:hover .dropdown-content {
+											display: block;
+										}
+
+										.dropdown:hover .dropbtn {
+											background-color: white;
+										}
+										</style>
+									</head>
+									<body>
+
+
+										<div class="dropdown-content">
+											<a href="stage.php">Stages</a>
+											<a href="hall.php">Hall</a>
+											<a href="catering.php">Food</a>
+										</div>
+									</div>
 
 								<li>
-									<a href="contact.php">Contact</a>
+									<a href="contact-us.php">Contact</a>
 								</li>
 								<li>
 									<a href="logout.php">Logout</a>
@@ -248,69 +303,101 @@ if(isset($_POST['submit_food'])) {
 
 								<p> wedding catering is one of the importent thing. Images below show a few of the food items done by us for our customers.</p>
 								<div class="tab">
-									<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Vegitarian</button>
-									<button class="tablinks" onclick="openCity(event, 'Paris')">Non-Vegitarian</button>
+									<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Vegetarian</button>
+									<button class="tablinks" onclick="openCity(event, 'Paris')">Non-Vegetarian</button>
 									<button class="tablinks" onclick="openCity(event, 'Tokyo')">Snacks</button>
 								</div>
 
 								<div id="London" class="tabcontent">
 									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 									<p>
-											<!-- //veg -->
+										<?php
+										$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=1")or die(mysqli_error($con));
+										while ($row=mysqli_fetch_array($query)) {
+											?>
+											<div class="col-sm-4">
+												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+													<form action="editcatering.php" method="post">
+														<div class="about-me-thumbnail">
+															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+															<div class="social-media">
+																<a ><?php echo $row['food_name'] ?><br> </a>
+																<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
+																<left><input type="submit"  class="food_button" name="button_edit" id="button" value="Edit"></left>
+																<right><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<?php
+										}
+										?>
 									</p>
 								</div>
 
 								<div id="Paris" class="tabcontent">
 									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 									<p>
-											<!-- non-veg -->
+										<?php
+										$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=2")or die(mysqli_error($con));
+										while ($row=mysqli_fetch_array($query)) {
+											?>
+											<div class="col-sm-4">
+												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+													<form action="editcatering.php" method="post">
+														<div class="about-me-thumbnail">
+															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+															<div class="social-media">
+																<a ><?php echo $row['food_name'] ?><br> </a>
+																<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
+																<left><input type="submit"  class="food_button" name="button_edit" id="button" value="Edit"></left>
+																<right><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<?php
+										}
+										?>
 									</p>
 								</div>
 
 								<div id="Tokyo" class="tabcontent">
 									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 									<p>
-										<!-- snacks -->
+										<?php
+										$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=3")or die(mysqli_error($con));
+										while ($row=mysqli_fetch_array($query)) {
+											?>
+											<div class="col-sm-4">
+												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+													<form action="editcatering.php" method="post">
+														<div class="about-me-thumbnail">
+															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+															<div class="social-media">
+																<a ><?php echo $row['food_name'] ?><br> </a>
+																<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
+																<left><input type="submit"  class="food_button" name="button_edit" id="button" value="Edit"></left>
+																<right><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<?php
+										}
+										?>
 									</p>
 								</div>
 
 							</div><!-- col -->
 						</div><!-- row -->
 					</div><!-- container -->
-
-					<div class="container">
-						<div class="row">
-
-							<?php
-							$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1");
-							while ($row=mysqli_fetch_array($query)) {
-								?>
-								<div class="col-sm-4">
-
-									<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-										<form action="editcatering.php" method="post">
-											<div class="about-me-thumbnail">
-
-												<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
-
-												<div class="social-media">
-
-													<a ><?php echo $row['food_name'] ?><br> </a>
-													<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
-													<left><input type="submit"  class="food_button" name="button_edit" id="button" value="Edit"></left>
-													<right><input type="submit" class="food_button"  name="button_edit" id="button" value="Delete"></right>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-
-								<?php
-							}
-							?>
-							<!-- col -->
-						</div><!-- row -->
-					</div>
 					<!-- FOOTER -->
 					<footer>
 
@@ -464,7 +551,7 @@ if(isset($_POST['submit_food'])) {
 								<h3>New Food Items</h3>
 
 								<hr>
-								<form action="editcatering.php" method="post" id="pass_change_form" enctype="multipart/form-data" onsubmit="return true">
+								<form action="editcatering.php" method="post" id="food_add_form" enctype="multipart/form-data" onsubmit="return ">
 									<input type="text" name="food_name" id="food_name"  placeholder="Name">
 									<input type="file" name="food_image" id="food_image" placeholder="Imagefile">
 									<input type="number" name="food_price" id="food_price" placeholder="Price">

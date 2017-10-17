@@ -37,4 +37,22 @@ $(document).ready(function(){
 			$('#hall_add_popup').removeClass('is-visible');
 		}
 	});
+	$('#food_add_button').on('click', function(event){
+		event.preventDefault();
+		$('#food_add_popup').addClass('is-visible');
+	});
+
+	//close popup-profile-pic
+	$('#food_add_popup').on('click', function(event){
+		if( $(event.target).is('.cd-popup-close') || $(event.target).is('#food_add_popup') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+		}
+	});
+	//close popup when clicking the esc keyboard button-profile-pic
+	$(document).keyup(function(event){
+		if(event.which=='27'){
+			$('#food_add_popup').removeClass('is-visible');
+		}
+	});
 });
