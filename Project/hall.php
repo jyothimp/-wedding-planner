@@ -47,7 +47,7 @@ if(isset($_POST['submit_hall'])) {
 	<meta name="keywords" content="Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Wedding Planners Kochi, Wedding Planners Ernakulam, Wedding Planners Kerala">
 	<meta name="description" content="Scenario Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : scenariowedding@gmail.com, +91 99464 90001">
 	<meta name="author" content="Innovosome">
-
+	s
 	<title>Event Management Kochi | Event Management Ernakulam | Event Management Kerala</title>
 
 	<!-- FAVICON AND APPLE TOUCH -->

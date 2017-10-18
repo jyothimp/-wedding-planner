@@ -48,6 +48,7 @@ if(isset($_POST['submit_stage'])) {
 	<meta name="description" content="Scenario Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : scenariowedding@gmail.com, +91 99464 90001">
 	<meta name="author" content="Innovosome">
 
+
 	<title>Event Management Kochi | Event Management Ernakulam | Event Management Kerala</title>
 
 	<!-- FAVICON AND APPLE TOUCH -->
@@ -506,6 +507,7 @@ if(isset($_POST['submit_stage'])) {
 											<input type="submit" name="submit_stage" id="submit_stage" Value="Submit">
 
 							  </form>
+
 								<a href="#0" class="cd-popup-close img-replace">Close</a>
 							</div> <!-- cd-popup -->
 							</div>

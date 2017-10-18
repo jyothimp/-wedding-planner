@@ -47,7 +47,6 @@ if(isset($_POST['submit_food'])) {
 	<meta name="keywords" content="Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Wedding Planners Kochi, Wedding Planners Ernakulam, Wedding Planners Kerala">
 	<meta name="description" content="Scenario Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : scenariowedding@gmail.com, +91 99464 90001">
 	<meta name="author" content="Innovosome">
-
 	<title>Event Management Kochi | Event Management Ernakulam | Event Management Kerala</title>
 
 	<!-- FAVICON AND APPLE TOUCH -->
@@ -553,9 +552,13 @@ if(isset($_POST['submit_food'])) {
 								<hr>
 								<form action="editcatering.php" method="post" id="food_add_form" enctype="multipart/form-data" onsubmit="return ">
 									<input type="text" name="food_name" id="food_name"  placeholder="Name">
+									<span class="pop-error-message" id="food_name_error"></span>
 									<input type="file" name="food_image" id="food_image" placeholder="Imagefile">
+									<span class="pop-error-message" id="food_image_error"></span>
 									<input type="number" name="food_price" id="food_price" placeholder="Price">
+									<span class="pop-error-message" id="food_price_error"></span>
 									<textarea name="food_description" rows="3" id="food_description" placeholder="Description"></textarea>
+									<span class="pop-error-message" id="food_description_error"></span>
 									<input type="submit" name="submit_food" id="submit_food" Value="submit">
 
 								</form>
@@ -593,6 +596,7 @@ if(isset($_POST['submit_food'])) {
 					<!-- BOOTSTRAP JS -->
 					<script src="assets/js/bootstrap.min.js"></script>
 					<script src="js/popup.js"></script>
+					<script src="js/validation.js"></script>
 
 					<!-- VIEWPORT -->
 					<script src="assets/js/viewport/jquery.viewport.js"></script>
