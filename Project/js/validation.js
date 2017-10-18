@@ -49,7 +49,7 @@ $(document).ready(function() {
     if(!val_fullname.test($fullname)){
       $(this).focus();
       $(this).css('border','1px solid red');
-      $('#name_error').html("Invalid Username");
+      $('#name_error').html("Invalid name");
       $('#name_error').addClass('is-visible');
       return false;
     }

@@ -556,7 +556,7 @@ if(isset($_POST['submit_food'])) {
 									<input type="file" name="food_image" id="food_image" placeholder="Imagefile">
 									<input type="number" name="food_price" id="food_price" placeholder="Price">
 									<textarea name="food_description" rows="3" id="food_description" placeholder="Description"></textarea>
-									<input type="submit" name="submit_food" id="submit_food" Value="Submit">
+									<input type="submit" name="submit_food" id="submit_food" Value="submit">
 
 								</form>
 								<a href="#0" class="cd-popup-close img-replace">Close</a>
