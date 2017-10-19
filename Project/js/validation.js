@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $("#signup_form").on("submit", function(){
-    var val_fullname= /^[A-Za-z.]{3,30}$/;
+    var val_fullname= /^[A-Za-z.\s]{3,30}$/;
     var val_username= /^[A-Za-z0-9_.]{3,30}$/;
     var val_phone= /^[0-9]{9,12}$/;
     var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
@@ -44,7 +44,7 @@ $(document).ready(function() {
     }
   });
   $("#signup-fullname").focusout(function() {
-    var val_fullname= /^[A-Za-z.]{3,30}$/;
+    var val_fullname= /^[A-Za-z.\s]{3,30}$/;
     $fullname = $(this).val();
     if(!val_fullname.test($fullname)){
       $(this).focus();
