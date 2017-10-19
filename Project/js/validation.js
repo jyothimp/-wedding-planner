@@ -576,13 +576,19 @@ $(document).ready(function() {
     var val_fname= /^[A-Za-z0-9_.]{3,30}$/;
     var val_fdescription= /^[^\*]{5,300}$/;
     var val_fprice= /^[0-9.]{1,30}$/;
+    var val_ftype= /^[0-9]{1,2}$/;
     var val_fimage=/\.(jpe?g|png|gif|bmp)$/i;
     $fname = $('#food_name').val();
     $fdescription = $('#food_description').val();
     $fprice= $('#food_price').val();
+    $ftype= $('#food_type').val();
     $fimage = $('#food_image').val();
     if(!val_fname.test($fname)){
       $("#food_name").focusout();
+      return false;
+    }
+    else if(!val_ftype.test($ftype)){
+      $("#food_type").focusout();
       return false;
     }
     else if(!val_fimage.test($fimage)){
@@ -650,6 +656,23 @@ $(document).ready(function() {
       return true;
     }
   });
+  $("#food_type").focusout(function() {
+    var val_ftype= /^[1-9]{1,2}$/;
+    $ftype = $(this).val();
+    if(!val_ftype.test($ftype)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#food_type_error').html("Invalid type");
+      $('#food_type_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#food_type_error').html("");
+      $('#food_type_error').removeClass('is-visible');
+      return true;
+    }
+  });
   $("#food_description").focusout(function() {
     var val_fdescription= /^[^\*]{5,300}$/;
     $fdescription = $(this).val();
@@ -671,7 +694,7 @@ $(document).ready(function() {
     var val_fename= /^[A-Za-z0-9_.]{3,30}$/;
     var val_fedescription= /^[^\*]{5,300}$/;
     var val_feprice= /^[0-9.]{1,30}$/;
-    var val_feimage=/\.(jpe?g|png|gif|bmp)$/i;
+    var val_fedescription=/\.(jpe?g|png|gif|bmp)$/i;
     $fename = $('#food_editname').val();
     $fedescription = $('#food_editdescription').val();
     $feprice= $('#food_editprice').val();

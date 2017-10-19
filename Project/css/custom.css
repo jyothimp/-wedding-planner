@@ -13,7 +13,7 @@
   #stage_add_form{
     padding: 10px;
   }
-  #stage_add_form input,textarea{
+  #stage_add_form input,textarea,select{
     width: 100%;
     margin-bottom: 16px !important;
   }
@@ -86,7 +86,7 @@
   #food_add_form{
     padding: 10px;
   }
-  #food_add_form input,textarea{
+  #food_add_form input,textarea,select{
     width: 100%;
     margin-bottom: 16px !important;
   }
@@ -101,7 +101,7 @@
   #food_edit_form{
     padding: 10px;
   }
-  #food_edit_form input,textarea{
+  #food_edit_form input,textarea,select{
     width: 100%;
     margin-bottom: 16px !important;
   }
