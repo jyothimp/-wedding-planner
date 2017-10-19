@@ -192,7 +192,7 @@
                 <h4>Design and Decor</h4>
 
               </div><!-- col -->
-            
+
             </div><!-- row -->
           </div><!-- ontainer -->
         </div><!-- page-header -->

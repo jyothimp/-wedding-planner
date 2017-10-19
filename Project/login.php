@@ -49,15 +49,15 @@ if(isset($_POST['create_account'])){
 
 if(isset($_POST['reset_password'])){
 
-	// $email=$_POST['reset_email'];
-	// $query2="select * from `wp_login` where login_username='$un' and login_password='$pwd'";
-	// $id_query=mysqli_query($con,$query2) or die(mysqli_error());
-	// while($row2=mysqli_fetch_array($id_query)){
-	// 	$id=$row2['login_id'];
-	// 	$query= "INSERT INTO `wp_registration` (login_id,registration_name,registration_address,registration_phone,registration_email) VALUES($id,'$flname','$add','$phn','$email')";
-	// 	$result = mysqli_query($con, $query) or die(mysqli_error());
-	// 	?> <script>alert("Success");</script><?php
-	// }
+	$email=$_POST['reset_email'];
+	$query2="select * from `wp_login` where login_username='$un' and login_password='$pwd'";
+	$id_query=mysqli_query($con,$query2) or die(mysqli_error());
+	while($row2=mysqli_fetch_array($id_query)){
+		$id=$row2['login_id'];
+		$query= "INSERT INTO `wp_registration` (login_id,registration_name,registration_address,registration_phone,registration_email) VALUES($id,'$flname','$add','$phn','$email')";
+		$result = mysqli_query($con, $query) or die(mysqli_error());
+		?> <script>alert("Success");</script><?php
+	}
 }
 ?>
 <div class="cd-user-modal" style="z-index: 300;"> <!-- this is the entire modal form, including the background -->
