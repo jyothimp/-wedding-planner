@@ -6,7 +6,7 @@ include_once 'check_logout.php';
 <!doctype html>
 <html>
 <head>
-	
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
@@ -208,14 +208,7 @@ include_once 'check_logout.php';
 
 
 								</div><!-- col -->
-								<div class="col-sm-6">
-
-									<ol class="breadcrumb">
-										<li><a href="index.php">Home</a></li>
-										<li class="active">Services</li>
-									</ol>
-
-								</div><!-- col -->
+								
 							</div><!-- row -->
 						</div><!-- ontainer -->
 					</div><!-- page-header -->

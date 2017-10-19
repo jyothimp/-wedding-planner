@@ -179,20 +179,12 @@ if(isset($_POST['stage_edit_submit'])){
 
                         <li><a href="design-stage.php">Stage Decoration</a></li>
                         <li><a href="design-decor.php">Hall Decoration</a></li>
-                        <li><a href="light.php">Light System</a></li>
-                        <li><a href="cake.php">Designer Cakes</a></li>
+
                       </ul>
 
                     </div><!-- section -->
 
-                    <div class="section">
 
-                      <h5>Management</h5>
-
-                      <ul>
-                        <li><a href="soundsystem.php">Sound System</a></li>
-                      </ul>
-                    </div><!-- section -->
 
                     <div class="section">
 
@@ -220,6 +212,61 @@ if(isset($_POST['stage_edit_submit'])){
                     </div><!-- section -->
 
                   </div><!-- megamenu-container -->
+                  <li class="megamenu ">
+
+  									<div class="dropdown">
+  										<button class="dropbtn">ITEMS</button>
+  										<style>
+  										.dropbtn {
+  											background-color:white;
+  											color: orange;
+  											padding: 9px;
+  											font-size: 14px;
+  											border: none;
+  											cursor: pointer;
+  										}
+
+  										.dropdown {
+  											position: relative;
+  											display: inline-block;
+  										}
+
+  										.dropdown-content {
+  											display: none;
+  											position: absolute;
+  											background-color: #f9f9f9;
+  											min-width: 160px;
+  											box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  											z-index: 1;
+  										}
+
+  										.dropdown-content a {
+  											color: black;
+  											padding: 12px 16px;
+  											text-decoration: none;
+  											display: block;
+  										}
+
+  										.dropdown-content a:hover {background-color: #f1f1f1}
+
+  										.dropdown:hover .dropdown-content {
+  											display: block;
+  										}
+
+  										.dropdown:hover .dropbtn {
+  											background-color: white;
+  										}
+  										</style>
+  									</head>
+  									<body>
+
+
+  										<div class="dropdown-content">
+  											<a href="stage.php">Stages</a>
+  											<a href="hall.php">Hall</a>
+  											<a href="catering.php">Food</a>
+  										</div>
+  									</div>
 
                 </li>
 
@@ -269,14 +316,7 @@ if(isset($_POST['stage_edit_submit'])){
             <h4>Edit Items</h4>
 
           </div><!-- col -->
-          <div class="col-sm-6">
 
-            <ol class="breadcrumb">
-              <li><a href="index.php">Home</a></li>
-              <li class="active">FAQ</li>
-            </ol>
-
-          </div><!-- col -->
         </div><!-- row -->
       </div><!-- ontainer -->
     </div><!-- page-header -->

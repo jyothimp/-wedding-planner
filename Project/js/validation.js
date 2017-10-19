@@ -694,7 +694,7 @@ $(document).ready(function() {
     var val_fename= /^[A-Za-z0-9_.]{3,30}$/;
     var val_fedescription= /^[^\*]{5,300}$/;
     var val_feprice= /^[0-9.]{1,30}$/;
-    var val_fedescription=/\.(jpe?g|png|gif|bmp)$/i;
+    var val_feimage=/\.(jpe?g|png|gif|bmp)$/i;
     $fename = $('#food_editname').val();
     $fedescription = $('#food_editdescription').val();
     $feprice= $('#food_editprice').val();
@@ -719,14 +719,14 @@ $(document).ready(function() {
     var val = $(this).val();
     switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
       case 'gif': case 'jpg': case 'png':
-      $('#food_eimage_error').html("");
-      $('#food_eimage_error').removeClass('is-visible');
-      return true;
-      break;
+        $('#food_eimage_error').html("");
+        $('#food_eimage_error').removeClass('is-visible');
+        return true;
+        break;
       default:
-      $("#food_eimage_error").html("Invalid image");
-      $('#food_eimage_error').addClass('is-visible');
-      return false;
+        $("#food_eimage_error").html("Invalid image");
+        $('#food_eimage_error').addClass('is-visible');
+        return false;
       break;
     }
   });

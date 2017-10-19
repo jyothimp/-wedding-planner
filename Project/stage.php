@@ -23,11 +23,11 @@ if(isset($_POST['submit_stage'])) {
 					echo "Sussecfully uploaded your image.";
 			}
 			else {
-					echo "Failed to move your image.";
+					 echo "Failed to move your image.";
 			}
 	}
 	else {
-			echo "Failed to upload your image.";
+			 echo "Failed to upload your image.";
 	}
 	$stage_name= $_POST['stage_name'];
 	$stage_description = $_POST['stage_description'];
@@ -275,14 +275,7 @@ if(isset($_POST['submit_stage'])) {
 										<h4>Add Stages</h4>
 
 									</div><!-- col -->
-									<div class="col-sm-6">
 
-										<ol class="breadcrumb">
-											<li><a href="#">Home</a></li>
-											<li class="active">Services</li>
-										</ol>
-
-									</div><!-- col -->
 								</div><!-- row -->
 							</div><!-- ontainer -->
 						</div><!-- page-header -->

@@ -211,6 +211,61 @@ if(isset($_POST['hall_edit_submit'])){
                   </div><!-- megamenu-container -->
 
                 </li>
+                <li class="megamenu ">
+
+									<div class="dropdown">
+										<button class="dropbtn">ITEMS</button>
+										<style>
+										.dropbtn {
+											background-color:white;
+											color: orange;
+											padding: 9px;
+											font-size: 14px;
+											border: none;
+											cursor: pointer;
+										}
+
+										.dropdown {
+											position: relative;
+											display: inline-block;
+										}
+
+										.dropdown-content {
+											display: none;
+											position: absolute;
+											background-color: #f9f9f9;
+											min-width: 160px;
+											box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+											z-index: 1;
+										}
+
+										.dropdown-content a {
+											color: black;
+											padding: 12px 16px;
+											text-decoration: none;
+											display: block;
+										}
+
+										.dropdown-content a:hover {background-color: #f1f1f1}
+
+										.dropdown:hover .dropdown-content {
+											display: block;
+										}
+
+										.dropdown:hover .dropbtn {
+											background-color: white;
+										}
+										</style>
+									</head>
+									<body>
+
+
+										<div class="dropdown-content">
+											<a href="stage.php">Stages</a>
+											<a href="hall.php">Hall</a>
+											<a href="catering.php">Food</a>
+										</div>
+									</div>
 
                 <li>
                   <a href="contact-us.php">Contact</a>
@@ -258,14 +313,7 @@ if(isset($_POST['hall_edit_submit'])){
             <h4>Edit Hall Items</h4>
 
           </div><!-- col -->
-          <div class="col-sm-6">
 
-            <ol class="breadcrumb">
-              <li><a href="index.php">Home</a></li>
-              <li class="active">FAQ</li>
-            </ol>
-
-          </div><!-- col -->
         </div><!-- row -->
       </div><!-- ontainer -->
     </div><!-- page-header -->

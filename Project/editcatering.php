@@ -211,26 +211,80 @@ if(isset($_POST['food_edit_submit'])){
                   </div><!-- megamenu-container -->
 
                 </li>
+                <li class="megamenu ">
 
-                <li>
-                  <a href="contact-us.php">Contact</a>
-                </li>
-                <li>
-                  <a href="logout.php">Logout</a>
-                </nav>
+                  <div class="dropdown">
+                    <button class="dropbtn">ITEMS</button>
+                    <style>
+                    .dropbtn {
+                      background-color:white;
+                      color: orange;
+                      padding: 9px;
+                      font-size: 14px;
+                      border: none;
+                      cursor: pointer;
+                    }
 
-              </div><!-- col -->
-            </div><!-- row -->
-          </div><!-- container -->
+                    .dropdown {
+                      position: relative;
+                      display: inline-block;
+                    }
 
-        </header><!-- HEADER -->
+                    .dropdown-content {
+                      display: none;
+                      position: absolute;
+                      background-color: #f9f9f9;
+                      min-width: 160px;
+                      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                      z-index: 1;
+                    }
 
-      </li>
-    </ul>
+                    .dropdown-content a {
+                      color: black;
+                      padding: 12px 16px;
+                      text-decoration: none;
+                      display: block;
+                    }
 
-  </nav>
+                    .dropdown-content a:hover {background-color: #f1f1f1}
 
-</div><!-- col -->
+                    .dropdown:hover .dropdown-content {
+                      display: block;
+                    }
+
+                    .dropdown:hover .dropbtn {
+                      background-color: white;
+                    }
+                    </style>
+                  </head>
+                  <body>
+
+
+                    <div class="dropdown-content">
+                      <a href="stage.php">Stages</a>
+                      <a href="hall.php">Hall</a>
+                      <a href="catering.php">Food</a>
+                    </div>
+                  </div>
+                  <li>
+                    <a href="contact-us.php">Contact</a>
+                  </li>
+                  <li>
+                    <a href="logout.php">Logout</a>
+                  </nav>
+
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- container -->
+
+          </header><!-- HEADER -->
+
+        </li>
+      </ul>
+
+    </nav>
+
+  </div><!-- col -->
 </div><!-- row -->
 </div><!-- container -->
 
@@ -258,14 +312,7 @@ if(isset($_POST['food_edit_submit'])){
             <h4>Edit Food Items</h4>
 
           </div><!-- col -->
-          <div class="col-sm-6">
 
-            <ol class="breadcrumb">
-              <li><a href="index.php">Home</a></li>
-              <li class="active">FAQ</li>
-            </ol>
-
-          </div><!-- col -->
         </div><!-- row -->
       </div><!-- ontainer -->
     </div><!-- page-header -->

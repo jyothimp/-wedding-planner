@@ -195,14 +195,7 @@
                             <h4>About us</h4>
 
                         </div><!-- col -->
-                        <div class="col-sm-6">
-
-                            <ol class="breadcrumb">
-                                <li><a href="index.php">Home</a></li>
-                                <li class="active">About Us</li>
-                            </ol>
-
-                        </div><!-- col -->
+                        
                     </div><!-- row -->
                 </div><!-- ontainer -->
             </div><!-- page-header -->

@@ -192,7 +192,7 @@
                 <h4>Design and Decor</h4>
 
               </div><!-- col -->
-            
+              
             </div><!-- row -->
           </div><!-- ontainer -->
         </div><!-- page-header -->
@@ -211,11 +211,11 @@
           <div class="row">
             <div class="col-sm-12">
 
-              <h2>Design and Decor - Wedding Stages</h2>
+              <h2>Catering Service</h2>
 
-              <p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
+              <p>Each wedding catering is customized for different wedding and their tastes and opinions are incorporated in the catering. Based on budget and colour preferences, the catering service will be customized. Images below show a few of the items done by us for our customers.</p>
             </div><!-- col -->
-3          </div><!-- row -->
+         </div><!-- row -->
         </div><!-- container -->
 
 
@@ -223,7 +223,7 @@
           <div class="row">
 
 <?php
-    $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_status`=1");
+    $query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1");
     while ($row=mysqli_fetch_array($query)) {
       ?>
       <div class="col-sm-4">
@@ -232,11 +232,11 @@
        <form action="design-decor.php" method="post">
           <div class="about-me-thumbnail">
 
-            <img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
+            <img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 
             <div class="social-media">
 
-              <a ><?php echo $row['stage_name'] ?><br>  <a ><?php echo "₹ ".$row['stage_price'] ?></a></a>
+              <a ><?php echo $row['food_name'] ?><br>  <a ><?php echo "₹ ".$row['food_price'] ?></a></a>
 
 								<center><input type="submit"  name="button" id="button" value="Add to cart"></center>
             </div>

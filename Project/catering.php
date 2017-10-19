@@ -278,14 +278,7 @@ if(isset($_POST['submit_food'])) {
 										<h4>Add Food Items</h4>
 
 									</div><!-- col -->
-									<div class="col-sm-6">
 
-										<ol class="breadcrumb">
-											<li><a href="#">Home</a></li>
-											<li class="active">Services</li>
-										</ol>
-
-									</div><!-- col -->
 								</div><!-- row -->
 							</div><!-- ontainer -->
 						</div><!-- page-header -->
