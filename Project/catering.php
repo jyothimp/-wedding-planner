@@ -176,10 +176,9 @@ if(isset($_POST['submit_food'])) {
 											<h5>Catering Services</h5>
 
 											<ul>
-												<li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-												<li><a href="vegetarian.php">Vegetarian</a></li>
-												<li><a href="snacks.php">Snacks</a></li>
-
+												<li><a href="catservice.php">Nonvegetarian</a></li>
+												<li><a href="catservice.php">Vegetarian</a></li>
+												<li><a href="catservice.php">Snacks</a></li>
 											</ul>
 										</div>
 										<div class="section">

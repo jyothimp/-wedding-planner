@@ -8,6 +8,8 @@ if(isset($_POST['login_submit'])){
 	$query=mysqli_query($con,"select * from wp_login where login_username='$un' and (login_password='$pw' OR login_reset_password='$pw')  and login_status=1");
 	if(mysqli_num_rows($query)>0){
 		while ($row=mysqli_fetch_array($query)) {
+			$logid=$row['login_id'];
+			mysqli_query($con,"UPDATE wp_login SET login_reset_password=NULL WHERE login_id=$logid");
 			$_SESSION['user']=$row['login_id'];
 			$_SESSION['user_role']=$row['login_role'];
 			if($row['login_role']==1){
@@ -48,15 +50,37 @@ if(isset($_POST['create_account'])){
 }
 
 if(isset($_POST['reset_password'])){
-
 	$email=$_POST['reset_email'];
-	$query2="select * from `wp_login` where login_username='$un' and login_password='$pwd'";
-	$id_query=mysqli_query($con,$query2) or die(mysqli_error());
-	while($row2=mysqli_fetch_array($id_query)){
-		$id=$row2['login_id'];
-		$query= "INSERT INTO `wp_registration` (login_id,registration_name,registration_address,registration_phone,registration_email) VALUES($id,'$flname','$add','$phn','$email')";
+	$query=mysqli_query($con,"SELECT * FROM `wp_login`,`wp_registration` WHERE `wp_login`.login_id=`wp_registration`.login_id AND registration_email='$email' AND login_status=1") or die(mysqli_error());
+	while($row=mysqli_fetch_array($query)){
+		$id=$row['login_id'];
+		$name=$row['registration_name'];
+		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		$password = substr( str_shuffle( $chars ), 0, 8 );
+		$reset_password=SHA1($password);
+		$query= "UPDATE `wp_login` SET login_reset_password='$reset_password' WHERE login_id=$id";
 		$result = mysqli_query($con, $query) or die(mysqli_error());
-		?> <script>alert("Success");</script><?php
+		define("MAIL_FROM","info.angelweddings@gmail.com");
+		define("MAIL_USERNAME","info.angelweddings@gmail.com");
+		define("MAIL_PASSWORD","angel@85");
+		require_once "mail/class.phpmailer.php";
+		$mail->IsSMTP();                // Sets up a SMTP connection
+		$mail->SMTPAuth = true;         // Connection with the SMTP does require authorization
+		$mail->SMTPSecure = "ssl";      // Connect using a TLS connection
+		$mail->Host = "smtp.gmail.com";  //Gmail SMTP server address
+		$mail->Port = 465;  //Gmail SMTP port
+		//Set who the message is to be sent from
+		$mail->setFrom("info.angelweddings@gmail.com", "Angel-Weddings - Password");
+		//Set who the message is to be sent to
+		$mail->addAddress($email);
+		$mail->Subject = "Angel-Weddings - Password";
+		$mail->Body = "Hello $name, <br>&nbsp;&nbsp;&nbsp;&nbsp;You can now login with the password : <b>$password</b>. This password is valid  for one-time use.You should change your password immediately after this login.";
+		if ($mail->Send()) {
+			?> <script>alert("Your One-Time Password has been sent to your email");</script><?php
+		}
+		else {
+			?> <script>alert("Sorry, We can't send password now.!");</script><?php
+		}
 	}
 }
 ?>
