@@ -1,6 +1,6 @@
 <?php
 include_once 'db_connect.php';
-//include_once 'check_logout.php';
+include_once 'check_logout.php';
 $item_id=0;
 if(isset($_POST['button_delete'])){
   $item_id=$_POST['item_id'];

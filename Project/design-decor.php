@@ -1,6 +1,6 @@
 <?php
 include_once 'db_connect.php';
-//include_once 'check_logout.php';
+include_once 'check_logout.php';
 ?>
 <!doctype html>
 <html>
@@ -227,7 +227,7 @@ include_once 'db_connect.php';
                   <div class="col-sm-4">
 
                     <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-                      <form action="catering.php" method="post">
+                      <form action="addtocart.php" method="post">
                         <div class="about-me-thumbnail">
 
                           <img style="height:215px !important"src="images/hall/<?php echo $row['hall_image'] ?>" alt="best wedding planner in cochin">

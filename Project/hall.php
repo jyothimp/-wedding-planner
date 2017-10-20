@@ -1,6 +1,6 @@
 <?php
 include_once 'db_connect.php';
-//include_once 'check_logout.php';
+include_once 'check_logout.php';
 ?>
 <?php
 
@@ -272,7 +272,7 @@ if(isset($_POST['submit_hall'])) {
 										<h4>Add Halls</h4>
 
 									</div><!-- col -->
-									
+
 								</div><!-- row -->
 							</div><!-- ontainer -->
 						</div><!-- page-header -->

@@ -215,7 +215,7 @@
 
               <p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
             </div><!-- col -->
-3          </div><!-- row -->
+         </div><!-- row -->
         </div><!-- container -->
 
 
@@ -229,7 +229,7 @@
       <div class="col-sm-4">
 
         <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-       <form action="design-decor.php" method="post">
+       <form action="addtocart.php" method="post">
           <div class="about-me-thumbnail">
 
             <img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
