@@ -719,14 +719,14 @@ $(document).ready(function() {
     var val = $(this).val();
     switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
       case 'gif': case 'jpg': case 'png':
-        $('#food_eimage_error').html("");
-        $('#food_eimage_error').removeClass('is-visible');
-        return true;
-        break;
+      $('#food_eimage_error').html("");
+      $('#food_eimage_error').removeClass('is-visible');
+      return true;
+      break;
       default:
-        $("#food_eimage_error").html("Invalid image");
-        $('#food_eimage_error').addClass('is-visible');
-        return false;
+      $("#food_eimage_error").html("Invalid image");
+      $('#food_eimage_error').addClass('is-visible');
+      return false;
       break;
     }
   });
@@ -778,6 +778,34 @@ $(document).ready(function() {
       $(this).css('border','1px solid #cccccc');
       $('#food_edescription_error').html("");
       $('#food_edescription_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#reset_password-form").on("submit", function(){
+    var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    $email = $('#reset-email').val();
+    if(!val_email.test($email)){
+      $("#reset-email").focusout();
+      return false;
+    }
+    else {
+      return true;
+    }
+  });
+  $("#reset-email").focusout(function() {
+    var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    $email = $('#reset-email').val();
+    if(!val_email.test($email)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#reset_password_error').html("Invalid Email Id");
+      $('#reset_password_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#reset_password_error').html("");
+      $('#reset_password_error').removeClass('is-visible');
       return true;
     }
   });

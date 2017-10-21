@@ -5,7 +5,7 @@ include_once 'check_logout.php';
 <?php
 
 if(isset($_POST['submit_stage'])) {
-	$image = $_POST['stage_image'];
+		//$image = $_POST['stage_image'];
 	//Stores the filename as it was on the client computer.
 	$imagename = $_FILES['stage_image']['name'];
 	//Stores the filetype e.g image/jpeg
@@ -20,14 +20,14 @@ if(isset($_POST['submit_stage'])) {
 
 	if(is_uploaded_file($imagetemp)) {
 			if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
-					echo "Sussecfully uploaded your image.";
+					// echo "Sussecfully uploaded your image.";
 			}
 			else {
-					 echo "Failed to move your image.";
+					// echo "Failed to move your image.";
 			}
 	}
 	else {
-			 echo "Failed to upload your image.";
+			 // echo "Failed to upload your image.";
 	}
 	$stage_name= $_POST['stage_name'];
 	$stage_description = $_POST['stage_description'];

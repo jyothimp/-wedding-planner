@@ -29,14 +29,14 @@ if(isset($_POST['stage_edit_submit'])){
     $imagePath = "./images/stage/";
     if(is_uploaded_file($imagetemp)) {
       if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
-        echo "Sussecfully uploaded your image.";
+        // echo "Sussecfully uploaded your image.";
       }
       else {
-        echo "Failed to move your image.";
+        // echo "Failed to move your image.";
       }
     }
     else {
-      echo "Failed to upload your image.";
+      // echo "Failed to upload your image.";
     }
   }
   else{

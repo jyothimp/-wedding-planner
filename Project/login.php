@@ -51,37 +51,43 @@ if(isset($_POST['create_account'])){
 
 if(isset($_POST['reset_password'])){
 	$email=$_POST['reset_email'];
-	$query=mysqli_query($con,"SELECT * FROM `wp_login`,`wp_registration` WHERE `wp_login`.login_id=`wp_registration`.login_id AND registration_email='$email' AND login_status=1") or die(mysqli_error());
-	while($row=mysqli_fetch_array($query)){
-		$id=$row['login_id'];
-		$name=$row['registration_name'];
-		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-		$password = substr( str_shuffle( $chars ), 0, 8 );
-		$reset_password=SHA1($password);
-		$query= "UPDATE `wp_login` SET login_reset_password='$reset_password' WHERE login_id=$id";
-		$result = mysqli_query($con, $query) or die(mysqli_error());
-		define("MAIL_FROM","info.angelweddings@gmail.com");
-		define("MAIL_USERNAME","info.angelweddings@gmail.com");
-		define("MAIL_PASSWORD","angel@85");
-		require_once "mail/class.phpmailer.php";
-		$mail->IsSMTP();                // Sets up a SMTP connection
-		$mail->SMTPAuth = true;         // Connection with the SMTP does require authorization
-		$mail->SMTPSecure = "ssl";      // Connect using a TLS connection
-		$mail->Host = "smtp.gmail.com";  //Gmail SMTP server address
-		$mail->Port = 465;  //Gmail SMTP port
-		//Set who the message is to be sent from
-		$mail->setFrom("info.angelweddings@gmail.com", "Angel-Weddings - Password");
-		//Set who the message is to be sent to
-		$mail->addAddress($email);
-		$mail->Subject = "Angel-Weddings - Password";
-		$mail->Body = "Hello $name, <br>&nbsp;&nbsp;&nbsp;&nbsp;You can now login with the password : <b>$password</b>. This password is valid  for one-time use.You should change your password immediately after this login.";
-		if ($mail->Send()) {
-			?> <script>alert("Your One-Time Password has been sent to your email");</script><?php
-		}
-		else {
-			?> <script>alert("Sorry, We can't send password now.!");</script><?php
+	$query=mysqli_query($con,"SELECT * FROM `wp_login`,`wp_registration` WHERE `wp_login`.login_id=`wp_registration`.login_id AND registration_email='$email' AND login_status=1");
+	if(mysqli_num_rows($query)>0){
+		while($row=mysqli_fetch_array($query)){
+			$id=$row['login_id'];
+			$name=$row['registration_name'];
+			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			$password = substr( str_shuffle( $chars ), 0, 8 );
+			$reset_password=SHA1($password);
+			$query= "UPDATE `wp_login` SET login_reset_password='$reset_password' WHERE login_id=$id";
+			$result = mysqli_query($con, $query) or die(mysqli_error());
+			define("MAIL_FROM","info.angelweddings@gmail.com");
+			define("MAIL_USERNAME","info.angelweddings@gmail.com");
+			define("MAIL_PASSWORD","angel@85");
+			require_once "mail/class.phpmailer.php";
+			$mail->IsSMTP();                // Sets up a SMTP connection
+			$mail->SMTPAuth = true;         // Connection with the SMTP does require authorization
+			$mail->SMTPSecure = "ssl";      // Connect using a TLS connection
+			$mail->Host = "smtp.gmail.com";  //Gmail SMTP server address
+			$mail->Port = 465;  //Gmail SMTP port
+			//Set who the message is to be sent from
+			$mail->setFrom("info.angelweddings@gmail.com", "Angel-Weddings - Password");
+			//Set who the message is to be sent to
+			$mail->addAddress($email);
+			$mail->Subject = "Angel-Weddings - Password";
+			$mail->Body = "Hello $name, <br>&nbsp;&nbsp;&nbsp;&nbsp;You can now login with the password : <b>$password</b>. This password is valid  for one-time use.You should change your password immediately after this login.";
+			if ($mail->Send()) {
+				?> <script>alert("Your One-Time Password has been sent to your email");</script><?php
+			}
+			else {
+				?> <script>alert("Sorry, We can't send password now.!");</script><?php
+			}
 		}
 	}
+	else{
+		?> <script>alert("Email id is not registered..!");</script><?php
+	}
+
 }
 ?>
 <div class="cd-user-modal" style="z-index: 300;"> <!-- this is the entire modal form, including the background -->
@@ -183,11 +189,11 @@ if(isset($_POST['reset_password'])){
 				<div id="cd-reset-password"> <!-- reset password form -->
 					<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
 
-					<form class="cd-form" method="post" action="">
+					<form class="cd-form" id="reset_password-form" method="post" action="">
 						<p class="fieldset">
 							<label class="image-replace cd-email" for="reset-email">E-mail</label>
 							<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail" name="reset_email">
-							<b class="cd-error-message" id="reset_password_error">Error message here!</b>
+							<span class="cd-error-message" id="reset_password_error">Error message here!</span>
 						</p>
 
 						<p class="fieldset">
