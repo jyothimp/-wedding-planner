@@ -6,10 +6,11 @@ include_once 'check_logout.php';
 	if(isset($_POST['add_to_cart'])){
 		$itemid=$_POST['item_id'];
 		$user_id=$_SESSION['user'];
-		$itemtype=1;
+		$itemtype=2;
 		$itemquantity=1;
 		$result = mysqli_query($con, "INSERT INTO wp_addtocart(cart_login_id,cart_item_id,cart_item_type,cart_quantity) VALUES($user_id,$itemid,'$itemtype','$itemquantity')") or die(mysqli_error($con));
 	}
+ ?>
 <!doctype html>
 <html>
 
@@ -158,6 +159,10 @@ include_once 'check_logout.php';
                 </li>
                 <li>
                   <a href="logout.php">Logout</a>
+                </li>
+                  <li>
+  									<a href="cart.php"><i class="cart_top fa fa-shopping-cart"></i></a>
+  								</li>
                 </nav>
 
               </div><!-- col -->

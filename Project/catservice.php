@@ -2,6 +2,16 @@
 include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
+<?php
+	if(isset($_POST['add_to_cart'])){
+		$itemid=$_POST['item_id'];
+		$user_id=$_SESSION['user'];
+		$itemtype=3;
+		$itemquantity=1;
+		$result = mysqli_query($con, "INSERT INTO wp_addtocart(cart_login_id,cart_item_id,cart_item_type,cart_quantity) VALUES($user_id,$itemid,'$itemtype','$itemquantity')") or die(mysqli_error($con));
+	}
+
+ ?>
 <!doctype html>
 <html>
 <head>
@@ -97,7 +107,7 @@ include_once 'check_logout.php';
 											<li><a href="catservice.php">Snacks</a></li>
 										</ul>
 									</div>
-									
+
 								</div><!-- megamenu-container -->
 							</li>
 							<li>
@@ -105,6 +115,10 @@ include_once 'check_logout.php';
 							</li>
 							<li>
 								<a href="logout.php">Logout</a>
+							</li>
+							<li>
+								<a href="cart.php"><i class="cart_top fa fa-shopping-cart"></i></a>
+							</li>
 							</nav>
 						</div><!-- col -->
 					</div><!-- row -->
@@ -154,7 +168,9 @@ include_once 'check_logout.php';
 											?>
 											<div class="col-sm-4">
 												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-													<form action="addtocart.php" method="post">
+													<form action="" method="post">
+										 				 <input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>">
+										 				 <input type="hidden" name="item_type" value="3">
 														<div class="about-me-thumbnail">
 															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 															<div class="social-media">
@@ -184,7 +200,7 @@ include_once 'check_logout.php';
 															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 															<div class="social-media">
 																<a ><?php echo $row['food_name'] ?><br>  <a ><?php echo "₹ ".$row['food_price'] ?></a></a>
-																<center><input type="submit"  name="button" id="button" value="Add to cart"></center>
+																<center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
 															</div>
 														</div>
 													</form>
@@ -209,7 +225,7 @@ include_once 'check_logout.php';
 															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 															<div class="social-media">
 																<a ><?php echo $row['food_name'] ?><br>  <a ><?php echo "₹ ".$row['food_price'] ?></a></a>
-																<center><input type="submit"  name="button" id="button" value="Add to cart"></center>
+															<center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
 															</div>
 														</div>
 													</form>
