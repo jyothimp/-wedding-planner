@@ -152,3 +152,24 @@
     margin-bottom: 25px;
     border-top: none;
   }
+  .btn_cart
+  {
+    background:white;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 8px;
+    margin: 1px 1px 1px 8px;
+    transition: 0.3s;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+.btn_cart:hover{
+  background-color: white;
+}
+.cart_top{
+  font-size: 40px;
+  margin-top: -12px;
+}

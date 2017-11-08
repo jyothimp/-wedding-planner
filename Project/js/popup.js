@@ -2,7 +2,9 @@ $(document).ready(function(){
 	//open popup-profile-pic
 	$('#stage_add_button').on('click', function(event){
 		event.preventDefault();
+		$('#stage_add_popup').trigger('reset');
 		$('#stage_add_popup').addClass('is-visible');
+
 	});
 
 	//close popup-profile-pic

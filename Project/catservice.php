@@ -97,14 +97,7 @@ include_once 'check_logout.php';
 											<li><a href="catservice.php">Snacks</a></li>
 										</ul>
 									</div>
-									<div class="section">
-										<h5>Media&Entertainment</h5>
-										<ul>
-											<li><a href="entertainment.php">Entertainment</a></li>
-											<li><a href="videography.php">Videography</a></li>
-											<li><a href="photography.php">Photography</a></li>
-										</ul>
-									</div><!-- section -->
+									
 								</div><!-- megamenu-container -->
 							</li>
 							<li>
@@ -166,7 +159,7 @@ include_once 'check_logout.php';
 															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 															<div class="social-media">
 																<a ><?php echo $row['food_name'] ?><br>  <a ><?php echo "₹ ".$row['food_price'] ?></a></a>
-																<center><input type="submit"  name="button" id="button" value="Add to cart"></center>
+																<center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
 															</div>
 														</div>
 													</form>

@@ -156,18 +156,7 @@
 
                                             </ul>
                                             </div>
-                                       <div class="section">
-
-                                            <h5>Media&Entertainment</h5>
-
-                                            <ul>
-                                            	<li><a href="entertainment.php">Entertainment</a></li>
-                                                <li><a href="videography.php">Videography</a></li>
-                                                <li><a href="photography.php">Photography</a></li>
-
-                                            </ul>
-
-                                     </div><!-- section -->
+                                      
 
                                     </div><!-- megamenu-container -->
 

@@ -2,6 +2,14 @@
 include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
+<?php
+	if(isset($_POST['add_to_cart'])){
+		$itemid=$_POST['item_id'];
+		$user_id=$_SESSION['user'];
+		$itemtype=1;
+		$itemquantity=1;
+		$result = mysqli_query($con, "INSERT INTO wp_addtocart(cart_login_id,cart_item_id,cart_item_type,cart_quantity) VALUES($user_id,$itemid,'$itemtype','$itemquantity')") or die(mysqli_error($con));
+	}
 <!doctype html>
 <html>
 
@@ -53,6 +61,7 @@ include_once 'check_logout.php';
 
   <!-- CUSTOM & PAGES STYLE -->
   <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="assets/css/pages-style.css">
 
   <!-- STYLE SWITCHER -->
@@ -138,18 +147,7 @@ include_once 'check_logout.php';
                         <li><a href="catservice.php">Snacks</a></li>
                       </ul>
                     </div>
-                    <div class="section">
 
-                      <h5>Media&Entertainment</h5>
-
-                      <ul>
-                        <li><a href="entertainment.php">Entertainment</a></li>
-                        <li><a href="videography.php">Videography</a></li>
-                        <li><a href="photography.php">Photography</a></li>
-
-                      </ul>
-
-                    </div><!-- section -->
 
                   </div><!-- megamenu-container -->
 
@@ -227,7 +225,9 @@ include_once 'check_logout.php';
                   <div class="col-sm-4">
 
                     <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-                      <form action="addtocart.php" method="post">
+                      <form action="" method="post">
+                        <input type="hidden" name="item_id" value="<?php echo $row['hall_id'] ?>">
+                       <input type="hidden" name="item_type" value="2">
                         <div class="about-me-thumbnail">
 
                           <img style="height:215px !important"src="images/hall/<?php echo $row['hall_image'] ?>" alt="best wedding planner in cochin">
@@ -235,7 +235,7 @@ include_once 'check_logout.php';
                           <div class="social-media">
 
                             <a ><?php echo $row['hall_name'] ?><br>  <a ><?php echo "₹ ".$row['hall_price'] ?></a></a>
-                            <center><input type="submit"  name="hall_submit" id="hall_submit" value="Add to cart"></center>
+                          <center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
                           </div>
                         </div>
                       </form>

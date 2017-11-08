@@ -2,6 +2,16 @@
 	include_once 'db_connect.php';
 	include_once 'check_logout.php';
 ?>
+<?php
+	if(isset($_POST['add_to_cart'])){
+		$itemid=$_POST['item_id'];
+		$user_id=$_SESSION['user'];
+		$itemtype=1;
+		$itemquantity=1;
+		$result = mysqli_query($con, "INSERT INTO wp_addtocart(cart_login_id,cart_item_id,cart_item_type,cart_quantity) VALUES($user_id,$itemid,'$itemtype','$itemquantity')") or die(mysqli_error($con));
+	}
+
+ ?>
 <!doctype html>
 <html>
 
@@ -53,6 +63,7 @@
 
   <!-- CUSTOM & PAGES STYLE -->
   <link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="assets/css/pages-style.css">
 
   <!-- STYLE SWITCHER -->
@@ -140,18 +151,6 @@
 
 														</ul>
 														</div>
-											 <div class="section">
-
-														<h5>Media&Entertainment</h5>
-
-														<ul>
-															<li><a href="entertainment.php">Entertainment</a></li>
-																<li><a href="videography.php">Videography</a></li>
-																<li><a href="photography.php">Photography</a></li>
-
-														</ul>
-
-										 </div><!-- section -->
 
 										</div><!-- megamenu-container -->
 
@@ -162,6 +161,10 @@
 								</li>
 							<li>
 									<a href="logout.php">Logout</a>
+								</li>
+								<li>
+									<a href="cart.php"><i class="cart_top fa fa-shopping-cart"></i></a>
+								</li>
 							</nav>
 
 							</div><!-- col -->
@@ -229,16 +232,18 @@
       <div class="col-sm-4">
 
         <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-       <form action="addtocart.php" method="post">
+       <form action="" method="post">
+				 <input type="hidden" name="item_id" value="<?php echo $row['stage_id'] ?>">
+				 <input type="hidden" name="item_type" value="1">
           <div class="about-me-thumbnail">
 
             <img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
 
             <div class="social-media">
 
-              <a ><?php echo $row['stage_name'] ?><br>  <a ><?php echo "₹ ".$row['stage_price'] ?></a></a>
 
-								<center><input type="submit"  name="button" id="button" value="Add to cart"></center>
+              <a ><?php echo $row['stage_name'] ?><br>  <a ><?php echo "₹ ".$row['stage_price'] ?></a></a>
+								<center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
             </div>
           </div>
 				</form>

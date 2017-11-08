@@ -142,10 +142,10 @@ ga('send', 'pageview');
 
                                     <a href="#">Add-ons</a>
 
-                                    <div class="megamenu-container col-4">
+                                    <div class="megamenu-container col-"2>
 
                                     	<div class="section">
-											<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
+											<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi" >
 										</div><!-- section -->
 
                                         <div class="section">
@@ -170,18 +170,7 @@ ga('send', 'pageview');
 
                                             </ul>
                                             </div>
-                                       <div class="section">
 
-                                            <h5>Media&Entertainment</h5>
-
-                                            <ul>
-                                            	<li><a href="entertainment.php">Entertainment</a></li>
-                                                <li><a href="videography.php">Videography</a></li>
-                                                <li><a href="photography.php">Photography</a></li>
-
-                                            </ul>
-
-                                     </div><!-- section -->
 
                                     </div><!-- megamenu-container -->
 
