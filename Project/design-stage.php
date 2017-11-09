@@ -3,7 +3,7 @@
 	include_once 'check_logout.php';
 ?>
 <?php
-	if(isset($_POST['add_to_cart'])){
+	if(isset($_POST['Buy Now'])){
 		$itemid=$_POST['item_id'];
 		$user_id=$_SESSION['user'];
 		$itemtype=1;
@@ -232,7 +232,7 @@
       <div class="col-sm-4">
 
         <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-       <form action="" method="post">
+       <form action="stagedes.php" method="post">
 				 <input type="hidden" name="item_id" value="<?php echo $row['stage_id'] ?>">
 				 <input type="hidden" name="item_type" value="1">
           <div class="about-me-thumbnail">
@@ -243,7 +243,7 @@
 
 
               <a ><?php echo $row['stage_name'] ?><br>  <a ><?php echo "₹ ".$row['stage_price'] ?></a></a>
-								<center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
+								<center><button type="submit" class="btn_cart" name="Buy Now" id="button"><i class="fa fa-shopping-cart"></i>Buy Now</button></center>
             </div>
           </div>
 				</form>

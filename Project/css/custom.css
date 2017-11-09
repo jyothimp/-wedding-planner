@@ -173,3 +173,18 @@
   font-size: 40px;
   margin-top: -12px;
 }
+.cart_table{
+  width: 100%;
+  border:none;
+}
+.cart_table th{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 30px;
+}
+.cart_table td{
+  text-align: center;
+  font-size: 14px;
+  height: 30px;
+}
