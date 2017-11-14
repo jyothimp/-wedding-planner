@@ -155,7 +155,7 @@
   .btn_cart
   {
     background:white;
-    background-color: inherit;
+    background-color:orange;
     border: none;
     outline: none;
     cursor: pointer;
@@ -167,7 +167,7 @@
     border-radius: 10px;
   }
 .btn_cart:hover{
-  background-color: white;
+  background-color:orange;
 }
 .cart_top{
   font-size: 40px;
@@ -186,5 +186,30 @@
 .cart_table td{
   text-align: center;
   font-size: 14px;
+  height: 30px;
+}
+.btnremove
+{
+  background:white;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 8px;
+  margin: 1px 1px 1px 8px;
+  transition: 0.3s;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.btnremove:hover{
+  background-color:orange;
+}
+.desc_table{
+  width: 100%;
+  text-align: center;
+}
+.desc_table td,th{
+  text-align: center !important;
   height: 30px;
 }

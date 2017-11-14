@@ -3,7 +3,7 @@ include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
 <?php
-	if(isset($_POST['add_to_cart'])){
+	if(isset($_POST['buynow'])){
 		$itemid=$_POST['item_id'];
 		$user_id=$_SESSION['user'];
 		$itemtype=2;
@@ -240,7 +240,7 @@ include_once 'check_logout.php';
                           <div class="social-media">
 
                             <a ><?php echo $row['hall_name'] ?><br>  <a ><?php echo "₹ ".$row['hall_price'] ?></a></a>
-                          <center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to cart</button></center>
+                          <center><button type="submit" class="btn_cart" name="buynow" id="button"><i class="fa fa-shopping-cart"></i>Buy Now</button></center>
                           </div>
                         </div>
                       </form>

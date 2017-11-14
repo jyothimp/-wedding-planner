@@ -7,7 +7,7 @@ else {
   $role=$_SESSION['user_role'];
   $page=basename($_SERVER['PHP_SELF']);
   if($role==1){
-    if(!($page=="cart.php"||$page=="design-stage.php"||$page=="design-decor.php"||$page=="catservice.php"||$page=="get-a-quote.php")){
+    if(!($page=="cart.php"||$page=="design-stage.php"||$page=="design-decor.php"||$page=="catservice.php"||$page=="get-a-quote.php"||$page=="stagedes.php")){
       header('location:design-stage.php');
     }
   }

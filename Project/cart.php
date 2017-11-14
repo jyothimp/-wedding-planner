@@ -2,6 +2,21 @@
 include_once 'db_connect.php';
 include_once 'check_logout.php';
 $user_id=$_SESSION['user'];
+if(isset($_POST['btn_remove_cart_stage'])){
+	$item_id=$_POST['cart_item'];
+$result = mysqli_query($con, "UPDATE `wp_addtocart` SET cart_status=0 WHERE`cart_item_id`=$item_id and cart_item_type=1") or die(mysqli_error($con));
+	echo "<script>alert('Item has been successfully removed..!');</script>";
+}
+if(isset($_POST['btn_remove_cart_hall'])){
+	$item_id=$_POST['cart_item'];
+$result = mysqli_query($con, "UPDATE `wp_addtocart` SET cart_status=0 WHERE`cart_item_id`=$item_id and cart_item_type=2") or die(mysqli_error($con));
+echo "<script>alert('Item has been successfully removed..!');</script>";
+}
+if(isset($_POST['btn_remove_cart_food'])){
+	$item_id=$_POST['cart_item'];
+	$result = mysqli_query($con, "UPDATE `wp_addtocart` SET cart_status=0 WHERE`cart_item_id`=$item_id and cart_item_type=3") or die(mysqli_error($con));
+	echo "<script>alert('Item has been successfully removed..!');</script>";
+}
 ?>
 <!doctype html>
 <html>
@@ -178,21 +193,25 @@ $user_id=$_SESSION['user'];
 													<th>Actions</th>
 												</tr>
 												<?php
-													$query=mysqli_query($con,"select * from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and cart_status=1");
+													$query=mysqli_query($con,"select cart_id,cart_login_id,cart_item_id,cart_item_type,sum(cart_quantity) AS quantity,item_name,item_id from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and cart_status=1 GROUP BY cart_item_id");
 													while ($row=mysqli_fetch_array($query)) {
-														$item_type=$row['cart_item_type'];
-														$item_id=$row['cart_item_id'];
+														$item_type = $row['cart_item_type'];
+														$item_id = $row['cart_item_id'];
 														if($item_type==1){
+
 															$query2=mysqli_query($con,"select * from wp_stage where stage_id=$item_id");
 															while($row2=mysqli_fetch_array($query2)){
 																?>
 																<tr><font color="black">
 																	<td><?php echo $row2['stage_name']?></td>
 																	<td>Stage</td>
-																	<td><?php echo $q=$row['cart_quantity']?></td>
+																	<td><?php echo $q=$row['quantity']?></td>
 																	<td><?php echo $p=$row2['stage_price']?></td>
 																	<td><?php echo $q*$p ?></td>
-																	<td>Actions</td>
+																	<form action="" method="post">
+																		<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
+																	<td><center><input type="submit" name="btn_remove_cart_stage" class="btnremove" value="Remove"></center></td>
+																</form>
 																</tr>
 																<?php
 															}
@@ -204,10 +223,14 @@ $user_id=$_SESSION['user'];
 																<tr><font color="black">
 																	<td><?php echo $row2['hall_name']?></td>
 																	<td>Hall</td>
-																	<td><?php echo $q=$row['cart_quantity']?></td>
+																	<td><?php echo $q=$row['quantity']?></td>
 																	<td><?php echo $p=$row2['hall_price']?></td>
-																	<td><?php echo $q*$p ?></td>
-																	<td>Actions</td>
+																	<td><?php echo $q*$p ?></td
+																		<form action="" method="post">
+																			<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
+																		<td><center><input type="submit" name="btn_remove_cart_hall" class="btnremove" value="Remove"></center></td>
+																	</form>
+
 																</tr>
 																<?php
 															}
@@ -219,10 +242,14 @@ $user_id=$_SESSION['user'];
 																<tr><font color="black">
 																	<td><?php echo $row2['food_name']?></td>
 																	<td>Food</td>
-																	<td><?php echo $q=$row['cart_quantity']?></td>
+																	<td><?php echo $q=$row['quantity']?></td>
 																	<td><?php echo $p=$row2['food_price']?></td>
 																	<td><?php echo $q*$p ?></td>
-																	<td>Actions</td>
+																	<form action="" method="post">
+																		<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
+																	<td><center><input type="submit" name="btn_remove_cart_food" class="btnremove" value="Remove"></center></td>
+																</form>
+
 																</tr>
 																<?php
 															}

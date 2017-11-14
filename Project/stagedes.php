@@ -2,52 +2,51 @@
 include_once 'db_connect.php';
 include_once 'check_logout.php';
 $item_id=0;
-if(isset($_POST['add'])){
-  $item_id=$_POST['item_id'];
-  mysqli_query($con,"UPDATE wp_stage SET stage_status=0 WHERE stage_id=$item_id");
-  header('location:./stage.php');
-}
-if(!(isset($_POST['item_id']) || isset($_POST['stage_edit_submit']))){
-  header('location:./');
-}
-if(isset($_POST['item_id'])){
-  $item_id=$_POST['item_id'];
-}
-if(isset($_POST['stage_edit_submit'])){
-  $imagename="default.png";
-  $item_id=$_POST['item_id'];
-  if(!$_FILES['stage_image']['name']==""){
-    //Stores the filename as it was on the client computer.
-    $imagename = $_FILES['stage_image']['name'];
-    //Stores the filetype e.g image/jpeg
-    $imagetype = $_FILES['stage_image']['type'];
-    //Stores any error codes from the upload.
-    $imageerror = $_FILES['stage_image']['error'];
-    //Stores the tempname as it is given by the host when uploaded.
-    $imagetemp = $_FILES['stage_image']['tmp_name'];
-    //The path you wish to upload the image to
-    $imagePath = "./images/stage/";
-    if(is_uploaded_file($imagetemp)) {
-      if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
-        // echo "Sussecfully uploaded your image.";
+
+  ?>
+  <?php
+  if(!(isset($_POST['item_id']) || isset($_POST['stage_edit_submit']))){
+    header('location:./');
+  }
+  if(isset($_POST['item_id'])){
+    $item_id=$_POST['item_id'];
+  }
+  if(isset($_POST['stage_edit_submit'])){
+    $imagename="default.png";
+    $item_id=$_POST['item_id'];
+    if(!$_FILES['stage_image']['name']==""){
+      //Stores the filename as it was on the client computer.
+      $imagename = $_FILES['stage_image']['name'];
+      //Stores the filetype e.g image/jpeg
+      $imagetype = $_FILES['stage_image']['type'];
+      //Stores any error codes from the upload.
+      $imageerror = $_FILES['stage_image']['error'];
+      //Stores the tempname as it is given by the host when uploaded.
+      $imagetemp = $_FILES['stage_image']['tmp_name'];
+      //The path you wish to upload the image to
+      $imagePath = "./images/stage/";
+      if(is_uploaded_file($imagetemp)) {
+        if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
+          // echo "Sussecfully uploaded your image.";
+        }
+        else {
+          // echo "Failed to move your image.";
+        }
       }
       else {
-        // echo "Failed to move your image.";
+        // echo "Failed to upload your image.";
       }
     }
-    else {
-      // echo "Failed to upload your image.";
+    else{
+      $imagename = $_POST['temp_pic'];
     }
+    $stage_name= $_POST['stage_name'];
+    $stage_description = $_POST['stage_description'];
+    $stage_price = $_POST['stage_price'];
+    $result = mysqli_query($con, "SELECT * FROM `wp_addtocart` WHERE `stage_id`=$item_id `stage_status`=1") or die(mysqli_error($con));
   }
-  else{
-    $imagename = $_POST['temp_pic'];
-  }
-  $stage_name= $_POST['stage_name'];
-  $stage_description = $_POST['stage_description'];
-  $stage_price = $_POST['stage_price'];
-  $result = mysqli_query($con, "update wp_stage set stage_name='$stage_name',stage_image='$imagename',stage_description='$stage_description',stage_price='$stage_price' where  stage_id=$item_id") or die(mysqli_error($con));
-}
-?>
+  ?>
+
 <!doctype html>
 <html>
 <head>
@@ -275,6 +274,10 @@ if(isset($_POST['stage_edit_submit'])){
                 </li>
                 <li>
                   <a href="logout.php">Logout</a>
+								</li>
+								<li>
+									<a href="cart.php"><i class="cart_top fa fa-shopping-cart"></i></a>
+								</li>
                 </nav>
 
               </div><!-- col -->
@@ -313,7 +316,7 @@ if(isset($_POST['stage_edit_submit'])){
         <div class="row">
           <div class="col-sm-6">
 
-            <h4>Edit Items</h4>
+            <h4>Stage Description</h4>
 
           </div><!-- col -->
 
@@ -327,28 +330,34 @@ if(isset($_POST['stage_edit_submit'])){
         <div class="elements-section" id="accordion">
           <div class="headline style-1">
             <div>
-              <h2><center>Edit Items</center></h2>
+              <h2><center>Stage Description</center></h2>
               <?php
               $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
-                <form action="" method="post" id="stage_edit_form" class="form-pop" enctype="multipart/form-data" onsubmit="return">
+                <form action="./design-stage.php" method="post">
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
                       <img src="images/stage/<?php echo $row['stage_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
                     </div>
                     <div class="col-lg-6">
-                      <input type="text" name="stage_name" id="stage_editname" value="<?php echo $row['stage_name'] ?>"  placeholder="Name">
-                      <span class="pop-error-message" id="stage_ename_error"></span>
-                      <textarea name="stage_description" rows="3" id="stage_editdescription" placeholder="Description"><?php echo $row['stage_description'] ?></textarea>
-                      <span class="pop-error-message" id="stage_edescription_error"></span>
-                      <input type="number" name="stage_price" id="stage_editprice" value="<?php echo $row['stage_price'] ?>" placeholder="Price">
-                      <span class="pop-error-message" id="stage_eprice_error"></span>
-                      <input type="file" name="stage_image" id="stage_editimage" placeholder="Imagefile">
-                      <span class="pop-error-message" id="stage_eimage_error"></span>
+											<table style="width:100%;border;" class="desc_table">
+												<tr>
+													<th>Item</th>
+													<td><?php echo $row['stage_name'] ?></td>
+												</tr>
+												<tr>
+													<th>Description</th>
+													<td><?php echo $row['stage_description'] ?></td>
+												</tr>
+												<tr>
+													<th>Price</th>
+													<td><?php echo $row['stage_price'] ?></td>
+												</tr>
+											</table>
                       <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
-                      <input type="hidden" name="temp_pic" value="<?php echo $row['stage_image'] ?>">
-                      <input type="submit" name="add_to_cart" id="add_to_cart" Value="Submit">
+                      <input type="hidden" name="temp_pic" value="<?php echo $row['stage_image']; ?>">
+                    <center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Add to Cart</button></center>
                     </div>
                   </div>
                 </form>
