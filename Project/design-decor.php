@@ -230,7 +230,7 @@ include_once 'check_logout.php';
                   <div class="col-sm-4">
 
                     <div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-                      <form action="" method="post">
+                      <form action="halldes.php" method="post">
                         <input type="hidden" name="item_id" value="<?php echo $row['hall_id'] ?>">
                        <input type="hidden" name="item_type" value="2">
                         <div class="about-me-thumbnail">
