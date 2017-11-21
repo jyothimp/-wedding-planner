@@ -14,7 +14,7 @@ if(isset($_POST['login_submit'])){
 			$_SESSION['user_role']=$row['login_role'];
 			if($row['login_role']==1){
 				header('location: ./design-stage.php');
-			} 
+			}
 			else {
 				header('location: ./admin.php');
 			}

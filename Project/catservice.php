@@ -197,6 +197,8 @@ include_once 'check_logout.php';
 											<div class="col-sm-4">
 												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
 													<form action="fooddes.php" method="post">
+														<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>">
+														<input type="hidden" name="item_type" value="3">
 														<div class="about-me-thumbnail">
 															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 															<div class="social-media">
@@ -222,6 +224,8 @@ include_once 'check_logout.php';
 											<div class="col-sm-4">
 												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
 													<form action="fooddes.php" method="post">
+														<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>">
+														<input type="hidden" name="item_type" value="3">
 														<div class="about-me-thumbnail">
 															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
 															<div class="social-media">

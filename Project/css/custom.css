@@ -203,7 +203,7 @@
   border-radius: 10px;
 }
 .btnremove:hover{
-  background-color:orange;
+  background-color:red;
 }
 .desc_table{
   width: 100%;
@@ -212,4 +212,19 @@
 .desc_table td,th{
   text-align: center !important;
   height: 30px;
+}
+.btncontinue{
+  background:orange;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 8px;
+  margin: 1px 1px 1px 8px;
+  transition: 0.3s;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.btncontinue:hover{
+  background: white;
 }
