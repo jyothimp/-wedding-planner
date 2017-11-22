@@ -148,7 +148,7 @@ include_once 'check_logout.php';
 								</div><!-- row -->
 							</div><!-- ontainer -->
 						</div><!-- page-header -->
-            <center><img src="images/icons/paymentlogo123.png" alt="Destination wedding in Kerala" width="200" height="165"></center>
+            <center><img src="images/icons/paymentlogo123.png" alt="Destination wedding in Kerala" width="430px" height="165"></center>
 						  <div class="container">
 							<div class="row">
 								<div class="col-sm-3">
@@ -159,6 +159,8 @@ include_once 'check_logout.php';
                       <select   name="payment_type" id="paymenttype" class="form-control">
                         <option value="Credit Card">Credit Card</option>
                         <option value="Debit Card">Debit Card</option>
+                        <option value="Debit Card">Net Banking</option>
+                        <option value="Debit Card">UPI Payment</option>
                       </select>
 
 												<span style="color:red;display: none;" id="namelabel">

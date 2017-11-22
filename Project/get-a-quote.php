@@ -152,7 +152,7 @@ include_once 'check_logout.php';
 							<div class="row">
 								<div class="col-sm-9">
 									<div class="popform">
-										<form   name="myform" id="myform" method="post" role="form" style="height:auto;">
+										<form action="payment.php" name="myform" id="myform" method="post" role="form" style="height:auto;">
 											<div class="form-group">
 												<label for="name">Name : </label>
 												<input  required=""  type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
@@ -209,30 +209,20 @@ include_once 'check_logout.php';
 											</div>
 											<div class="form-group">
 												<label for="selectlocation">District:</label>
-												<select   name="district" id="district" class="form-control">
-													<option value="Kasargode">Kasargode</option>
-													<option value="Kannur">Kannur</option>
-													<option value="Wayanad">Wayanad</option>
-													<option value="Kozhikode">Kozhikode</option>
-													<option value="Malappuram">Malappuram</option>
-													<option value="Palakkad">Palakkad</option>
-													<option value="Trissur">Trissur</option>
-													<option value="Kottayam">Kottayam</option>
-													<option value="Eranakulam">Eranakulam</option>
-													<option value="Alappuzha">Alappuzha</option>
-													<option value="Kollam">Kollam</option>
-													<option value="Pathanamthitta">Pathanamthitta</option>
-													<option value="Idukki">Idukki</option>
-													<option value="Trivandrum">Trivandrum</option>
+												<select  name="district" id="district" class="form-control">
+													<?php
+														$quer=mysqli_query($con,"SELECT * FROM wp_district");
+														while ($rw=mysqli_fetch_array($quer)) {
+															?><option value="<?php echo $rw['district_id']?>"><?php echo $rw['district_name']?></option>
+														<?php
+													}
+													 ?>
 												</select>
 												<div class="form-group">
 													<label for="selectlocation">Location:</label>
 													<select   name="location" id="location" class="form-control">
-														<option value="Kerala">Manjeri</option>
-														<option value="Kerala">Perithamanna</option>
 													</select>
 												</div>
-												<form action="payment.php" method="post">
 												<input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit" value="Continue to Payment">
 											</form>
 										</div>
@@ -422,6 +412,19 @@ include_once 'check_logout.php';
 							$('#submit').removeAttr('disabled');
 						}
 					});
+					</script>
+					<script>
+						$("#district").on("change",function () {
+							$dist=$(this).val();
+							$.ajax({
+								type:'post',
+								url:'./get_locations.php',
+								data:{dist:$dist},
+								success:function (response) {
+									$("#location").html(response);
+								}
+							})
+						})
 					</script>
 				</body>
 				</html>
