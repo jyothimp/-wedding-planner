@@ -202,6 +202,12 @@
   border: 1px solid black;
   border-radius: 10px;
 }
+.btn_stage:hover, .btn_food:hover, .btn_hall:hover{
+  cursor: pointer;
+}
+.btn_stage, .btn_food, .btn_hall{
+  width: 300px;
+}
 .btnremove:hover{
   background-color:red;
 }
@@ -227,4 +233,11 @@
 }
 .btncontinue:hover{
   background: white;
+}
+#myform{
+  padding: 10px;
+}
+#myform input,textarea,select{
+  width: 100%;
+  margin-bottom: 16px !important;
 }

@@ -139,22 +139,17 @@ include_once 'check_logout.php';
 									<div class="col-sm-6">
 										<h4>Payment</h4>
 									</div><!-- col -->
-									<div class="col-sm-6">
-										<ol class="breadcrumb">
-											<li><a href="index.php">Home</a></li>
-											<li class="active">Payment</li>
-										</ol>
-									</div><!-- col -->
+
 								</div><!-- row -->
 							</div><!-- ontainer -->
 						</div><!-- page-header -->
             <center><img src="images/icons/paymentlogo123.png" alt="Destination wedding in Kerala" width="430px" height="165"></center>
-						  <div class="container">
-							<div class="row">
+						 <div class="container">
+							<div class="row" >
 								<div class="col-sm-3">
-									<div class="popform">
+									<div class="popform" align="center">
 										<form   name="myform" id="myform" method="post" role="form" style="height:auto;">
-											<div class="form-group">
+											<div class="form-group" >
 											<label for="payment type">Type of payment </label>
                       <select   name="payment_type" id="paymenttype" class="form-control">
                         <option value="Credit Card">Credit Card</option>
@@ -170,23 +165,23 @@ include_once 'check_logout.php';
 												</span>
 											</div>
 											<div class="form-group">
-												<label for="name">Card Number : </label>
+												<label for="cardnumber">Card Number  </label>
 												<input  required=""  type="" class="form-control"  name="card_no" id="cardno" placeholder="Enter Card Number">
 												<span style="color:red;display: none;" id="cardlabel">
 													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter card Number.</label>
+														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter card number.</label>
 													</span>
 												</span>
 											</div>
-
 											<div class="form-group">
-												<label for="name">Event Date : </label>
+												<label for="expirydate">Expiry Date </label>
 												<input  required=""  type="date" class="form-control"  name="event_date" id="number" placeholder="mm/dd/yyyy">
 												<span style="color:red;display: none;" id="phonelabel">
 													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter Your Event Date.</label>
+														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter expiry date.</label>
 													</span>
 												</span>
+                        <div 
 											</div>
 											<div class="form-group">
 												<label for="name">Event Venue : </label>
@@ -198,14 +193,8 @@ include_once 'check_logout.php';
 												</span>
 											</div>
 
-												<div class="form-group">
-													<label for="selectlocation">Location:</label>
-													<select   name="location" id="location" class="form-control">
-														<option value="Kerala">Manjeri</option>
-														<option value="Kerala">Perithamanna</option>
-													</select>
-												</div>
-												<input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit" value="Continue to Payment">
+
+												<input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit" value="Pay Now">
 											</form>
 										</div>
 									</div><!-- col -->
@@ -216,6 +205,7 @@ include_once 'check_logout.php';
 						</div><!-- container -->
 					</div><!-- CONTENT -->
 					<!-- FOOTER -->
+
 					<footer>
 						<div id="footer-top">
 							<!-- container -->

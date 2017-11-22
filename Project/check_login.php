@@ -3,7 +3,7 @@
 if(isset($_SESSION['user'])){
   $role=$_SESSION['user_role'];
   if($role==1){
-    header('location:design-stage.php');
+    header('location:userhome.php');
   }
   else {
     header('location:admin.php');
