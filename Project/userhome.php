@@ -133,6 +133,9 @@ else{
                 <li>
                   <a href="logout.php">Logout</a>
                 </li>
+                <li>
+									<a href="cart.php"><i class="cart_top fa fa-shopping-cart"></i></a>
+								</li>
               </nav>
             </div><!-- col -->
           </div><!-- row -->

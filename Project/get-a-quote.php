@@ -50,6 +50,7 @@ include_once 'check_logout.php';
 	<!-- CUSTOM & PAGES STYLE -->
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="assets/css/pages-style.css">
 	<!-- ALTERNATIVE STYLES -->
 	<link rel="stylesheet" href="#" data-style="styles">
@@ -148,63 +149,53 @@ include_once 'check_logout.php';
 							<div class="row">
 								<div class="col-sm-9">
 									<div class="popform">
-										<form action="payment.php" name="myform" id="myform" method="post" role="form" style="height:auto;">
+										<form action="payment.php"  name="myform" id="myform" method="post" role="form" style="height:auto;">
 											<div class="form-group">
 												<label for="name">Name : </label>
-												<input  required=""  type="text" class="form-control" name="fullname" id="name" placeholder="Enter Name">
-												<span class="get_quote" id="name_error"></span>
+												<input   type="text" class="form-control" name="fullname" id="name" placeholder="Enter Name">
+												<span class="get_quote cd-error-message" id="name_error"></span>
 
 												</span>
 											</div>
 											<div class="form-group">
 												<label for="name">Phone Number : </label>
-												<input  required=""  type="" class="form-control"  name="phone" id="number" placeholder="Enter Number">
-												<span class="get_quote" id="number_error"></span>
+												<input   type="" class="form-control"  name="phone" id="number" placeholder="Enter Number">
+												<span class="get_quote cd-error-message" id="number_error"></span>
 												<span style="color:red;display: none;" id="phonelabel">
-													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter phone Number.</label>
-													</span>
+
 												</span>
 											</div>
 											<div class="form-group">
 												<label for="email">Email:</label>
-												<input required type="email" class="form-control" name="email" id="mail" placeholder="Enter email">
-												<span class="get_quote" id="mail_error"></span>
+												<input  type="email" class="form-control" name="email" id="mail" placeholder="Enter email">
+												<span class="get_quote cd-error-message" id="mail_error"></span>
 												<span style="color:red;display: none;" id="emaillabel">
-													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter  Email Address.</label>
-													</span>
+
 												</span>
 											</div>
 											<div class="form-group">
 												<label for="address">Address:</label>
-												<textarea  required placeholder="Enter Address" name="address" class="form-control" id="addr" cols="" rows="5"></textarea>
-												<span class="get_quote" id="addr_error"></span>
+												<textarea   placeholder="Enter Address" name="address" class="form-control" id="addr" cols="" rows="5"></textarea>
+												<span class="get_quote cd-error-message" id="addr_error"></span>
 												<span style="color:red;display: none;" id="addresslabel">
-													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter  Your Address.</label>
-													</span>
+
 												</span>
 											</div>
 											<div class="form-group">
 												<label for="name">Event Date : </label>
-												<input  required=""  type="date" class="form-control"  name="event_date" id="date" placeholder="mm/dd/yyyy">
-												<span class="get_quote" id="date_error"></span>
+												<input   type="date" class="form-control"  name="event_date" id="date" placeholder="mm/dd/yyyy">
+												<span class="get_quote cd-error-message" id="date_error"></span>
 												<span style="color:red;display: none;" id="phonelabel">
-													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter Your Event Date.</label>
-													</span>
+
 												</span>
 											</div>
 											<div class="form-group">
 												<label for="name">Event Venue : </label>
-												<input  required=""  type="text" class="form-control" name="event_venue" id="venue" placeholder="Enter Event Venue">
-												<span class="get_quote" id="venue_error"></span>
+												<input   type="text" class="form-control" name="event_venue" id="venue" placeholder="Enter Event Venue">
+												<span class="get_quote cd-error-message" id="venue_error"></span>
 
 												<span style="color:red;display: none;" id="namelabel">
-													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter  Event Venue.</label>
-													</span>
+
 												</span>
 											</div>
 											<div class="form-group">
