@@ -49,6 +49,7 @@ include_once 'check_logout.php';
 	<link rel="stylesheet" href="assets/js/animations/animate.min.css">
 	<!-- CUSTOM & PAGES STYLE -->
 	<link rel="stylesheet" href="assets/css/custom.css">
+		<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="assets/css/pages-style.css">
 	<!-- ALTERNATIVE STYLES -->
 	<link rel="stylesheet" href="#" data-style="styles">
@@ -141,10 +142,10 @@ include_once 'check_logout.php';
 									</div><!-- col -->
 
 								</div><!-- row -->
-							</div><!-- ontainer -->
+							</div></center><!-- ontainer -->
 						</div><!-- page-header -->
             <center><img src="images/icons/paymentlogo123.png" alt="Destination wedding in Kerala" width="430px" height="165"></center>
-						 <div class="container">
+						 <center><div class="container">
 							<div class="row" >
 								<div class="col-sm-3">
 									<div class="popform" align="center">
@@ -173,18 +174,35 @@ include_once 'check_logout.php';
 													</span>
 												</span>
 											</div>
-											<div class="form-group">
+											<div class="form-group cvv">
 												<label for="expirydate">Expiry Date </label>
-												<input  required=""  type="date" class="form-control"  name="event_date" id="number" placeholder="mm/dd/yyyy">
-												<span style="color:red;display: none;" id="phonelabel">
-													<span>
-														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter expiry date.</label>
-													</span>
-												</span>
-                        <div 
+												<div "cvv form-group">
+												<select name="month">
+													<option selected disabled>MM</option>
+													<?php
+														for($i=1;$i<=12;$i++){
+															?><option value="<?php echo $i;?>"><?php echo $i;?></option><?php
+														}
+													 ?>
+												</select>
 											</div>
+											<div class="cvv form-group">
+												<select name="month">
+													<option selected disabled>YYYY</option>
+													<?php
+														for($i=2000;$i<=2100;$i++){
+															?><option value="<?php echo $i;?>"><?php echo $i;?></option><?php
+														}
+													 ?>
+												</select>
+											</div>
+											<div class="cvv form-group">
+												<input  required=""  type="text"  name="cvv" id="cvv" placeholder="xxx">
+											</div>
+										</div>
 											<div class="form-group">
-												<label for="name">Event Venue : </label>
+
+												<label for="name">Card Holder Name : </label>
 												<input  required=""  type="text" class="form-control" name="venue" id="name" placeholder="Enter Event Venue">
 												<span style="color:red;display: none;" id="namelabel">
 													<span>

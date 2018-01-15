@@ -10,6 +10,14 @@ include_once 'check_logout.php';
 		$itemquantity=1;
 		$result = mysqli_query($con, "INSERT INTO wp_addtocart(cart_login_id,cart_item_id,cart_item_type,cart_quantity) VALUES($user_id,$itemid,'$itemtype','$itemquantity')") or die(mysqli_error($con));
 	}
+	if(isset($_POST['add_to_cart'])){
+		$itemid=$_POST['item_id'];
+		$user_id=$_SESSION['user'];
+		$itemtype=2;
+		$itemquantity=1;
+		$result = mysqli_query($con, "INSERT INTO wp_addtocart(cart_login_id,cart_item_id,cart_item_type,cart_quantity) VALUES($user_id,$itemid,'$itemtype','$itemquantity')") or die(mysqli_error($con));
+		echo "<script>alert('Hall has been added to cart..!');</script>";
+	}
  ?>
 <!doctype html>
 <html>

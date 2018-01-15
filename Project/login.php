@@ -111,7 +111,10 @@ if(isset($_POST['reset_password'])){
 					<a href="#0" class="hide-password">Show</a>
 					<span class="cd-error-message" id="signin-password_error">Error message here!</span>
 				</p>
-
+				<p class="fieldset">
+       <span class="g-recaptcha" data-sitekey="6LfUv0AUAAAAAPOMsXuRzIuJNK3wM_S-u0yUmOEC"></span>
+			 <span class="cd-error-message" id="signin-captcha_error">Error message here!</span>
+		 </p>
 				<p class="fieldset">
 					<input class="full-width" type="submit" name="login_submit" value="Login">
 				</p>
@@ -207,4 +210,5 @@ if(isset($_POST['reset_password'])){
 			</div> <!-- cd-user-modal-container -->
 		</div> <!-- cd-user-modal -->
 		<script src="js/jquery.js"></script>
+		 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script src="js/validation.js"></script>

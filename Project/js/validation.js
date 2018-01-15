@@ -152,6 +152,8 @@ $(document).ready(function() {
     var val_password= /^[^&]{6,30}$/;
     $username = $('#signin-username').val();
     $password = $('#signin-password').val();
+    var v = grecaptcha.getResponse();
+
     if(!val_username.test($username)){
       $("#signin-username").focusout();
       return false;
@@ -159,6 +161,10 @@ $(document).ready(function() {
     else if(!val_password.test($password)){
       $("#signin-password").focusout();
       return false;
+    }
+    else if(v.length==0){
+         $("#signin-captcha_error ").addClass('is-visible');
+         return false;
     }
     else {
       return true;
@@ -809,7 +815,7 @@ $(document).ready(function() {
       return true;
     }
   });
-  $("#myform").on("submit", function(){
+  $("#myform_car").on("submit", function(){
     var val_name= /^[A-Za-z.\s]{3,30}$/;
     var val_phone= /^[0-9]{9,12}$/;
     var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
@@ -850,6 +856,7 @@ $(document).ready(function() {
       return true;
     }
   });
+
   $("#name").focusout(function() {
     var val_name= /^[A-Za-z.\s]{3,30}$/;
     $name = $(this).val();

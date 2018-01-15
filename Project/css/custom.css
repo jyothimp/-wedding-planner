@@ -242,3 +242,8 @@
   width: 100%;
   margin-bottom: 16px !important;
 }
+.cvv1{
+  width: 80px;
+  display: inline-block;
+  float: left;
+}

@@ -1,7 +1,17 @@
 <?php
 include_once 'db_connect.php';
 include_once 'check_logout.php';
+if(isset($_POST['submit_cart'])){
+	$user_id=$_SESSION['user'];
+	$phone=$_POST['phone'];
+	$location=$_POST['location'];
+	$date=$_POST['event_date'];
+	$venue=$_POST['event_venue'];
+	$result=mysqli_query($con,"INSERT INTO `wp_getforquotation`(`quotation_user_id`, `quotation_date`, `quotation_phone`, `quotation_venue`,`quotation_location`) VALUES ($user_id,'$date','$phone','$venue',$location)");
+	header('location:./payment.php');
+}
 ?>
+
 <!doctype html>
 <html>
 <head>
@@ -149,55 +159,25 @@ include_once 'check_logout.php';
 							<div class="row">
 								<div class="col-sm-9">
 									<div class="popform">
-										<form action="payment.php"  name="myform" id="myform" method="post" role="form" style="height:auto;">
-											<div class="form-group">
-												<label for="name">Name : </label>
-												<input   type="text" class="form-control" name="fullname" id="name" placeholder="Enter Name">
-												<span class="get_quote cd-error-message" id="name_error"></span>
+										<form action=""  name="myform" id="myform_cart" onsubmit="return "method="post" style="height:auto;">
 
-												</span>
-											</div>
 											<div class="form-group">
-												<label for="name">Phone Number : </label>
+												<label for="name">Contact Number : </label>
 												<input   type="" class="form-control"  name="phone" id="number" placeholder="Enter Number">
 												<span class="get_quote cd-error-message" id="number_error"></span>
 												<span style="color:red;display: none;" id="phonelabel">
 
 												</span>
 											</div>
-											<div class="form-group">
-												<label for="email">Email:</label>
-												<input  type="email" class="form-control" name="email" id="mail" placeholder="Enter email">
-												<span class="get_quote cd-error-message" id="mail_error"></span>
-												<span style="color:red;display: none;" id="emaillabel">
 
-												</span>
-											</div>
-											<div class="form-group">
-												<label for="address">Address:</label>
-												<textarea   placeholder="Enter Address" name="address" class="form-control" id="addr" cols="" rows="5"></textarea>
-												<span class="get_quote cd-error-message" id="addr_error"></span>
-												<span style="color:red;display: none;" id="addresslabel">
-
-												</span>
-											</div>
 											<div class="form-group">
 												<label for="name">Event Date : </label>
 												<input   type="date" class="form-control"  name="event_date" id="date" placeholder="mm/dd/yyyy">
 												<span class="get_quote cd-error-message" id="date_error"></span>
 												<span style="color:red;display: none;" id="phonelabel">
-
 												</span>
 											</div>
-											<div class="form-group">
-												<label for="name">Event Venue : </label>
-												<input   type="text" class="form-control" name="event_venue" id="venue" placeholder="Enter Event Venue">
-												<span class="get_quote cd-error-message" id="venue_error"></span>
 
-												<span style="color:red;display: none;" id="namelabel">
-
-												</span>
-											</div>
 											<div class="form-group">
 												<label for="selectlocation">District:</label>
 												<select  name="district" id="district" class="form-control">
@@ -209,12 +189,20 @@ include_once 'check_logout.php';
 													}
 													 ?>
 												</select>
-												<div class="form-group">
+											</div>
+											<div class="form-group">
 													<label for="selectlocation">Location:</label>
 													<select   name="location" id="location" class="form-control">
 													</select>
-												</div>
-												<input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit" value="Continue to Payment">
+											</div>
+											<div class="form-group">
+												<label for="name">Event Venue : </label>
+												<input   type="text" class="form-control" name="event_venue" id="venue" placeholder="Enter Event Venue">
+												<span class="get_quote cd-error-message" id="venue_error"></span>
+												<span style="color:red;display: none;" id="namelabel">
+												</span>
+											</div>
+												<input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit_cart" value="Continue to Payment">
 											</form>
 										</div>
 									</div><!-- col -->
