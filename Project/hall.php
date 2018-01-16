@@ -32,8 +32,12 @@ if(isset($_POST['submit_hall'])) {
 	$hall_name= $_POST['hall_name'];
 	$hall_description = $_POST['hall_description'];
 	$hall_price = $_POST['hall_price'];
-	$result = mysqli_query($con, "INSERT INTO wp_hall(hall_name,hall_image,hall_description,hall_price) VALUES('$hall_name','$imagename','$hall_description','$hall_price')") or die(mysqli_error($con));
+	$result = mysqli_query($con, "INSERT INTO wp_hall(hall_name,hall_image,hall_description,hall_price) VALUES('$hall_name','$imagename','$hall_description','$hall_price')");
+	if(!$result){
+		echo "<script>alert('Hall name already exists..!')</script>";
+	}
 }
+
 ?>
 <!doctype html>
 <html>
@@ -176,7 +180,7 @@ if(isset($_POST['submit_hall'])) {
 
 											</ul>
 										</div>
-										
+
 
 									</div><!-- megamenu-container -->
 

@@ -33,7 +33,10 @@ if(isset($_POST['submit_food'])) {
 	$food_description = $_POST['food_description'];
 	$food_price = $_POST['food_price'];
 	$food_type=$_POST['food_type'];
-	$result = mysqli_query($con, "INSERT INTO wp_food(food_name,food_image,food_description,food_price,food_type) VALUES('$food_name','$imagename','$food_description','$food_price',$food_type)") or die(mysqli_error($con));
+	$result = mysqli_query($con, "INSERT INTO wp_food(food_name,food_image,food_description,food_price,food_type) VALUES('$food_name','$imagename','$food_description','$food_price',$food_type)");
+	if(!$result){
+		echo "<script>alert('Food name already exists..!')</script>";
+	}
 }
 ?>
 <!doctype html>
@@ -181,7 +184,7 @@ if(isset($_POST['submit_food'])) {
 												<li><a href="catservice.php">Snacks</a></li>
 											</ul>
 										</div>
-										
+
 
 									</div><!-- megamenu-container -->
 

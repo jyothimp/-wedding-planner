@@ -3,7 +3,6 @@ include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
 <?php
-
 if(isset($_POST['submit_stage'])) {
 		//$image = $_POST['stage_image'];
 	//Stores the filename as it was on the client computer.
@@ -32,7 +31,10 @@ if(isset($_POST['submit_stage'])) {
 	$stage_name= $_POST['stage_name'];
 	$stage_description = $_POST['stage_description'];
 	$stage_price = $_POST['stage_price'];
-	$result = mysqli_query($con, "INSERT INTO wp_stage(stage_name,stage_image,stage_description,stage_price) VALUES('$stage_name','$imagename','$stage_description','$stage_price')") or die(mysqli_error($con));
+	$result = mysqli_query($con, "INSERT INTO wp_stage(stage_name,stage_image,stage_description,stage_price) VALUES('$stage_name','$imagename','$stage_description','$stage_price')");
+	if(!$result){
+		echo "<script>alert('Stage name already exists..!')</script>";
+	}
 }
 ?>
 <!doctype html>
@@ -177,7 +179,7 @@ if(isset($_POST['submit_stage'])) {
 
 											</ul>
 										</div>
-										
+
 
 									</div><!-- megamenu-container -->
 
