@@ -226,7 +226,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 																<td>Hall</td>
 																<td><?php echo $q=$row['quantity']?></td>
 																<td><?php echo $p=$row2['hall_price']?></td>
-																<td><?php echo $total=$total+$q*$p ?></td
+																<td><?php echo $total=$total+$q*$p ?></td>
 																	<form action="" method="post">
 																		<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
 																		<td><center><input type="submit" name="btn_remove_cart_hall" class="btnremove" value="Remove"></center></td>

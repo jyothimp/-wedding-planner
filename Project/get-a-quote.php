@@ -159,7 +159,7 @@ if(isset($_POST['submit_cart'])){
 							<div class="row">
 								<div class="col-sm-9">
 									<div class="popform">
-										<form action=""  name="myform" id="myform_cart" onsubmit="return "method="post" style="height:auto;">
+										<form class="get-quote" action="#"  name="myform" id="myform_cart" onsubmit="return "method="post" style="height:auto;">
 
 											<div class="form-group">
 												<label for="name">Contact Number : </label>

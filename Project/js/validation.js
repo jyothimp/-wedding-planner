@@ -579,7 +579,7 @@ $(document).ready(function() {
     }
   });
   $("#food_add_form").on("submit", function(){
-    var val_fname= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_fname= /^[^~]{3,30}$/;
     var val_fdescription= /^[^\*]{5,300}$/;
     var val_fprice= /^[0-9.]{1,30}$/;
     var val_ftype= /^[0-9]{1,2}$/;
@@ -629,7 +629,7 @@ $(document).ready(function() {
     }
   });
   $("#food_name").focusout(function() {
-    var val_fname=  /^[A-Za-z0-9_.]{3,30}$/;
+    var val_fname=  /^[^~]{3,30}$/;
     $fname = $(this).val();
     if(!val_fname.test($fname)){
       $(this).focus();
@@ -697,7 +697,7 @@ $(document).ready(function() {
     }
   });
   $("#food_edit_form").on("submit", function(){
-    var val_fename= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_fename= /^[^~]{3,30}$/;
     var val_fedescription= /^[^\*]{5,300}$/;
     var val_feprice= /^[0-9.]{1,30}$/;
     var val_feimage=/\.(jpe?g|png|gif|bmp)$/i;
@@ -737,7 +737,7 @@ $(document).ready(function() {
     }
   });
   $("#food_editname").focusout(function() {
-    var val_fename=  /^[A-Za-z0-9_.]{3,30}$/;
+    var val_fename= /^[^~]{3,30}$/;
     $fename = $(this).val();
     if(!val_fename.test($fename)){
       $(this).focus();

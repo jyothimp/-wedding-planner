@@ -293,12 +293,13 @@ if(isset($_POST['submit_food'])) {
 
 									<p> wedding catering is one of the importent thing. Images below show a few of the food items done by us for our customers.</p>
 									<div class="tab">
-										<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Vegetarian</button>
-										<button class="tablinks" onclick="openCity(event, 'Paris')">Non-Vegetarian</button>
-										<button class="tablinks" onclick="openCity(event, 'Tokyo')">Snacks</button>
+										<button class="tablinks" onclick="openCity(event, 'Vegitarian')" id="defaultOpen">Vegetarian</button>
+										<button class="tablinks" onclick="openCity(event, 'Non-Vegitarian')">Non-Vegetarian</button>
+										<button class="tablinks" onclick="openCity(event, 'Snacks')">Snacks</button>
+										<button class="tablinks" onclick="openCity(event, 'Icecreams')">Ice Creams</button>
 									</div>
 
-									<div id="London" class="tabcontent">
+									<div id="Vegitarian" class="tabcontent">
 										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 										<p>
 											<?php
@@ -327,7 +328,7 @@ if(isset($_POST['submit_food'])) {
 										</p>
 									</div>
 
-									<div id="Paris" class="tabcontent">
+									<div id="Non-Vegitarian" class="tabcontent">
 										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 										<p>
 											<?php
@@ -356,7 +357,7 @@ if(isset($_POST['submit_food'])) {
 										</p>
 									</div>
 
-									<div id="Tokyo" class="tabcontent">
+									<div id="Snacks" class="tabcontent">
 										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 										<p>
 											<?php
@@ -384,7 +385,34 @@ if(isset($_POST['submit_food'])) {
 											?>
 										</p>
 									</div>
+									<div id="Icecreams" class="tabcontent">
+										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
+										<p>
+											<?php
+											$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=4")or die(mysqli_error($con));
+											while ($row=mysqli_fetch_array($query)) {
+												?>
+												<div class="col-sm-4">
+													<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+														<form action="editcatering.php" method="post">
+															<div class="about-me-thumbnail">
+																<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+																<div class="social-media">
+																	<a ><?php echo $row['food_name'] ?><br> </a>
+																	<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
+																	<left><input type="submit"  class="food_button" name="button_edit" id="button" value="Edit"></left>
+																	<right><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
 
+												<?php
+											}
+											?>
+										</p>
+									</div>
 								</div><!-- col -->
 							</div><!-- row -->
 						</div><!-- container -->
@@ -549,6 +577,7 @@ if(isset($_POST['submit_food'])) {
 											<option value="1">Vegetarian</option>
 											<option value="2">Non-Veg</option>
 											<option value="3">Snacks</option>
+											<option value="4">Ice Cream</option>
 										</select>
 										<span class="pop-error-message" id="food_type_error"></span>
 										<input type="file" name="food_image" id="food_image" placeholder="Imagefile">

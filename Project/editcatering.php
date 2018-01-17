@@ -45,7 +45,10 @@ if(isset($_POST['food_edit_submit'])){
   $food_name= $_POST['food_name'];
   $food_description = $_POST['food_description'];
   $food_price = $_POST['food_price'];
-  $result = mysqli_query($con, "update wp_food set food_name='$food_name',food_image='$imagename',food_description='$food_description',food_price='$food_price' where food_id=$item_id") or die(mysqli_error($con));
+  $result = mysqli_query($con, "update wp_food set food_name='$food_name',food_image='$imagename',food_description='$food_description',food_price='$food_price' where food_id=$item_id");
+  if(!$result){
+		echo "<script>alert('Food name already exists..!')</script>";
+	}
 }
 ?>
 <!doctype html>
