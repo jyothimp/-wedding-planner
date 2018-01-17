@@ -815,62 +815,32 @@ $(document).ready(function() {
       return true;
     }
   });
-  $("#myform_car").on("submit", function(){
-    var val_name= /^[A-Za-z.\s]{3,30}$/;
+  $("#myform_cart").on("submit", function(){
     var val_phone= /^[0-9]{9,12}$/;
-    var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
-    var val_address= /^[^&]{10,300}$/;
     var val_dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
-    var val_venue= /^[A-Za-z.\s]{3,30}$/;
-    $name = $('#name').val();
+    var val_location = /^[A-Za-z.\s]{3,30}$/;
+    var val_venue=  /^[A-Za-z.\s]{3,30}$/;
     $phone = $('#number').val();
-    $email = $('#mail').val();
-    $address = $('#addr').val();
     $dateformat = $('#date').val();
+    $location= $('#location :selected').text();
     $venue= $('#venue').val();
-    if(!val_name.test($name)){
-      $("#name").focusout();
-      return false;
-    }
-    else if(!val_phone.test($phone)){
+    if(!val_phone.test($phone)){
       $("#number").focusout();
-      return false;
-    }
-    else if(!val_email.test($email)){
-      $("#mail").focusout();
-      return false;
-    }
-    else if(!val_address.test($address)){
-      $("#addr").focusout();
       return false;
     }
     else if(!val_dateformat .test($dateformat)){
       $("#date").focusout();
       return false;
     }
-    else if(!val_venue.test($venue)){
-      $("#venue"),focusout();
-      return false;
-    }
-    else {
+    else if(!val_location .test($location)){
+      $("#location").focusout();
       return true;
     }
-  });
-
-  $("#name").focusout(function() {
-    var val_name= /^[A-Za-z.\s]{3,30}$/;
-    $name = $(this).val();
-    if(!val_name.test($name)){
-      $(this).focus();
-      $(this).css('border','1px solid red');
-      $('#name_error').html("Invalid name");
-      $('#name_error').addClass('is-visible');
-      return false;
+    else if(!val_venue.test($venue)){
+      $("#venue"),focusout();
+      return true;
     }
     else {
-      $(this).css('border','1px solid #cccccc');
-      $('#name_error').html("");
-      $('#name_error').removeClass('is-visible');
       return true;
     }
   });
@@ -888,40 +858,6 @@ $(document).ready(function() {
       $(this).css('border','1px solid #cccccc');
       $('#number_error').html("");
       $('#number_error').removeClass('is-visible');
-      return true;
-    }
-  });
-  $("#mail").focusout(function() {
-    var val_email=/^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
-    $email = $(this).val();
-    if(!val_email.test($email)){
-      $(this).focus();
-      $(this).css('border','1px solid red');
-      $('#mail_error').html("Invalid email");
-      $('#mail_error').addClass('is-visible');
-      return false;
-    }
-    else {
-      $(this).css('border','1px solid #cccccc');
-      $('#mail_error').html("");
-      $('#mail_error').removeClass('is-visible');
-      return true;
-    }
-  });
-  $("#addr").focusout(function() {
-    var val_address=/^[^&]{10,300}$/;
-    $address = $(this).val();
-    if(!val_address.test($address)){
-      $(this).focus();
-      $(this).css('border','1px solid red');
-      $('#addr_error').html("Invalid address");
-      $('#addr_error').addClass('is-visible');
-      return false;
-    }
-    else {
-      $(this).css('border','1px solid #cccccc');
-      $('#addr_error').html("");
-      $('#addr_error').removeClass('is-visible');
       return true;
     }
   });
@@ -949,6 +885,23 @@ $(document).ready(function() {
       $(this).css('border','1px solid #cccccc');
       $('#date_error').html("");
       $('#date_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#location").focusout(function() {
+    var val_location= /^[A-Za-z.\s]{3,30}$/;
+    $location=$('#location :selected').text();
+    if(!val_location.test($location)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#location_error').html("Invalid location");
+      $('#location_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#location_error').html("");
+      $('#location_error').removeClass('is-visible');
       return true;
     }
   });

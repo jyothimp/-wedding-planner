@@ -138,44 +138,7 @@ ga('send', 'pageview');
                                 </li>
                                  <li><a href="about-us.php">About</a></li>
 
-                                <li class="megamenu ">
-
-                                    <a href="#">Add-ons</a>
-
-                                    <div class="megamenu-container col-"2>
-
-                                    	<div class="section">
-											<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi" >
-										</div><!-- section -->
-
-                                        <div class="section">
-
-                                            <h5>Designing</h5>
-
-                                            <ul>
-
-                                                <li><a href="design-stage.php">Stage Decoration</a></li>
-																								<li><a href="design-decor.php">Hall Decoration</a></li>
-                                            </ul>
-
-                                        </div><!-- section -->
-                                        <div class="section">
-
-                                            <h5>Catering Services</h5>
-
-                                            <ul>
-																							<li><a href="catservice.php">Nonvegetarian</a></li>
-																							<li><a href="catservice.php">Vegetarian</a></li>
-																							<li><a href="catservice.php">Snacks</a></li>
-
-                                            </ul>
-                                            </div>
-
-
-                                    </div><!-- megamenu-container -->
-
-                                </li>
-
+                              
                                  <li>
                                 	<a href="contact-us.php">Contact</a>
                                 </li>

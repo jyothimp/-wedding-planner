@@ -98,32 +98,37 @@ if(isset($_POST['submit_cart'])){
 								<li><a href="about-us.php">About</a></li>
 								<li class="megamenu ">
 									<a href="#">Add-ons</a>
+
 									<div class="megamenu-container col-4">
+
 										<div class="section">
 											<img class="hidden-xs hidden-sm" src="images/backgrounds/image-megamenu.png" alt="Destination Weddings in Kochi">
 										</div><!-- section -->
+
 										<div class="section">
+
 											<h5>Designing</h5>
+
 											<ul>
-												<li><a href="decoration.php">Decoration</a></li>
-												<li><a href="light.php">Light System</a></li>
-												<li><a href="cake.php">Designer Cakes</a></li>
+
+												<li><a href="design-stage.php">Stage Decoration</a></li>
+												<li><a href="design-decor.php">Hall Decoration</a></li>
 											</ul>
+
 										</div><!-- section -->
+
 										<div class="section">
-											<h5>Management</h5>
-											<ul>
-												<li><a href="soundsystem.php">Sound System</a></li>
-											</ul>
-										</div><!-- section -->
-										<div class="section">
+
 											<h5>Catering Services</h5>
+
 											<ul>
-												<li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-												<li><a href="vegetarian.php">Vegetarian</a></li>
-												<li><a href="snacks.php">Snacks</a></li>
+												<li><a href="catservice.php">Nonvegetarian</a></li>
+												<li><a href="catservice.php">Vegetarian</a></li>
+												<li><a href="catservice.php">Snacks</a></li>
 											</ul>
 										</div>
+
+
 									</div><!-- megamenu-container -->
 								</li>
 								<li>
@@ -159,7 +164,7 @@ if(isset($_POST['submit_cart'])){
 							<div class="row">
 								<div class="col-sm-9">
 									<div class="popform">
-										<form class="get-quote" action="#"  name="myform" id="myform_cart" onsubmit="return "method="post" style="height:auto;">
+										<form class="get-quote" action="#"  name="myform" id="myform_cart" onsubmit="return" method="post" style="height:auto;">
 
 											<div class="form-group">
 												<label for="name">Contact Number : </label>
@@ -193,6 +198,7 @@ if(isset($_POST['submit_cart'])){
 											<div class="form-group">
 													<label for="selectlocation">Location:</label>
 													<select   name="location" id="location" class="form-control">
+													<span class="get_quote cd-error-message" id="location_error"></span>
 													</select>
 											</div>
 											<div class="form-group">

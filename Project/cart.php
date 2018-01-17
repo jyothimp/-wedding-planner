@@ -112,16 +112,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 												<li><a href="catservice.php">Snacks</a></li>
 											</ul>
 										</div>
-										<div class="section">
-											<h5>Media&Entertainment</h5>
-											<ul>
-												<li><a href="entertainment.php">Entertainment</a></li>
-												<li><a href="videography.php">Videography</a></li>
-												<li><a href="photography.php">Photography</a></li>
-											</ul>
-										</div><!-- section -->
-									</div><!-- megamenu-container -->
-								</li>
+
 								<li>
 									<a href="contact-us.php">Contact</a>
 								</li>
