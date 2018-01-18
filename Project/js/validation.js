@@ -817,9 +817,9 @@ $(document).ready(function() {
   });
   $("#myform_cart").on("submit", function(){
     var val_phone= /^[0-9]{9,12}$/;
-    var val_dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
-    var val_location = /^[A-Za-z.\s]{3,30}$/;
-    var val_venue=  /^[A-Za-z.\s]{3,30}$/;
+    var val_dateformat = /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/;
+    var val_location = /^[^&]{3,30}$/;
+    var val_venue=  /^[^&]{3,30}$/;
     $phone = $('#number').val();
     $dateformat = $('#date').val();
     $location= $('#location :selected').text();
@@ -834,11 +834,11 @@ $(document).ready(function() {
     }
     else if(!val_location .test($location)){
       $("#location").focusout();
-      return true;
+      return false;
     }
     else if(!val_venue.test($venue)){
-      $("#venue"),focusout();
-      return true;
+      $("#venue").focusout();
+      return false;
     }
     else {
       return true;

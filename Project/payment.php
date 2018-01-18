@@ -148,6 +148,8 @@ include_once 'check_logout.php';
 						 <center><div class="container">
 							<div class="row" >
 								<div class="col-sm-3">
+								</div>
+								<div class="col-sm-6">
 									<div class="popform" align="center">
 										<form   name="myform" id="myform" method="post" role="form" style="height:auto;">
 											<div class="form-group" >
