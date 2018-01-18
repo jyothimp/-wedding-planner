@@ -922,4 +922,127 @@ $(document).ready(function() {
       return true;
     }
   });
+  $("#payment").on("submit", function(){
+    var val_cardno=  /^[0-9]{16,18}$/;
+    var val_cvv=  /^[0-9]{3}$/;
+    var val_holdername=  /^[^&]{3,30}$/;
+    var val_month=  /^[0-9]{1,2}$/;
+    var val_year=  /^[0-9]{4}$/;
+    $cardno= $('#cardno').val();
+    $cvv= $('#cvv').val();
+    $holdername= $('#holdername').val();
+    $month= $('#month :selected').text();
+    $year= $('#year :selected').text();
+   if(! val_cardno.test($cardno)){
+      $("#cardno").focusout();
+      return false;
+    }
+    else if(!val_month.test($month)){
+      $("#month").focusout();
+      return false;
+    }
+    else if(!val_year.test($year)){
+      $("#year").focusout();
+      return false;
+    }
+    else if(!val_cvv.test($cvv)){
+      $("#cvv").focusout();
+      return false;
+    }
+
+    else if(!val_holdername.test($holdername)){
+      $("#holdername").focusout();
+      return false;
+    }
+    else {
+      alert("Payment Success..!");
+      return true;
+    }
+  });
+  $("#cardno").focusout(function() {
+    var val_cardno= /^[0-9]{16,18}$/;
+    $cardno = $(this).val();
+    if(!val_cardno.test($cardno)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#cardno_error').html("Invalid card number");
+      $('#cardno_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#cardno_error').html("");
+      $('#cardno_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#month").focusout(function() {
+    var val_month= /^[0-9]{1,2}$/;
+    $month = $(this).val();
+    if(!val_month.test($month)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#month_error').html("Invalid month");
+      $('#month_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#month_error').html("");
+      $('#month_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#year").focusout(function() {
+    var val_year= /^[0-9]{4}$/;
+    $year = $(this).val();
+    if(!val_year.test($year)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#year_error').html("Invalid year");
+      $('#year_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#year_error').html("");
+      $('#year_error').removeClass('is-visible');
+      return true;
+    }
+  });
+
+  $("#cvv").focusout(function() {
+    var val_cvv= /^[0-9]{3}$/;
+    $cvv= $(this).val();
+    if(!val_cvv.test($cvv)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#cvv_error').html("Invalid cvv");
+      $('#cvv_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#cvv_error').html("");
+      $('#cvv_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#holdername").focusout(function() {
+    var val_holdername= /^[A-Za-z.\s]{3,30}$/;
+    $holdername= $(this).val();
+    if(!val_holdername.test($holdername)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#holdername_error').html("Invalid holdername");
+      $('#holdername_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#holdername_error').html("");
+      $('#holdername_error').removeClass('is-visible');
+      return true;
+    }
+  });
 })
