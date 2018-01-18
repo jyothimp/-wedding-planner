@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="Wedding Planners Kerala, Wedding Planners Ernakulam, Wedding Planners KochiWedding Photography in Kochi, Wedding Videography in Kochi, Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Designer cakes in Kerala, Beach wedding in Kochi, Destination weddings in Kerala">
-    <meta name="description" content="Scenario Wedding Company is a Kerala based wedding planner excelled in stage decoration, wedding decoration, wedding photography, wedding videography, Catering services, Event management in kochi. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="description" content="Angel Wedding Company is a Kerala based wedding planner excelled in stage decoration, wedding decoration, wedding photography, wedding videography, Catering services, Event management in kochi. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
     
     <title>Wedding Planners Kerala | Wedding Planners Ernakulam | Wedding Planners Kochi</title>
     
@@ -69,8 +69,8 @@
             <div class="row">
             
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
-            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
             <div class="container" style="border-bottom: 3px #110000">
@@ -266,7 +266,7 @@ We arrange designers who specialise in various types of weddings according to th
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/shopassistance/1429268466jayalakshmy.jpg" alt="kochi weddings planner">
+                                <img src="Angel_webmaster/upload/shopassistance/1429268466jayalakshmy.jpg" alt="kochi weddings planner">
                                 
                                 <!--<div class="social-media">
 									
@@ -288,7 +288,7 @@ We arrange designers who specialise in various types of weddings according to th
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/shopassistance/1429268466kalyan.jpg" alt="kochi weddings planner">
+                                <img src="Angel_webmaster/upload/shopassistance/1429268466kalyan.jpg" alt="kochi weddings planner">
                                 
                                 <!--<div class="social-media">
 									
@@ -310,7 +310,7 @@ We arrange designers who specialise in various types of weddings according to th
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/shopassistance/1429268466sheematy.jpg" alt="kochi weddings planner">
+                                <img src="Angel_webmaster/upload/shopassistance/1429268466sheematy.jpg" alt="kochi weddings planner">
                                 
                                 <!--<div class="social-media">
 									
@@ -332,7 +332,7 @@ We arrange designers who specialise in various types of weddings according to th
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/shopassistance/1429268667jollysilks.jpg" alt="kochi weddings planner">
+                                <img src="Angel_webmaster/upload/shopassistance/1429268667jollysilks.jpg" alt="kochi weddings planner">
                                 
                                 <!--<div class="social-media">
 									
@@ -354,7 +354,7 @@ We arrange designers who specialise in various types of weddings according to th
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/shopassistance/1434531971921477_472891519458335_648362778_o.jpg" alt="kochi weddings planner">
+                                <img src="Angel_webmaster/upload/shopassistance/1434531971921477_472891519458335_648362778_o.jpg" alt="kochi weddings planner">
                                 
                                 <!--<div class="social-media">
 									
@@ -620,7 +620,7 @@ We arrange designers who specialise in various types of weddings according to th
   			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
                             
                          </div>
@@ -628,9 +628,9 @@ We arrange designers who specialise in various types of weddings according to th
                          <div class="social-media abc">
 									
 									
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 									
 								</div>  
                         </div><!-- col -->
@@ -660,7 +660,7 @@ We arrange designers who specialise in various types of weddings according to th
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+                                        <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>
@@ -685,7 +685,7 @@ We arrange designers who specialise in various types of weddings according to th
                         	
                             <div class="widget widget-text">	
                             	
-                                <p class="last text-center text-uppercase">Scenario Wedding Company &copy; All Rights Reserved  
+                                <p class="last text-center text-uppercase">Angel Wedding Company &copy; All Rights Reserved  
                                 |
                               Designed By .:<a href="http://www.atees.in/" target="_blank">ATEES</a>:.
                                 

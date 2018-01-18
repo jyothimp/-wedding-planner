@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="Wedding Planner in Kochi,Wedding Planner in Cochin,Wedding Planner in Angamaly,Cochin Weddings Planner,Wedding Planners in Kochi Kerala, Kochi Weddings Planner ">
-    <meta name="description" content="The Scenario Wedding Company makes your wedding as ultimate celebrations. We create glorious and emotional moments in your life events which match with your tastes. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="description" content="The Angel Wedding Company makes your wedding as ultimate celebrations. We create glorious and emotional moments in your life events which match with your tastes. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
     <meta name="author" content="Innovosome">
 
-    <title>Wedding Planner in Kochi | Scenario Wedding Company </title>
+    <title>Wedding Planner in Kochi | Angel Wedding Company </title>
 
     <!-- FAVICON AND APPLE TOUCH -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
@@ -78,8 +78,8 @@
             <div class="row">
 
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a></div>
-            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
             <div class="container" style="border-bottom: 3px #110000">
@@ -270,14 +270,14 @@ BE it a traditional theme or the most advanced cyber start up.</p>
 
                             <div class="about-me-thumbnail">
 
-                                <img src="images/scenario/team.jpg" alt="Wedding Planner in Cochin">
+                                <img src="images/Angel/team.jpg" alt="Wedding Planner in Cochin">
 
                                 <div class="social-media">
 
-									<a class="facebook" href="https://www.facebook.com/scenarioweddingcompany/?fref=ts"><i class="fa fa-facebook"></i></a>
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+									<a class="facebook" href="https://www.facebook.com/Angelweddingcompany/?fref=ts"><i class="fa fa-facebook"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 
 								</div><!-- social-media -->
 
@@ -370,7 +370,7 @@ BE it a traditional theme or the most advanced cyber start up.</p>
   			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
 
                          </div>
@@ -378,9 +378,9 @@ BE it a traditional theme or the most advanced cyber start up.</p>
                          <div class="social-media abc">
 
 
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 
 								</div>
                         </div><!-- col -->
@@ -410,7 +410,7 @@ BE it a traditional theme or the most advanced cyber start up.</p>
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+                                        <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>
@@ -435,7 +435,7 @@ BE it a traditional theme or the most advanced cyber start up.</p>
 
                             <div class="widget widget-text">
 
-                                <p class="last text-center text-uppercase">Scenario Wedding Company &copy; All Rights Reserved
+                                <p class="last text-center text-uppercase">Angel Wedding Company &copy; All Rights Reserved
                                 |
                               Designed By .:<a href="http://www.atees.in/" target="_blank">ATEES</a>:.
 

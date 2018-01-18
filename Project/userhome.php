@@ -17,7 +17,7 @@ else{
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
   <meta name="keywords" content="wedding planner in Kerala,Wedding Planner in Kochi,Wedding Planner in Cochin,Best wedding planner in cochin,Cochin weddings planner,event management in Kochi">
-  <meta name="description" content="Scenario Wedding Company is a Cochin based wedding planner. We design your dream wedding with classic ideas and extreme themes. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+  <meta name="description" content="Angel Wedding Company is a Cochin based wedding planner. We design your dream wedding with classic ideas and extreme themes. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
   <meta name="author" content="Invosome">
   <meta name="google-site-verification" content="s1Qgwud677otLoQ_HX0flk-H37BezyHRnUy3-9OUXIw" />
   <title>  Best Wedding Planner in cochin - Kerala</title>
@@ -81,8 +81,8 @@ else{
       <div class="container">
         <div class="row">
           <div class="col-lg-6"></div>
-          <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a></div>
-          <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+          <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+          <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
         </div>
       </div>
       <div class="container" style="border-bottom: 3px #110000">
@@ -149,15 +149,15 @@ else{
                 <div class="headline style-3"><br><br>
                   <h1>Welcome to Angel Wedding Company</h1>
                 </div><!-- headline -->
-                <div class="col-md-4 col-sm-3">
+                <div class="col-md-4 col-sm-6">
                   <div class="portfolio-item wow fadeInLeft">
                     <div class="portfolio-item-thumbnail btn_stage">
-                      <img src="images/scenario/New folder/th2.jpg" width="360" alt="Wedding planners kerala">
+                      <img src="images/stage/stagelogo.jpg" width="270" alt="Wedding planners kerala">
                       <div class="portfolio-item-hover">
                         <div class="portfolio-item-description">
                           <h3><a href="design-stage.php">Stage Decoration</a></h3>
                         </div><!-- portfolio-item-description -->
-                        <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th1.jpg"><i class="fa fa-plus"></i></a>
+                        <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th1.jpg"><i class="fa fa-plus"></i></a>
                       </div><!-- portfolio-item-hover -->
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
@@ -170,7 +170,7 @@ else{
                         <div class="portfolio-item-description">
                           <h3><a href="design-decor.php">Hall Decoration</a></h3>
                         </div><!-- portfolio-item-description -->
-                        <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th2.jpg"><i class="fa fa-plus"></i></a>
+                        <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th2.jpg"><i class="fa fa-plus"></i></a>
                       </div><!-- portfolio-item-hover -->
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
@@ -183,7 +183,7 @@ else{
                         <div class="portfolio-item-description">
                           <h3><a href="catservice.php">Catering Service</a></h3>
                         </div><!-- portfolio-item-description -->
-                        <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th3.jpg"><i class="fa fa-plus"></i></a>
+                        <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th3.jpg"><i class="fa fa-plus"></i></a>
                       </div><!-- portfolio-item-hover -->
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
@@ -230,7 +230,7 @@ else{
     <h5>Your Perfect Wedding Planner..</h5>
   </div>
   <p>WEDDINGS, Product Launches, Award Nights and Fashion Shows.........whatever be the
-    occasion, Scenario - The Ultimate Wedding Planner in Cochin, have the classic ideas to reach
+    occasion, Angel - The Ultimate Wedding Planner in Cochin, have the classic ideas to reach
     the minds of the participants and guests with the real essence of the theme, forever. OUR
     expertise will provide you the best inputs to organize the event from the scratch to the final
     execution, like the preparation of the invitation letters to the final end of the event by standing at
@@ -323,12 +323,12 @@ else{
                   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
                   fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
               </div>
               <div class="social-media abc">
-                <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                 <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
               </div>
             </div><!-- col -->
             <div class="col-sm-3">
@@ -349,7 +349,7 @@ else{
                   </li>
                   <li>
                     <span>E-mail</span>
-                    <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
+                    <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                   </li>
                   <li>
                     <a href="faq.php"> <span>FAQ</span></a>

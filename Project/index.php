@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="wedding planner in Kerala,Wedding Planner in Kochi,Wedding Planner in Cochin,Best wedding planner in cochin,Cochin weddings planner,event management in Kochi">
-    <meta name="description" content="Scenario Wedding Company is a Cochin based wedding planner. We design your dream wedding with classic ideas and extreme themes. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="description" content="Angel Wedding Company is a Cochin based wedding planner. We design your dream wedding with classic ideas and extreme themes. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
      <meta name="author" content="Invosome">
 <meta name="google-site-verification" content="s1Qgwud677otLoQ_HX0flk-H37BezyHRnUy3-9OUXIw" />
 
@@ -106,8 +106,8 @@ ga('send', 'pageview');
             <div class="row">
 
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a></div>
-            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
             <div class="container" style="border-bottom: 3px #110000">
@@ -138,7 +138,7 @@ ga('send', 'pageview');
                                 </li>
                                  <li><a href="about-us.php">About</a></li>
 
-                              
+
                                  <li>
                                 	<a href="contact-us.php">Contact</a>
                                 </li>
@@ -277,7 +277,7 @@ ga('send', 'pageview');
 
                                             <p>WEDDINGS, Product Launches, Award Nights and Fashion Shows.........whatever be the
 
-occasion, Scenario - The Ultimate Wedding Planner in Cochin, have the classic ideas to reach
+occasion, Angel - The Ultimate Wedding Planner in Cochin, have the classic ideas to reach
 
 the minds of the participants and guests with the real essence of the theme, forever. OUR
 
@@ -357,7 +357,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th1.jpg" width="270" alt="Wedding planners kerala">
+                            	<img src="images/Angel/New folder/th1.jpg" width="270" alt="Wedding planners kerala">
 
                                 <div class="portfolio-item-hover">
 
@@ -368,7 +368,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th1.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th1.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -383,7 +383,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th2.jpg" alt="kerala wedding planners">
+                            	<img src="images/Angel/New folder/th2.jpg" alt="kerala wedding planners">
 
                                 <div class="portfolio-item-hover">
 
@@ -394,7 +394,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th2.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th2.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -409,7 +409,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th3.jpg" alt="Stage decoration in Kochi">
+                            	<img src="images/Angel/New folder/th3.jpg" alt="Stage decoration in Kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -420,7 +420,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th3.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th3.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -435,7 +435,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th4.jpg" alt="Wedding stage decoration in kochi">
+                            	<img src="images/Angel/New folder/th4.jpg" alt="Wedding stage decoration in kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -446,7 +446,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th4.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th4.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -467,7 +467,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th5.jpg" alt="wedding decorators in kochi">
+                            	<img src="images/Angel/New folder/th5.jpg" alt="wedding decorators in kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -478,7 +478,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th5.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th5.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -493,7 +493,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th6.jpg" alt="wedding decoration in kochi">
+                            	<img src="images/Angel/New folder/th6.jpg" alt="wedding decoration in kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -504,7 +504,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th6.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th6.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -519,7 +519,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th7.jpg" alt="Wedding Design and Decor in Kochi">
+                            	<img src="images/Angel/New folder/th7.jpg" alt="Wedding Design and Decor in Kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -530,7 +530,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th7.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th7.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -545,7 +545,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th8.jpg" alt="Stage Design and Decor in Kochi">
+                            	<img src="images/Angel/New folder/th8.jpg" alt="Stage Design and Decor in Kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -556,7 +556,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th8.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th8.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -576,7 +576,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th9.jpg" alt="Invitation designing in Kochi">
+                            	<img src="images/Angel/New folder/th9.jpg" alt="Invitation designing in Kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -587,7 +587,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th9.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th9.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -602,7 +602,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th10.jpg" alt="Invitation designing in Kerala">
+                            	<img src="images/Angel/New folder/th10.jpg" alt="Invitation designing in Kerala">
 
                                 <div class="portfolio-item-hover">
 
@@ -613,7 +613,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th10.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th10.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -628,7 +628,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th11.jpg" alt="Catering services in Kochi">
+                            	<img src="images/Angel/New folder/th11.jpg" alt="Catering services in Kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -639,7 +639,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th11.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th11.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -654,7 +654,7 @@ the flawless execution of the event.
 
                             <div class="portfolio-item-thumbnail">
 
-                            	<img src="images/scenario/New folder/th12.jpg"  alt="Catering service in Kochi">
+                            	<img src="images/Angel/New folder/th12.jpg"  alt="Catering service in Kochi">
 
                                 <div class="portfolio-item-hover">
 
@@ -665,7 +665,7 @@ the flawless execution of the event.
 
                                     </div><!-- portfolio-item-description -->
 
-                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/scenario/New folder/th12.jpg"><i class="fa fa-plus"></i></a>
+                                    <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th12.jpg"><i class="fa fa-plus"></i></a>
 
                                 </div><!-- portfolio-item-hover -->
 
@@ -775,7 +775,7 @@ the flawless execution of the event.
   			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
 
                          </div>
@@ -783,9 +783,9 @@ the flawless execution of the event.
                          <div class="social-media abc">
 
 
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 
 								</div>
                         </div><!-- col -->
@@ -815,7 +815,7 @@ the flawless execution of the event.
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
+                                        <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>

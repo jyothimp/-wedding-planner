@@ -49,7 +49,7 @@ if(isset($_POST['submit_hall'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 	<meta name="keywords" content="Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Wedding Planners Kochi, Wedding Planners Ernakulam, Wedding Planners Kerala">
-	<meta name="description" content="Scenario Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+	<meta name="description" content="Angel Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
 	<meta name="author" content="Innovosome">
 	s
 	<title>Event Management Kochi | Event Management Ernakulam | Event Management Kerala</title>
@@ -115,8 +115,8 @@ if(isset($_POST['submit_hall'])) {
 				<div class="row">
 
 					<div class="col-lg-6"></div>
-					<div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a></div>
-					<div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+					<div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+					<div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
 				</div>
 			</div>
 			<div class="container" style="border-bottom: 3px #110000">
@@ -392,7 +392,7 @@ if(isset($_POST['submit_hall'])) {
 													fjs.parentNode.insertBefore(js, fjs);
 												}(document, 'script', 'facebook-jssdk'));</script>
 
-												<div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+												<div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
 
 											</div>
@@ -400,9 +400,9 @@ if(isset($_POST['submit_hall'])) {
 											<div class="social-media abc">
 
 
-												<a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+												<a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
 												<a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-												<a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+												<a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 
 											</div>
 										</div><!-- col -->
@@ -432,7 +432,7 @@ if(isset($_POST['submit_hall'])) {
 													</li>
 													<li>
 														<span>E-mail</span>
-														<a href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a>
+														<a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
 													</li>
 													<li>
 														<a href="faq.php"> <span>FAQ</span></a>

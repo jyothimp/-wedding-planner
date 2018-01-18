@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="Wedding Entertainment in Kochi,Entertainment,Wedding Entertainment in Kerala, Wedding Entertainment in Kochi Kerala,Wedding  Services in Kochi Kerala
 ">
-    <meta name="description" content="Wedding ceremony is full of joy and ultimate celebrations. Wedding entertainment provides in the form of dance performances, music etc. Scenario wedding company has the best arrangements for you. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="description" content="Wedding ceremony is full of joy and ultimate celebrations. Wedding entertainment provides in the form of dance performances, music etc. Angel wedding company has the best arrangements for you. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
     <meta name="author" content="Invosome">
     
-    <title>Wedding Entertainment in Kochi | Scenario Wedding Company </title>
+    <title>Wedding Entertainment in Kochi | Angel Wedding Company </title>
     
     <!-- FAVICON AND APPLE TOUCH -->    
     <link rel="shortcut icon" href="images/icons/favicon.png">
@@ -71,8 +71,8 @@
             <div class="row">
             
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
-            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
             <div class="container" style="border-bottom: 3px #110000">
@@ -271,7 +271,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/1701112949.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/1701112949.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -293,7 +293,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/611978623.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/611978623.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -315,7 +315,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/164685904.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/164685904.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -337,7 +337,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/871308713.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/871308713.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -359,7 +359,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/1076691543.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/1076691543.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -381,7 +381,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/1645876143.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/1645876143.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -403,7 +403,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/593351598.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/593351598.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -425,7 +425,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/780064013.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/780064013.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -447,7 +447,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/1266532292.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/1266532292.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -469,7 +469,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/1551997153.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/1551997153.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -491,7 +491,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/243255292.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/243255292.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -513,7 +513,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/entertainment/176077089.jpg" alt="Wedding planners in ernakulam">
+                                <img src="Angel_webmaster/upload/entertainment/176077089.jpg" alt="Wedding planners in ernakulam">
                                 
                                <!-- <div class="social-media">
 									
@@ -614,7 +614,7 @@
   			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
                             
                          </div>
@@ -622,9 +622,9 @@
                          <div class="social-media abc">
 									
 									
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 									
 								</div>  
                         </div><!-- col -->
@@ -654,7 +654,7 @@
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+                                        <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>
@@ -679,7 +679,7 @@
                         	
                             <div class="widget widget-text">	
                             	
-                                <p class="last text-center text-uppercase">Scenario Wedding Company &copy; All Rights Reserved  
+                                <p class="last text-center text-uppercase">Angel Wedding Company &copy; All Rights Reserved  
                                 |
                               Designed By .:<a href="http://www.atees.in/" target="_blank">ATEES</a>:.
                                 

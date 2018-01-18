@@ -19,7 +19,7 @@ if(isset($_POST['submit_cart'])){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 	<meta name="keywords" content="wedding packages, wedding planners, wedding ideas, wedding themes, package, traditional kerala weddings, kerala weddings, wedding special">
-	<meta name="description" content="Scenario wedding company has many packages for your wedding. You can select your needed package that suits to your budget and customs. Every package has its own specialties and uniqueness. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+	<meta name="description" content="Angel wedding company has many packages for your wedding. You can select your needed package that suits to your budget and customs. Every package has its own specialties and uniqueness. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
 	<meta name="author" content="Invosome">
 	<title>Wedding Planners in Kerala | Angel Wedding Company</title>
 	<!-- FAVICON AND APPLE TOUCH -->
@@ -73,8 +73,8 @@ if(isset($_POST['submit_cart'])){
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6"></div>
-					<div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a></div>
-					<div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+					<div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+					<div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
 				</div>
 			</div>
 			<div class="container" style="border-bottom: 3px #110000">
@@ -268,7 +268,7 @@ if(isset($_POST['submit_cart'])){
 												</li>
 												<li>
 													<span>E-mail</span>
-													<a href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a>
+													<a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
 												</li>
 												<li>
 													<a href="faq.php"> <span>FAQ</span></a>

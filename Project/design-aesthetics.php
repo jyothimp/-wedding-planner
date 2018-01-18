@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Wedding Planners Kochi, Wedding Planners Ernakulam, Wedding Planners Kerala">
-    <meta name="description" content="Scenario Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="description" content="Angel Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
     <title>Event Management Ernakulam | Event Management Kerala | Event Management Kochi</title>
     
     <!-- FAVICON AND APPLE TOUCH -->    
@@ -69,8 +69,8 @@
             <div class="row">
             
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
-            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
             <div class="container" style="border-bottom: 3px #110000">
@@ -245,7 +245,7 @@
                         <h2>Design and Decor - Wedding Aesthetics</h2>
                         
                         <p>Flower arrangement is as essential part of wedding decor. The types of flower arrangement used will vary according to the theme. Oriental flowers are used in modern designs. We design it according to you and your families’ requirement and traditions.</p>
-                        <p>Theme decor also varies from the colour scheme and type of wedding chosen by the couple. The wedding planners at Scenario Weddings use their aesthetic sense to design beautiful wedding themes.</p>
+                        <p>Theme decor also varies from the colour scheme and type of wedding chosen by the couple. The wedding planners at Angel Weddings use their aesthetic sense to design beautiful wedding themes.</p>
                         
                         
                         
@@ -264,7 +264,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636081.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636081.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -287,7 +287,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636082.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636082.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -310,7 +310,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636083.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636083.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -333,7 +333,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636084.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636084.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -356,7 +356,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636085.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636085.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -379,7 +379,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636087.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636087.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -402,7 +402,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636088.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636088.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -425,7 +425,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343636089.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343636089.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -448,7 +448,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/143436360811.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/143436360811.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -471,7 +471,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/143436360812.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/143436360812.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -494,7 +494,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/143436390710.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/143436390710.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -517,7 +517,7 @@
                         	
                             <div class="about-me-thumbnail">
                             	
-                                <img src="scenario_webmaster/upload/designdecor/14343640236.jpg" alt="Wedding planner in Bolgatty palace">
+                                <img src="Angel_webmaster/upload/designdecor/14343640236.jpg" alt="Wedding planner in Bolgatty palace">
                                 
                                 <div class="social-media">
 									
@@ -776,7 +776,7 @@
   			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
                             
                          </div>
@@ -784,9 +784,9 @@
                          <div class="social-media abc">
 									
 									
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 									
 								</div>  
                         </div><!-- col -->
@@ -816,7 +816,7 @@
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+                                        <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>
@@ -841,7 +841,7 @@
                         	
                             <div class="widget widget-text">	
                             	
-                                <p class="last text-center text-uppercase">Scenario Wedding Company &copy; All Rights Reserved  
+                                <p class="last text-center text-uppercase">Angel Wedding Company &copy; All Rights Reserved  
                                 |
                               Designed By .:<a href="http://www.atees.in/" target="_blank">ATEES</a>:.
                                 

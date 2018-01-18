@@ -25,9 +25,9 @@ if(isset($_POST['btn_remove_cart_food'])){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 	<meta name="keywords" content="Beach Weddings,Beach Wedding in Kochi,Beach Weddings in Kerala,Beach Wedding in Kochi,Beach Wedding in Kerala,Wedding Venues in Kerala,Wedding Venues in Kochi">
-	<meta name="description" content="At present there are various trends include in the weddings. Scenario wedding company provides the facility of the beach wedding that makes your day as much special. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+	<meta name="description" content="At present there are various trends include in the weddings. Angel wedding company provides the facility of the beach wedding that makes your day as much special. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
 	<meta name="author" content="Invosome">
-	<title>Beach Weddings in Kochi | Scenario Wedding Company</title>
+	<title>Beach Weddings in Kochi | Angel Wedding Company</title>
 	<!-- FAVICON AND APPLE TOUCH -->
 	<link rel="shortcut icon" href="images/icons/favicon.png">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-57x57.png">
@@ -68,8 +68,8 @@ if(isset($_POST['btn_remove_cart_food'])){
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6"></div>
-					<div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a></div>
-					<div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+					<div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+					<div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
 				</div>
 			</div>
 			<div class="container" style="border-bottom: 3px #110000">
@@ -306,12 +306,12 @@ if(isset($_POST['btn_remove_cart_food'])){
 											js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
 											fjs.parentNode.insertBefore(js, fjs);
 										}(document, 'script', 'facebook-jssdk'));</script>
-										<div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+										<div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 									</div>
 									<div class="social-media abc">
-										<a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+										<a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
 										<a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-										<a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+										<a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div><!-- col -->
 								<div class="col-sm-3">
@@ -332,7 +332,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 											</li>
 											<li>
 												<span>E-mail</span>
-												<a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+												<a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
 											</li>
 											<li>
 												<a href="faq.php"> <span>FAQ</span></a>
@@ -348,7 +348,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="widget widget-text">
-										<p class="last text-center text-uppercase">Scenario Wedding Company &copy; All Rights Reserved
+										<p class="last text-center text-uppercase">Angel Wedding Company &copy; All Rights Reserved
 											|
 											Designed By .:<a href="http://www.atees.in/" target="_blank">ATEES</a>:.
 										</div><!-- widget-text -->

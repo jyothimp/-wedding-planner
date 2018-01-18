@@ -10,10 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="Wedding Planner in Bolgatty Palace,Wedding Planner in Bolgatty Palace Kochi,Wedding Planner in Bolgatty Palace in Cochin,Wedding Planners in Bolgatty Palace ">
-    <meta name="description" content="Scenario Wedding Company is one of the top wedding designing companies in Kerala. We have a team of impressive creative designers with extreme themes and classic ideas. We provide all kind of wedding services like invitation designing, stage specials, vehicle decor, residential décor, shopping assistance etc. Contact us : scenariowedding@gmail.com, +91 99464 90001">
+    <meta name="description" content="Angel Wedding Company is one of the top wedding designing companies in Kerala. We have a team of impressive creative designers with extreme themes and classic ideas. We provide all kind of wedding services like invitation designing, stage specials, vehicle decor, residential décor, shopping assistance etc. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
     <meta name="author" content="Innovosome">
 
-    <title>Wedding Planner in Bolgatty Palace | Scenario </title>
+    <title>Wedding Planner in Bolgatty Palace | Angel </title>
 
     <!-- FAVICON AND APPLE TOUCH -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
@@ -81,8 +81,8 @@
             <div class="row">
 
             <div class="col-lg-6"></div>
-            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:angelwedding@gmail.com">angelwedding@gmail.com</a></div>
-            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
+            <div class="col-lg-3" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-envelope-o ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a></div>
+            <div class="col-lg-2" style="color:#ffaa00; text-align:right; font-size:14px;"><i class="fa fa-phone-square ph-icon" aria-hidden="true"></i> <a style="text-decoration:none;" href="tel:+919946490001">+91 99464 90001</a></div>
             </div>
             </div>
             <div class="container" style="border-bottom: 3px #110000">
@@ -269,7 +269,7 @@
                                     <ul>
                                         <li>
                                             <span>Email</span>
-                                          <a href="mailto:scenariowedding@gmail.com">angelwedding@gmail.com</a>
+                                          <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                         </li>
                                     </ul>
 
@@ -395,7 +395,7 @@
   			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Scenario-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Angel-Wedding-Company/558467804256076" data-width="250" data-height="360" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 
 
                          </div>
@@ -403,9 +403,9 @@
                          <div class="social-media abc">
 
 
-                                    <a class="twitter" href="https://twitter.com/scenariowc"><i class="fa fa-twitter"></i></a>
+                                    <a class="twitter" href="https://twitter.com/Angelwc"><i class="fa fa-twitter"></i></a>
                                     <a class="google" href="https://plus.google.com/109256524763879194099?hl=en"><i class="fa fa-google-plus"></i></a>
-                                    <a class="linkedin" href="https://www.linkedin.com/company/scenarioweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
+                                    <a class="linkedin" href="https://www.linkedin.com/company/Angelweddings?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
 
 								</div>
                         </div><!-- col -->
@@ -435,7 +435,7 @@
                                     </li>
                                     <li>
                                         <span>E-mail</span>
-                                        <a href="mailto:scenariowedding@gmail.com">scenariowedding@gmail.com</a>
+                                        <a href="mailto:info.angelweddings@gmail.com">info.angelweddings@gmail.com</a>
                                     </li>
                                     <li>
                                         <a href="faq.php"> <span>FAQ</span></a>
@@ -460,7 +460,7 @@
 
                             <div class="widget widget-text">
 
-                                <p class="last text-center text-uppercase">Scenario Wedding Company &copy; All Rights Reserved
+                                <p class="last text-center text-uppercase">Angel Wedding Company &copy; All Rights Reserved
                                 |
                               Designed By .:<a href="http://www.atees.in/" target="_blank">ATEES</a>:.
 
