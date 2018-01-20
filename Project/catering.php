@@ -168,8 +168,8 @@ if(isset($_POST['submit_food'])) {
 
 											<ul>
 
-												<li><a href="design-stage.php">Stage Decoration</a></li>
-												<li><a href="design-decor.php">Hall Decoration</a></li>
+												<li><a href="stage.php">Stage Decoration</a></li>
+												<li><a href="hall.php">Hall Decoration</a></li>
 											</ul>
 
 										</div><!-- section -->
@@ -179,9 +179,9 @@ if(isset($_POST['submit_food'])) {
 											<h5>Catering Services</h5>
 
 											<ul>
-												<li><a href="catservice.php">Nonvegetarian</a></li>
-												<li><a href="catservice.php">Vegetarian</a></li>
-												<li><a href="catservice.php">Snacks</a></li>
+												<li><a href="catering.php">Nonvegetarian</a></li>
+												<li><a href="catering.php">Vegetarian</a></li>
+												<li><a href="catering.php">Snacks</a></li>
 											</ul>
 										</div>
 

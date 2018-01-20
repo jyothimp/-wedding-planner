@@ -190,27 +190,14 @@ $item_id=0;
                       <h5>Catering Services</h5>
 
                       <ul>
-                        <li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-                        <li><a href="vegetarian.php">Vegetarian</a></li>
-                        <li><a href="snacks.php">Snacks</a></li>
+                        <li><a href="catservice.php">Nonvegetarian</a></li>
+                        <li><a href="catservice.php">Vegetarian</a></li>
+                        <li><a href="catservice.php">Snacks</a></li>
 
                       </ul>
                     </div>
 
-                    <div class="section">
-
-                      <h5>Media&Entertainment</h5>
-
-                      <ul>
-                        <li><a href="entertainment.php">Entertainment</a></li>
-                        <li><a href="videography.php">Videography</a></li>
-                        <li><a href="photography.php">Photography</a></li>
-
-                      </ul>
-
-                    </div><!-- section -->
-
-                  </div><!-- megamenu-container -->
+                  
                   <li class="megamenu ">
 
   									<div class="dropdown">

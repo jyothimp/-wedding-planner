@@ -180,8 +180,8 @@ if(isset($_POST['food_edit_submit'])){
 
                       <ul>
 
-                        <li><a href="design-stage.php">Stage Decoration</a></li>
-                        <li><a href="design-decor.php">Hall Decoration</a></li>
+                        <li><a href="stage.php">Stage Decoration</a></li>
+                        <li><a href="hall.php">Hall Decoration</a></li>
                       </ul>
 
                     </div><!-- section -->
@@ -191,27 +191,12 @@ if(isset($_POST['food_edit_submit'])){
                       <h5>Catering Services</h5>
 
                       <ul>
-                        <li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-                        <li><a href="vegetarian.php">Vegetarian</a></li>
-                        <li><a href="snacks.php">Snacks</a></li>
+                        <li><a href="catering.php">Nonvegetarian</a></li>
+                        <li><a href="catering.php">Vegetarian</a></li>
+                        <li><a href="catering.php">Snacks</a></li>
 
                       </ul>
                     </div>
-
-                    <div class="section">
-
-                      <h5>Media&Entertainment</h5>
-
-                      <ul>
-                        <li><a href="entertainment.php">Entertainment</a></li>
-                        <li><a href="videography.php">Videography</a></li>
-                        <li><a href="photography.php">Photography</a></li>
-
-                      </ul>
-
-                    </div><!-- section -->
-
-                  </div><!-- megamenu-container -->
 
                 </li>
                 <li class="megamenu ">
