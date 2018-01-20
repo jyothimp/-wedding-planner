@@ -933,6 +933,7 @@ $(document).ready(function() {
     $holdername= $('#holdername').val();
     $month= $('#month :selected').text();
     $year= $('#year :selected').text();
+    $pay=$('#total_amount').val();
    if(! val_cardno.test($cardno)){
       $("#cardno").focusout();
       return false;
@@ -955,7 +956,7 @@ $(document).ready(function() {
       return false;
     }
     else {
-      alert("Payment Success..!");
+      alert("Advance Payment of Rs."+$pay.toString()+" Success..!");
       return true;
     }
   });

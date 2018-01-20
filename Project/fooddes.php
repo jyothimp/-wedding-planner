@@ -137,7 +137,7 @@ $item_id=0;
                     <div class="section">
                       <h5>Designing</h5>
                       <ul>
-                        <li><a href="design-food.php">food Decoration</a></li>
+                        <li><a href="design-stage.php">Stage Decoration</a></li>
                         <li><a href="design-decor.php">Hall Decoration</a></li>
                       </ul>
                     </div><!-- section -->
@@ -199,7 +199,7 @@ $item_id=0;
   									</head>
   									<body>
   										<div class="dropdown-content">
-  											<a href="food.php">foods</a>
+  											<a href="stage.php">Stage</a>
   											<a href="hall.php">Hall</a>
   											<a href="catering.php">Food</a>
   										</div>
@@ -278,7 +278,7 @@ $item_id=0;
                         <tr>
                             <th>Quantity</th>
                             <td><select name="food_quantity" id="food_quantity" >
-                          <?php for ($i=1;$i<=20;$i++){
+                          <?php for ($i=1;$i<=100;$i++){
                             ?>
                               <option value="<?php echo $i*50;?>"><?php echo $i*50;?></option>
 

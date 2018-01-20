@@ -181,6 +181,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 													<th>Quantity</th>
 													<th>Price</th>
 													<th>Total</th>
+													<th>Advance</th>
 													<th>Actions</th>
 												</tr>
 												<?php
@@ -200,6 +201,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 																<td><?php echo $q=$row['quantity']?></td>
 																<td><?php echo $p=$row2['stage_price']?></td>
 																<td><?php echo $total=$total+$q*$p ?></td>
+																<td><?php echo $total/2 ?></td>
 																<form action="" method="post">
 																	<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
 																	<td><center><input type="submit" name="btn_remove_cart_stage" class="btnremove" value="Remove"></center></td>
@@ -218,6 +220,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 																<td><?php echo $q=$row['quantity']?></td>
 																<td><?php echo $p=$row2['hall_price']?></td>
 																<td><?php echo $total=$total+$q*$p ?></td>
+																<td><?php echo $total/2 ?></td>
 																	<form action="" method="post">
 																		<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
 																		<td><center><input type="submit" name="btn_remove_cart_hall" class="btnremove" value="Remove"></center></td>
@@ -237,6 +240,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 																	<td><?php echo $q=$row['quantity']?></td>
 																	<td><?php echo $p=$row2['food_price']?></td>
 																	<td><?php echo $total=$total+$q*$p ?></td>
+																	<td><?php echo $total/2 ?></td>
 																	<form action="" method="post">
 																		<input type="hidden" name="cart_item" value="<?php echo $row['cart_item_id'] ?>">
 																		<td><center><input type="submit" name="btn_remove_cart_food" class="btnremove" value="Remove"></center></td>
@@ -251,8 +255,12 @@ if(isset($_POST['btn_remove_cart_food'])){
 													<tr>
 														<th colspan="3">Subtotal</th>
 														<th colspan="2"><?php echo $total;?></th>
+													</tr>
+													<tr>
+														<th colspan="3">Advance to pay</th>
+														<th colspan="2"><?php echo $pay_amt=$total/2;?></th>
 														<form action="get-a-quote.php" method="post">
-															<input type="hidden" name="total_amount" value="<?php echo $total;?>">
+															<input type="hidden" name="total_amount" value="<?php echo $pay_amt;?>">
 														<th><center><input type="submit" name="btn_checkout" class="btncontinue" value="Proceed to Checkout >>"> </center></th>
 													</form>
 													</tr>

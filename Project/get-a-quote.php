@@ -1,15 +1,7 @@
 <?php
 include_once 'db_connect.php';
 include_once 'check_logout.php';
-if(isset($_POST['submit_cart'])){
-	$user_id=$_SESSION['user'];
-	$phone=$_POST['phone'];
-	$location=$_POST['location'];
-	$date=$_POST['event_date'];
-	$venue=$_POST['event_venue'];
-	$result=mysqli_query($con,"INSERT INTO `wp_getforquotation`(`quotation_user_id`, `quotation_date`, `quotation_phone`, `quotation_venue`,`quotation_location`) VALUES ($user_id,'$date','$phone','$venue',$location)");
-	header('location:./payment.php');
-}
+
 ?>
 
 <!doctype html>
@@ -164,7 +156,7 @@ if(isset($_POST['submit_cart'])){
 							<div class="row">
 								<div class="col-sm-9">
 									<div class="popform">
-										<form class="get-quote" action="#"  name="myform" id="myform_cart" onsubmit="return" method="post" style="height:auto;">
+										<form class="get-quote" action="./payment.php"  name="myform" id="myform_cart" onsubmit="return" method="post" style="height:auto;">
 
 											<div class="form-group">
 												<label for="name">Contact Number : </label>
@@ -208,6 +200,7 @@ if(isset($_POST['submit_cart'])){
 												<span style="color:red;display: none;" id="namelabel">
 												</span>
 											</div>
+											<input type="hidden" name="tot_amt" value="<?php echo $_POST['total_amount'];?>">
 												<input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit_cart" value="Continue to Payment">
 											</form>
 										</div>

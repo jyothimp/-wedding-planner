@@ -1,6 +1,14 @@
 <?php
 include_once 'db_connect.php';
 include_once 'check_logout.php';
+if(isset($_POST['submit_cart'])){
+	$user_id=$_SESSION['user'];
+	$phone=$_POST['phone'];
+	$location=$_POST['location'];
+	$date=$_POST['event_date'];
+	$venue=$_POST['event_venue'];
+	$result=mysqli_query($con,"INSERT INTO `wp_getforquotation`(`quotation_user_id`, `quotation_date`, `quotation_phone`, `quotation_venue`,`quotation_location`) VALUES ($user_id,'$date','$phone','$venue',$location)");
+}
 ?>
 <!doctype html>
 <html>
@@ -160,7 +168,7 @@ include_once 'check_logout.php';
                         <option value="Debit Card" id="netbank">Net Banking</option>
                         <option value="Debit Card" id="upi">UPI Payment</option>
                      </select>
-
+										 <input type="hidden" id="total_amount" value="<?php echo $_POST['tot_amt'];?>">
 												<span style="color:red;display: none;" id="namelabel">
 													<span>
 														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter  payment type.</label>
