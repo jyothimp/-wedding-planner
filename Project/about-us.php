@@ -142,7 +142,7 @@
 																						<li><a href="catservice.php">Snacks</a></li>
               														</ul>
               														</div>
-              											
+
               										</div><!-- megamenu-container -->
 
               								</li>
@@ -150,6 +150,9 @@
               								 <li>
               									<a href="contact-us.php">Contact</a>
               								</li>
+															<li>
+															<a href="userprofile.php">User Profile</a>
+															</li> 
               							<li>
               									<a href="logout.php">Logout</a>
               							</nav>

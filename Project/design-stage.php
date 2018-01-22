@@ -166,6 +166,9 @@
 								 <li>
 									<a href="contact-us.php">Contact</a>
 								</li>
+								<li>
+								<a href="userprofile.php">User Profile</a>
+								</li> 
 							<li>
 									<a href="logout.php">Logout</a>
 								</li>

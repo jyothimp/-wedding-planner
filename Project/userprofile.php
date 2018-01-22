@@ -1,3 +1,8 @@
+<?php
+include_once 'db_connect.php';
+// include_once 'check_logout.php';
+$user_id=$_SESSION['user'];
+?>
 <!doctype html>
 <html>
  <head>
@@ -257,17 +262,33 @@
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- container -->
+            <table class="cart_table"style="width:100%" align="center" width="200" border="1">
+              <tr><font color="black">
+                <th>Name</th>
+                <th>Address</th>
+                <th>PhoneNo</th>
+                <th>Email</th>
+              </tr>
+              <?php
+              $query=mysqli_query($con,"select * from wp_registration where login_id=$user_id");
+              while ($row=mysqli_fetch_array($query)) {
+                    ?>
+                    <tr><font color="black">
+                      <td><?php echo $row['registration_name']?></td>
+                      <td><?php echo $row['registration_address']?></td>
+                      <td><?php echo $row['registration_phone']?></td>
+                      <td><?php echo $row['registration_email']?></td>
+                    </tr>
+                    <?php
+                  }
+
+                ?>
 
 
-
-
-
-
-
-
-
-
-        <!-- FOOTER -->
+            </table></br>
+          <form action="" method="post">
+            <input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit_cart" value="Cancel all Orders"></br></br>
+              <!-- FOOTER -->
                <footer>
 
             <div id="footer-top">

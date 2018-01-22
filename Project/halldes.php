@@ -197,7 +197,7 @@ $item_id=0;
                       </ul>
                     </div>
 
-                  
+
                   <li class="megamenu ">
 
   									<div class="dropdown">
@@ -259,6 +259,9 @@ $item_id=0;
                 <li>
                   <a href="contact-us.php">Contact</a>
                 </li>
+                <li>
+								<a href="userprofile.php">User Profile</a>
+								</li> 
                 <li>
                   <a href="logout.php">Logout</a>
 								</li>

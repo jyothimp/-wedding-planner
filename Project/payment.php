@@ -119,6 +119,9 @@ if(isset($_POST['submit_cart'])){
 									<a href="contact-us.php">Contact</a>
 								</li>
 								<li>
+								<a href="userprofile.php">User Profile</a>
+								</li> 
+								<li>
 									<a href="logout.php">Logout</a>
 								</nav>
 							</div><!-- col -->
