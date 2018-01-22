@@ -1,7 +1,13 @@
 <?php
 include_once 'db_connect.php';
-// include_once 'check_logout.php';
+//include_once 'check_logout.php';
 $user_id=$_SESSION['user'];
+if(isset($_POST['cancel_order'])){
+  $q=mysqli_query($con,"UPDATE wp_addtocart SET order_status=0 WHERE cart_login_id=$user_id");
+  if($q){
+    echo "<script>alert('Order canceled')</script>";
+  }
+}
 ?>
 <!doctype html>
 <html>
@@ -50,6 +56,7 @@ $user_id=$_SESSION['user'];
 
     <!-- CUSTOM & PAGES STYLE -->
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="assets/css/pages-style.css">
 
     <!-- STYLE SWITCHER -->
@@ -205,6 +212,10 @@ $user_id=$_SESSION['user'];
                 								</li>
                 								<li>
                 									<a href="logout.php">Logout</a>
+                                </li>
+                                <li>
+                									<a href="cart.php"><i class="cart_top fa fa-shopping-cart"></i></a>
+                								</li>
                 								</nav>
 
 
@@ -285,10 +296,98 @@ $user_id=$_SESSION['user'];
                 ?>
 
 
-            </table></br>
+            </table>
+          </br>
+
+
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12">
+
+                      <h2>Previous orders</h2>
+
+
+
+                  </div><!-- col -->
+              </div><!-- row -->
+          </div><!-- container -->
+          <table class="cart_table" align="center" width="200" border="1">
+            <tr><font color="black">
+              <th>Item</th>
+              <th>Type</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th>Advance</th>
+            </tr>
+            <?php
+            $total=0;
+            $query=mysqli_query($con,"select cart_id,cart_login_id,cart_item_id,cart_item_type,sum(cart_quantity) AS quantity,item_name,item_id from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and cart_status=1 GROUP BY cart_item_id");
+            while ($row=mysqli_fetch_array($query)) {
+              $item_type = $row['cart_item_type'];
+              $item_id = $row['cart_item_id'];
+              if($item_type==1){
+
+                $query2=mysqli_query($con,"select * from wp_stage where stage_id=$item_id");
+                while($row2=mysqli_fetch_array($query2)){
+                  ?>
+                  <tr><font color="black">
+                    <td><?php echo $row2['stage_name']?></td>
+                    <td>Stage</td>
+                    <td><?php echo $q=$row['quantity']?></td>
+                    <td><?php echo $p=$row2['stage_price']?></td>
+                    <td><?php echo $total=$total+$q*$p ?></td>
+                    <td><?php echo $total/2 ?></td>
+
+                  </tr>
+                  <?php
+                }
+              }
+              else if($item_type==2){
+                $query2=mysqli_query($con,"select * from wp_hall where hall_id=$item_id");
+                while($row2=mysqli_fetch_array($query2)){
+                  ?>
+                  <tr><font color="black">
+                    <td><?php echo $row2['hall_name']?></td>
+                    <td>Hall</td>
+                    <td><?php echo $q=$row['quantity']?></td>
+                    <td><?php echo $p=$row2['hall_price']?></td>
+                    <td><?php echo $total=$total+$q*$p ?></td>
+                    <td><?php echo $total/2 ?></td>
+
+
+                    </tr>
+                    <?php
+                  }
+                }
+                else if($item_type==3){
+                  $query2=mysqli_query($con,"select * from wp_food where food_id=$item_id");
+                  while($row2=mysqli_fetch_array($query2)){
+                    ?>
+                    <tr><font color="black">
+                      <td><?php echo $row2['food_name']?></td>
+                      <td>Food</td>
+                      <td><?php echo $q=$row['quantity']?></td>
+                      <td><?php echo $p=$row2['food_price']?></td>
+                      <td><?php echo $total=$total+$q*$p ?></td>
+                      <td><?php echo $total/2 ?></td>
+
+                    </tr>
+                    <?php
+                  }
+                }
+              }
+              ?>
+            </table>
+            <!--   <a class="btn btn-default" href="venueone.php">Know more</a> -->
+          </div><!-- portfolio-item-description -->
+        </br>
+
           <form action="" method="post">
-            <input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="submit_cart" value="Cancel all Orders"></br></br>
-              <!-- FOOTER -->
+
+            <input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="cancel_order" value="Cancel all Orders"></br></br>
+
+          </form>  <!-- FOOTER -->
                <footer>
 
             <div id="footer-top">

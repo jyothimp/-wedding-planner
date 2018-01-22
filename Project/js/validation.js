@@ -956,7 +956,7 @@ $(document).ready(function() {
       return false;
     }
     else {
-      alert("Advance Payment of Rs."+$pay.toString()+" Success..!");
+  
       return true;
     }
   });

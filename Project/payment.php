@@ -9,6 +9,14 @@ if(isset($_POST['submit_cart'])){
 	$venue=$_POST['event_venue'];
 	$result=mysqli_query($con,"INSERT INTO `wp_getforquotation`(`quotation_user_id`, `quotation_date`, `quotation_phone`, `quotation_venue`,`quotation_location`) VALUES ($user_id,'$date','$phone','$venue',$location)");
 }
+if(isset($_POST['submit'])){
+	$amt=$_POST['total_amount'];
+	$user_id=$_SESSION['user'];
+	mysqli_query($con,"UPDATE wp_addtocart SET order_status=1,cart_status=0 WHERE cart_status=1 and cart_login_id=$user_id");
+	if($r=mysqli_affected_rows($con)>0){
+		echo "<script>alert('Advance Payment of Rs.$amt Success..!');</script>";
+	}
+}
 ?>
 <!doctype html>
 <html>
@@ -120,7 +128,7 @@ if(isset($_POST['submit_cart'])){
 								</li>
 								<li>
 								<a href="userprofile.php">User Profile</a>
-								</li> 
+								</li>
 								<li>
 									<a href="logout.php">Logout</a>
 								</nav>
@@ -154,7 +162,7 @@ if(isset($_POST['submit_cart'])){
 								</div>
 								<div class="col-sm-6">
 									<div class="popform" align="center">
-										<form   name="myform" id="payment" action="userhome.php"method="post" role="form" style="height:auto;">
+										<form   name="myform" id="payment" action=""method="post" role="form" style="height:auto;">
 											<div class="form-group" >
 											<label for="payment type" >Type of payment </label>
                       <select   name="payment_type" id="paymenttype" class="form-control">
@@ -163,7 +171,7 @@ if(isset($_POST['submit_cart'])){
                         <option value="Debit Card" id="netbank">Net Banking</option>
                         <option value="Debit Card" id="upi">UPI Payment</option>
                      </select>
-										 <input type="hidden" id="total_amount" value="<?php echo $_POST['tot_amt'];?>">
+										 <input type="hidden" id="total_amount"name="total_amount" value="<?php echo $_POST['tot_amt'];?>">
 												<span style="color:red;display: none;" id="namelabel">
 													<span>
 														<label class="control-label" for="project" style="color: #A94442"><i class="fa fa-times-circle-o"></i>Please enter  payment type.</label>
