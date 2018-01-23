@@ -168,7 +168,7 @@
 								</li>
 								<li>
 								<a href="userprofile.php">User Profile</a>
-								</li> 
+								</li>
 							<li>
 									<a href="logout.php">Logout</a>
 								</li>
@@ -223,6 +223,10 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
+							<form action="" method="post">
+								<input type="submit" id="submit"name="OK" class="btn_search" value="Search"  style="float:right;"></input>
+								<input type="search" name="search" class="search" id="search_box" placeholder="Search..."  style="float:right;" ></input>
+							</form>
 
               <h2>Design and Decor - Wedding Stages</h2>
 
@@ -230,8 +234,6 @@
             </div><!-- col -->
          </div><!-- row -->
         </div><!-- container -->
-
-
         <div class="container">
           <div class="row">
 

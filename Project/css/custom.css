@@ -9,7 +9,15 @@
     display: inline-block;
     background-color: orange;
   }
-
+.search{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.btn_search{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: orange;
+}
   #stage_add_form{
     padding: 10px;
   }

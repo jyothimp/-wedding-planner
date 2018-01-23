@@ -167,7 +167,7 @@ include_once 'check_logout.php';
                 </li>
 								<li>
 								<a href="userprofile.php">User Profile</a>
-								</li> 
+								</li>
                 <li>
                   <a href="logout.php">Logout</a>
                 </li>
@@ -222,6 +222,11 @@ include_once 'check_logout.php';
             <div class="container">
               <div class="row">
                 <div class="col-sm-12">
+									<form action="" method="post">
+										<input type="submit" id="submit"name="OK" class="btn_search" value="Search"  style="float:right;"></input>
+										<input type="search" name="search" class="search" id="search_box" placeholder="Search..."  style="float:right;" ></input>
+									</form>
+
 
                   <h2>Design and Decor - Hall Decoration</h2>
 
