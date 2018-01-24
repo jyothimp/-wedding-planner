@@ -224,8 +224,8 @@ $user_id=$_SESSION['user'];
               <div class="row">
                 <div class="col-sm-12">
 									<form action="" method="post">
-										<input type="submit" id="submit"name="OK" class="btn_search" value="Search"  style="float:right;"></input>
-										<input type="search" name="search" class="search" id="search_box" placeholder="Search..."  style="float:right;" ></input>
+										<input type="submit" id="submit"name="search_btn" class="btn_search" value="Search"  style="float:right;"></input>
+										<input type="search" name="search_txt" class="search" id="search_box" placeholder="Search..."  style="float:right;" ></input>
 									</form>
 
 
@@ -241,7 +241,12 @@ $user_id=$_SESSION['user'];
               <div class="row">
 
                 <?php
-                $query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE  hall_id NOT IN (SELECT cart_item_id from wp_addtocart Where cart_item_type=2 and cart_login_id=$user_id and cart_status=1) AND`hall_status`=1");
+								$search_q="";
+								if(isset($_POST['search_btn'])){
+									$term=$_POST['search_txt'];
+									$search_q="AND `hall_name` LIKE '%$term%'";
+								}
+                $query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE  hall_id NOT IN (SELECT cart_item_id from wp_addtocart Where cart_item_type=2 and cart_login_id=$user_id and cart_status=1) AND`hall_status`=1 $search_q");
                 while ($row=mysqli_fetch_array($query)) {
                   ?>
                   <div class="col-sm-4">
