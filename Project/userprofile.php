@@ -138,9 +138,9 @@ if(isset($_POST['cancel_order'])){
                 											<h5>Catering Services</h5>
 
                 											<ul>
-                												<li><a href="nonvegetarian.php">Nonvegetarian</a></li>
-                												<li><a href="vegetarian.php">Vegetarian</a></li>
-                												<li><a href="snacks.php">Snacks</a></li>
+                												<li><a href="catservice.php">Nonvegetarian</a></li>
+                												<li><a href="catservice.php">Vegetarian</a></li>
+                												<li><a href="catservice.php">Snacks</a></li>
 
                 											</ul>
                 										</div>
@@ -322,12 +322,11 @@ if(isset($_POST['cancel_order'])){
             </tr>
             <?php
             $total=0;
-            $query=mysqli_query($con,"select cart_id,cart_login_id,cart_item_id,cart_item_type,sum(cart_quantity) AS quantity,item_name,item_id from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and cart_status=1 GROUP BY cart_item_id");
+            $query=mysqli_query($con,"select cart_id,cart_login_id,cart_item_id,cart_item_type,sum(cart_quantity) AS quantity,item_name,item_id from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and order_status=1 GROUP BY cart_item_id");
             while ($row=mysqli_fetch_array($query)) {
               $item_type = $row['cart_item_type'];
               $item_id = $row['cart_item_id'];
               if($item_type==1){
-
                 $query2=mysqli_query($con,"select * from wp_stage where stage_id=$item_id");
                 while($row2=mysqli_fetch_array($query2)){
                   ?>

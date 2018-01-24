@@ -164,10 +164,38 @@ include_once 'check_logout.php';
 								<h2> Wedding Catering</h2>
 								<p> wedding catering is one of the importent thing. Images below show a few of the food items done by us for our customers.</p>
 								<div class="tab">
-									<button class="tablinks" onclick="openCity(event, 'Vegetarian')" id="defaultOpen">Vegetarian</button>
+								  <button class="tablinks" onclick="openCity(event, 'Welcomedrink')" id="defaultOpen">Welcome Drinks</button>
+								  <button class="tablinks" onclick="openCity(event, 'Vegetarian')" id="defaultOpen">Vegetarian</button>
 									<button class="tablinks" onclick="openCity(event, 'Non-Vegetarian')">Non-Vegetarian</button>
 									<button class="tablinks" onclick="openCity(event, 'Snacks')">Snacks</button>
 									<button class="tablinks" onclick="openCity(event, 'Icecreams')">Ice Creams</button>
+								</div>
+								<div id="Welcomedrink" class="tabcontent">
+									<span onclick="this.parentElement.style.display='none'" class="topright"></span>
+									<p>
+										<?php
+										$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=5")or die(mysqli_error($con));
+										while ($row=mysqli_fetch_array($query)) {
+											?>
+											<div class="col-sm-4">
+												<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+													<form action="fooddes.php" method="post">
+										 				 <input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>">
+										 				 <input type="hidden" name="item_type" value="5">
+														<div class="about-me-thumbnail">
+															<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+															<div class="social-media">
+																<a ><?php echo $row['food_name'] ?><br>  <a ><?php echo "₹ ".$row['food_price'] ?></a></a>
+																<center><button type="submit" class="btn_cart" name="add_to_cart" id="button"><i class="fa fa-shopping-cart"></i>Buy Now</button></center>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+											<?php
+										}
+										?>
+									</p>
 								</div>
 								<div id="Vegetarian" class="tabcontent">
 									<span onclick="this.parentElement.style.display='none'" class="topright"></span>

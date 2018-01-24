@@ -238,7 +238,8 @@
           <div class="row">
 
 <?php
-    $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_status`=1");
+$user_id=$_SESSION['user'];
+    $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE stage_id NOT IN (SELECT cart_item_id from wp_addtocart Where cart_item_type=1 and cart_login_id=$user_id and cart_status=1) AND`stage_status`=1");
     while ($row=mysqli_fetch_array($query)) {
       ?>
       <div class="col-sm-4">

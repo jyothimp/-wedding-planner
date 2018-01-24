@@ -1,6 +1,7 @@
 <?php
 include_once 'db_connect.php';
 include_once 'check_logout.php';
+$user_id=$_SESSION['user'];
 ?>
 <?php
 	if(isset($_POST['buynow'])){
@@ -240,7 +241,7 @@ include_once 'check_logout.php';
               <div class="row">
 
                 <?php
-                $query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE `hall_status`=1");
+                $query=mysqli_query($con,"SELECT * FROM `wp_hall` WHERE  hall_id NOT IN (SELECT cart_item_id from wp_addtocart Where cart_item_type=2 and cart_login_id=$user_id and cart_status=1) AND`hall_status`=1");
                 while ($row=mysqli_fetch_array($query)) {
                   ?>
                   <div class="col-sm-4">

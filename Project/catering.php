@@ -250,7 +250,7 @@ if(isset($_POST['submit_food'])) {
 									</li>
 									<li>
 									<a href="userprofile.php">User Profile</a>
-									</li> 
+									</li>
 									<li>
 										<a href="logout.php">Logout</a>
 									</nav>
@@ -296,11 +296,41 @@ if(isset($_POST['submit_food'])) {
 
 									<p> wedding catering is one of the importent thing. Images below show a few of the food items done by us for our customers.</p>
 									<div class="tab">
+										<button class="tablinks" onclick="openCity(event, 'Welcomedrink')" id="defaultOpen">Welcome Drink</button>
 										<button class="tablinks" onclick="openCity(event, 'Vegitarian')" id="defaultOpen">Vegetarian</button>
 										<button class="tablinks" onclick="openCity(event, 'Non-Vegitarian')">Non-Vegetarian</button>
 										<button class="tablinks" onclick="openCity(event, 'Snacks')">Snacks</button>
 										<button class="tablinks" onclick="openCity(event, 'Icecreams')">Ice Creams</button>
 									</div>
+									<div id="Welcomedrink" class="tabcontent">
+										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
+										<p>
+											<?php
+											$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=5")or die(mysqli_error($con));
+											while ($row=mysqli_fetch_array($query)) {
+												?>
+												<div class="col-sm-4">
+													<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
+														<form action="editcatering.php" method="post">
+															<div class="about-me-thumbnail">
+																<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+																<div class="social-media">
+																	<a ><?php echo $row['food_name'] ?><br> </a>
+																	<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
+																	<left><input type="submit"  class="food_button" name="button_edit" id="button" value="Edit"></left>
+																	<right><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+
+												<?php
+											}
+											?>
+										</p>
+									</div>
+
 
 									<div id="Vegitarian" class="tabcontent">
 										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
@@ -577,6 +607,7 @@ if(isset($_POST['submit_food'])) {
 										<span class="pop-error-message" id="food_name_error"></span>
 										<select name="food_type" id="food_type">
 											<option selected disabled>Food Type</option>
+											<option value="5">Welcome Drink</option>
 											<option value="1">Vegetarian</option>
 											<option value="2">Non-Veg</option>
 											<option value="3">Snacks</option>
