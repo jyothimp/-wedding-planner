@@ -60,7 +60,7 @@ if(isset($_POST['food_edit_submit'])){
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
   <meta name="keywords" content="Destination Weddings in Kerala, Destination Weddings in Kochi, Kochi Wedding Planners, Wedding Planners in Kochi, Event Management Kochi, Event Management Ernakulam, Event Management Kerala, Wedding Planners Kochi, Wedding Planners Ernakulam, Wedding Planners Kerala ">
   <meta name="description" content="Angel Wedding Planner stands out from rest of the Event Management Kochi, Ernakulam & Kerala in terms of its quality of work and is the top rated Wedding Planners Kochi, Ernakulam & Kerala. Contact us : info.angelweddings@gmail.com, +91 99464 90001">
-  <meta name="author" content="Innovosome">s
+  <meta name="author" content="Innovosome">
 
   <title>Wedding Planner in Kerala | Event Management Kerala | Destination Weddings in Kerala | Kochi Wedding Planners</title>
 
@@ -259,7 +259,7 @@ if(isset($_POST['food_edit_submit'])){
                   </li>
                   <li>
                   <a href="userprofile.php">User Profile</a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="logout.php">Logout</a>
                   </nav>
