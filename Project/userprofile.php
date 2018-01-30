@@ -8,6 +8,26 @@ if(isset($_POST['cancel_order'])){
     echo "<script>alert('Order canceled')</script>";
   }
 }
+if(isset($_POST['save_user'])){
+  $count=0;
+  $name=$_POST['name'];
+  $address=$_POST['address'];
+  $phone=$_POST['phone'];
+  $email=$_POST['email'];
+  $query1=mysqli_query($con,"UPDATE wp_registration SET registration_name='$name',registration_address='$address',registration_email='$email',registration_phone='$phone' WHERE login_id=$user_id");
+  $count+=mysqli_affected_rows($con);
+  if(!($_POST['password']=="Password")){
+    $pass=SHA1($_POST['password']);
+    $query2=mysqli_query($con,"UPDATE wp_login SET login_password='$pass' WHERE login_id=$user_id");
+    $count+=mysqli_affected_rows($con);
+  }
+  if($count>0){
+    echo "<script>alert('User details updated..!')</script>";
+  }
+  else {
+      echo "<script>alert('No details updated..!')</script>";
+  }
+}
 ?>
 <!doctype html>
 <html>
@@ -273,37 +293,38 @@ if(isset($_POST['cancel_order'])){
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- container -->
-            <table class="cart_table"style="width:100%" align="center" width="200" border="1">
-              <tr><font color="black">
-                <th>Name</th>
-                <th>Address</th>
-                <th>PhoneNo</th>
-                <th>Email</th>
-              </tr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8" style="margin-left:15%;">
+            <form action="" method="post" >
+              <input type="submit" name="save_user"class="change_pwd btn btn-default" style="color:#000;float:right;" value="Save Details"/>
+            <table class="cart_table "style="width:100%" align="center" width="200" border="1">
               <?php
-              $query=mysqli_query($con,"select * from wp_registration where login_id=$user_id");
+              $query=mysqli_query($con,"select * from wp_registration,wp_login where wp_registration.login_id=wp_login.login_id and wp_login.login_id=$user_id");
               while ($row=mysqli_fetch_array($query)) {
                     ?>
-                    <tr><font color="black">
-                      <td><?php echo $row['registration_name']?></td>
-                      <td><?php echo $row['registration_address']?></td>
-                      <td><?php echo $row['registration_phone']?></td>
-                      <td><?php echo $row['registration_email']?></td>
-                    </tr>
+                    <font color="black">
+                        <tr><th width="25%">Name</th><td><input type="text" class="edit_details" name="name" value="<?php echo $row['registration_name']?>"/></td></tr>
+                      <tr><th>Address</th><td><textarea class="edit_details" name="address"><?php echo $row['registration_address']?></textarea></td></tr>
+                    <tr>  <th>PhoneNo</th>  <td><input class="edit_details" type="text" name="phone" value="<?php echo $row['registration_phone']?>"/></td></tr>
+                      <tr><th>Email</th><td><input class="edit_details" type="text" name="email" value="<?php echo $row['registration_email']?>"/></td></tr>
+                        <tr><th>Password</th><td><input class="edit_details" type="password" name="password" value="Password"></td></tr>
                     <?php
                   }
 
                 ?>
-
-
             </table>
-          </br>
+          </form>
+          </div><!-- col -->
+      </div><!-- row -->
+  </div><!-- container -->
+</br><br><br>
 
 
           <div class="container">
               <div class="row">
                   <div class="col-sm-12">
-
+<hr>
                       <h2>Previous orders</h2>
 
 
@@ -322,7 +343,7 @@ if(isset($_POST['cancel_order'])){
             </tr>
             <?php
             $total=0;
-            $query=mysqli_query($con,"select cart_id,cart_login_id,cart_item_id,cart_item_type,sum(cart_quantity) AS quantity,item_name,item_id from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and order_status=1 GROUP BY cart_item_id");
+            $query=mysqli_query($con,"select cart_id,cart_login_id,cart_item_id,cart_item_type,sum(cart_quantity) as quantity,item_name,item_id from wp_addtocart,wp_item_types where wp_addtocart.cart_item_type=wp_item_types.item_id and cart_login_id=$user_id and order_status=1 GROUP BY cart_item_id");
             while ($row=mysqli_fetch_array($query)) {
               $item_type = $row['cart_item_type'];
               $item_id = $row['cart_item_id'];

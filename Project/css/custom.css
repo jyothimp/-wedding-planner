@@ -191,6 +191,15 @@
   font-weight: bold;
   height: 30px;
 }
+textarea.edit_details{
+  height: 75px;
+}
+.edit_details{
+  width: 100%;
+  margin: 0px !important;
+  resize: none;
+
+}
 .cart_table td{
   text-align: center;
   font-size: 14px;

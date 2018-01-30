@@ -44,7 +44,7 @@ if(isset($_POST['create_account'])){
 			$id=$row2['login_id'];
 			$query= "INSERT INTO `wp_registration` (login_id,registration_name,registration_address,registration_phone,registration_email) VALUES($id,'$flname','$add','$phn','$email')";
 			$result = mysqli_query($con, $query) or die(mysqli_error());
-			?> <script>alert("Registration Success");</script><?php
+	     ?><script>alert("Registration Success");</script><?php
 		}
 	}
 }
@@ -61,22 +61,14 @@ if(isset($_POST['reset_password'])){
 			$reset_password=SHA1($password);
 			$query= "UPDATE `wp_login` SET login_reset_password='$reset_password' WHERE login_id=$id";
 			$result = mysqli_query($con, $query) or die(mysqli_error());
-			define("MAIL_FROM","info.angelweddings@gmail.com");
-			define("MAIL_USERNAME","info.angelweddings@gmail.com");
-			define("MAIL_PASSWORD","angel@85");
-			require_once "mail/class.phpmailer.php";
-			$mail->IsSMTP();                // Sets up a SMTP connection
-			$mail->SMTPAuth = true;         // Connection with the SMTP does require authorization
-			$mail->SMTPSecure = "ssl";      // Connect using a TLS connection
-			$mail->Host = "smtp.gmail.com";  //Gmail SMTP server address
-			$mail->Port = 465;  //Gmail SMTP port
-			//Set who the message is to be sent from
-			$mail->setFrom("info.angelweddings@gmail.com", "Angel-Weddings - Password");
-			//Set who the message is to be sent to
-			$mail->addAddress($email);
-			$mail->Subject = "Angel-Weddings - Password";
-			$mail->Body = "Hello $name, <br>&nbsp;&nbsp;&nbsp;&nbsp;You can now login with the password : <b>$password</b>. This password is valid  for one-time use.You should change your password immediately after this login.";
-			if ($mail->Send()) {
+
+			$to=$email;
+			$subject="Angel-Weddings - Password";
+			$message="Hello $name, <br>&nbsp;&nbsp;&nbsp;&nbsp;You can now login with the password : <b>$password</b>. This password is valid  for one-time use.You should change your password immediately after this login.";
+			$headers="MIME-Version: 1.0" . "\r\n";
+			$headers.="Content-type:text/html;charset=UTF-8" ."\r\n";
+
+			if(mail($to,$subject,$message,$headers)) {
 				?> <script>alert("Your One-Time Password has been sent to your email");</script><?php
 			}
 			else {
