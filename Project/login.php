@@ -59,8 +59,8 @@ if(isset($_POST['reset_password'])){
 			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 			$password = substr( str_shuffle( $chars ), 0, 8 );
 			$reset_password=SHA1($password);
-			$query= "UPDATE `wp_login` SET login_reset_password='$reset_password' WHERE login_id=$id";
-			$result = mysqli_query($con, $query) or die(mysqli_error());
+			$query1= "UPDATE `wp_login` SET login_reset_password='$reset_password' WHERE login_id=$id";
+			$result = mysqli_query($con, $query1) or die(mysqli_error());
 
 			$to=$email;
 			$subject="Angel-Weddings - Password";
