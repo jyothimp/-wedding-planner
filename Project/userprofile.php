@@ -296,6 +296,9 @@ if(isset($_POST['save_user'])){
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8" style="margin-left:15%;">
+                      <form action="userhistory.php" method="post">
+                      <input type="submit" name="user_hist" class="change_pwd btn btn-default" style="color:#000;float:left;" value="History"/>
+                    </form>
             <form action="" method="post" >
               <input type="submit" name="save_user"class="change_pwd btn btn-default" style="color:#000;float:right;" value="Save Details"/>
             <table class="cart_table "style="width:100%" align="center" width="200" border="1">
@@ -403,7 +406,7 @@ if(isset($_POST['save_user'])){
           </div><!-- portfolio-item-description -->
         </br>
 
-          <form action="" method="post">
+          <form action="" method="post" onsubmit="return confirm_cancelorder()">
 
             <input id="submit" type="submit" class="btn btn-default" style="color:#000;float:right;" name="cancel_order" value="Cancel all Orders"></br></br>
 
@@ -633,6 +636,16 @@ if(isset($_POST['save_user'])){
 
     <!-- CUSTOM JS -->
     <script src="assets/js/custom.js"></script>
+    <script>
+      function  confirm_cancelorder(){
+        var r = confirm("Are you really want to cancel all orders..?");
+    if (r == true) {
+        return true;
+    } else {
+      return false;
+    }
+      }
+    </script>
 
     <!-- STYLE SWITCHER -->
 

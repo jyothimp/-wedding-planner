@@ -223,7 +223,7 @@ if(isset($_POST['submit'])){
 											<div class="form-group">
 
 												<label for="name">Card Holder Name : </label>
-												<input    type="text" class="form-control" name="venue" id="holdername" placeholder="Enter Event Venue">
+												<input    type="text" class="form-control" name="venue" id="holdername" placeholder="Card Holder Name">
 												<span class="payment cd-error-message" id="holdername_error"></span>
 												<span style="color:red;display: none;" id="namelabel">
 													<span>

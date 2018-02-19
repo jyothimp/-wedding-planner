@@ -77,7 +77,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 					<div class="col-sm-2">
 						<!-- LOGO -->
 						<a id="logo" href="index.php">
-							<img src="images/backgrounds/logo.png" alt="Destination wedding in Kerala" width="165">
+							<img src="images/icons/logo1.png" alt="Destination wedding in Kerala" width="165">
 						</a>
 					</div><!-- col -->
 					<div class="col-sm-10">
@@ -118,7 +118,7 @@ if(isset($_POST['btn_remove_cart_food'])){
 								</li>
 								<li>
 								<a href="userprofile.php">User Profile</a>
-								</li> 
+								</li>
 								<li>
 									<a href="logout.php">Logout</a>
 								</li>
