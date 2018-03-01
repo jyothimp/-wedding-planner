@@ -149,7 +149,12 @@ $item_id=0;
                         <li><a href="catservice.php">Snacks</a></li>
                       </ul>
                     </div>
-
+                    <div class="section">
+                      <h5>Media</h5>
+                      <ul>
+                        <li><a href="photography.php">Photograhy&Videography</a></li>
+                      </ul>
+                    </div><!-- section -->
                   <li class="megamenu ">
   									<div class="dropdown">
   										<button class="dropbtn">ITEMS</button>
@@ -202,7 +207,7 @@ $item_id=0;
                 </li>
                 <li>
                 <a href="userprofile.php">User Profile</a>
-                </li> 
+                </li>
                 <li>
                   <a href="logout.php">Logout</a>
 								</li>

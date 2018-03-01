@@ -125,6 +125,12 @@ else{
                         <li><a href="catservice.php">Snacks</a></li>
                       </ul>
                     </div>
+                    <div class="section">
+                      <h5>Media</h5>
+                      <ul>
+                        <li><a href="photography.php">Photograhy&Videography</a></li>
+                      </ul>
+                    </div><!-- section -->
                   </div><!-- megamenu-container -->
                 </li>
                 <li>
@@ -132,7 +138,7 @@ else{
                 </li>
                 <li>
                 <a href="userprofile.php">User Profile</a>
-                </li> 
+                </li>
                 <li>
                   <a href="logout.php">Logout</a>
                 </li>
@@ -152,10 +158,10 @@ else{
                 <div class="headline style-3"><br><br>
                   <h1>Welcome to Angel Wedding Company</h1>
                 </div><!-- headline -->
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-3 col-sm-6">
                   <div class="portfolio-item wow fadeInLeft">
                     <div class="portfolio-item-thumbnail btn_stage">
-                      <img src="images/stage/stagelogo.jpg" width="270" alt="Wedding planners kerala">
+                      <img src="images/stage/stagelogo.jpg" width="240" alt="Wedding planners kerala">
                       <div class="portfolio-item-hover">
                         <div class="portfolio-item-description">
                           <h3><a href="design-stage.php">Stage Decoration</a></h3>
@@ -165,10 +171,10 @@ else{
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
                 </div><!-- col -->
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-3 col-sm-6">
                   <div class="portfolio-item wow fadeInLeft" data-wow-delay="0.3s">
                     <div class="portfolio-item-thumbnail btn_hall">
-                      <img src="images/hall/halllogo.jpg" width="270"  alt="kerala wedding planners">
+                      <img src="images/hall/halllogo.jpg" width="240"  alt="kerala wedding planners">
                       <div class="portfolio-item-hover">
                         <div class="portfolio-item-description">
                           <h3><a href="design-decor.php">Hall Decoration</a></h3>
@@ -178,10 +184,10 @@ else{
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
                 </div><!-- col -->
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-3 col-sm-6">
                   <div class="portfolio-item wow fadeInRight" data-wow-delay="0.3s">
                     <div class="portfolio-item-thumbnail btn_food">
-                      <img src="images/hall/cateringlogo.jpg" width="270"alt="Stage decoration in Kochi">
+                      <img src="images/hall/cateringlogo.jpg" width="200"alt="Stage decoration in Kochi">
                       <div class="portfolio-item-hover">
                         <div class="portfolio-item-description">
                           <h3><a href="catservice.php">Catering Service</a></h3>
@@ -191,8 +197,24 @@ else{
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
                 </div><!-- col -->
+                <div class="col-md-3 col-sm-6">
+                  <div class="portfolio-item wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="portfolio-item-thumbnail btn_food">
+                      <img src="images/photo_vdo/3.jpg" width="200"alt="Photograhy&videography in Kochi">
+                      <div class="portfolio-item-hover">
+                        <div class="portfolio-item-description">
+                          <h3><a href="photography.php">Photography & Videography</a></h3>
+                        </div><!-- portfolio-item-description -->
+                        <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th3.jpg"><i class="fa fa-plus"></i></a>
+                      </div><!-- portfolio-item-hover -->
+                    </div><!-- portfolio-item-thumbnail -->
+                  </div><!-- portfolio-item -->
+                </div><!-- col -->
               </div>
             </div><!-- container -->
+
+          </div>
+        </div><!-- container -->
             <br><br>
             <!-- container -->
             <!-- ontainer -->

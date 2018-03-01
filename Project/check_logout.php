@@ -7,7 +7,7 @@ else {
   $role=$_SESSION['user_role'];
   $page=basename($_SERVER['PHP_SELF']);
   if($role==1){
-    if(!($page=="userhome.php"||$page=="cart.php"||$page=="payment.php"||$page=="design-stage.php"||$page=="design-decor.php"||$page=="catservice.php"||$page=="get-a-quote.php"||$page=="stagedes.php"||$page=="halldes.php"||$page=="fooddes.php")){
+    if(!($page=="userhome.php"||$page=="cart.php"||$page=="payment.php"||$page=="design-stage.php"||$page=="design-decor.php"||$page=="catservice.php"||$page=="get-a-quote.php"||$page=="stagedes.php"||$page=="halldes.php"||$page=="fooddes.php"||$page=="photography.php"||$page=="photodes.php")){
       header('location:userhome.php');
     }
   }

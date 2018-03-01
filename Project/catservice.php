@@ -108,6 +108,12 @@ include_once 'check_logout.php';
 											<li><a href="catservice.php">Snacks</a></li>
 										</ul>
 									</div>
+									<div class="section">
+										<h5>Media</h5>
+										<ul>
+											<li><a href="photography.php">Photograhy&Videography</a></li>
+										</ul>
+									</div><!-- section -->
 
 								</div><!-- megamenu-container -->
 							</li>

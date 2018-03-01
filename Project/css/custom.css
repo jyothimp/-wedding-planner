@@ -223,7 +223,7 @@ textarea.edit_details{
   cursor: pointer;
 }
 .btn_stage, .btn_food, .btn_hall{
-  width: 300px;
+  width: 250px;
 }
 .btnremove:hover{
   background-color:red;

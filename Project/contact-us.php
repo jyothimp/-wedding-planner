@@ -146,6 +146,12 @@
 
                                              </ul>
                                              </div>
+																						 <div class="section">
+												                       <h5>Media</h5>
+												                       <ul>
+												                         <li><a href="photography.php">Photograhy&Videography</a></li>
+												                       </ul>
+												                     </div><!-- section -->
 
 
                                      </div><!-- megamenu-container -->
@@ -157,7 +163,7 @@
                                  </li>
 																 <li>
 																 <a href="userprofile.php">User Profile</a>
-																 </li> 
+																 </li>
                                              <li>
                               <a href="logout.php">Logout</a>
                                      </li>

@@ -118,6 +118,7 @@ include_once 'check_logout.php';
 											<a href="stage.php">Stages</a>
 											<a href="hall.php">Hall</a>
 											<a href="catering.php">Food</a>
+											<a href="catering.php">Photo&Video</a>
 										</div>
 									</div>
 									<li >
@@ -125,7 +126,7 @@ include_once 'check_logout.php';
 									</li>
 									<li>
 									<a href="userprofile.php">User Profile</a>
-									</li> 
+									</li>
 									<li>
 										<a href="logout.php">Logout</a>
 									</li>

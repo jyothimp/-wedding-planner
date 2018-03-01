@@ -194,7 +194,12 @@ if(isset($_POST['hall_edit_submit'])){
 
                       </ul>
                     </div>
-
+                    <div class="section">
+                      <h5>Media</h5>
+                      <ul>
+                        <li><a href="photography.php">Photograhy&Videography</a></li>
+                      </ul>
+                    </div><!-- section -->
 
                 <li class="megamenu ">
 
@@ -257,7 +262,7 @@ if(isset($_POST['hall_edit_submit'])){
                 </li>
                 <li>
                 <a href="userprofile.php">User Profile</a>
-                </li> 
+                </li>
                 <li>
                   <a href="logout.php">Logout</a>
                 </nav>
