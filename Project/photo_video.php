@@ -243,6 +243,7 @@ if(isset($_POST['submit_stage'])) {
 											<a href="stage.php">Stages</a>
 											<a href="hall.php">Hall</a>
 											<a href="catering.php">Food</a>
+											<a href="photo_video.php">Photo&Video</a>
 										</div>
 									</div>
 
@@ -272,7 +273,7 @@ if(isset($_POST['submit_stage'])) {
 								<div class="row">
 									<div class="col-sm-6">
 
-										<h4>Add Stages</h4>
+										<h4>Add Photos</h4>
 
 									</div><!-- col -->
 
@@ -291,13 +292,13 @@ if(isset($_POST['submit_stage'])) {
 						</div><!-- container -->
 
 						<div class="container">
-								<input type="submit"  class="stage_button" name="button" id="stage_add_button" style="color:black;float:right" value="Add New Stage"
+								<input type="submit"  class="stage_button" name="button" id="stage_add_button" style="color:black;float:right" value="Add New Photos"
 							<div class="row">
 								<div class="col-sm-12">
 
-									<h2>Design and Decor - Wedding Stages</h2>
+									<h2>Wedding Photography</h2>
 
-									<p>Each wedding stage is customized for different couples and their tastes and opinions are incorporated in the design. Based on budget and colour preferences, the wedding stage decoration will be customized. Images below show a few of the stages done by us for our customers.</p>
+									<p>THE ENTIRE EVENT can be covered digitally to transmit to distant lands where anxious relatives and friends can join the celebrations live through on line.</p><p>THE ENTIRE TEAM OF   professional cinematographers and still photographers who can blot each moments to a  visual treat  for ever as a fondly caring document that may bring back every moment in future as lively as on that day of importance.The event venue can even extend to exotic locations where no one had ever picturised an event like this in the past.</p>
 								</div><!-- col -->
 							</div><!-- row -->
 						</div><!-- container -->

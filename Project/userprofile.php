@@ -227,6 +227,7 @@ if(isset($_POST['save_user'])){
                 											<a href="stage.php">Stages</a>
                 											<a href="hall.php">Hall</a>
                 											<a href="catering.php">Food</a>
+                                      <a href="photo_video.php">Photo&Video</a>
                 										</div>
                 									</div>
 

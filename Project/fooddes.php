@@ -199,6 +199,7 @@ $item_id=0;
   											<a href="stage.php">Stage</a>
   											<a href="hall.php">Hall</a>
   											<a href="catering.php">Food</a>
+                        <a href="photo_video.php">Photo&Video</a>
   										</div>
   									</div>
                 </li>

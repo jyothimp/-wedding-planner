@@ -118,7 +118,7 @@ include_once 'check_logout.php';
 											<a href="stage.php">Stages</a>
 											<a href="hall.php">Hall</a>
 											<a href="catering.php">Food</a>
-											<a href="catering.php">Photo&Video</a>
+											<a href="photo_video.php">Photo&Video</a>
 										</div>
 									</div>
 									<li >
