@@ -326,27 +326,48 @@ $item_id=0;
             <div>
               <h2><center>Photo Description</center></h2>
               <?php
-              $query=mysqli_query($con,"SELECT * FROM `wp_photo` WHERE `photo_id`=$item_id");
+              $query=mysqli_query($con,"SELECT * FROM `wp_photo`,`wp_district` WHERE `photo_district`=`district_id` and `photo_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
-                <form action="./design-photo.php" method="post">
+
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
                       <img src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
                     </div>
                     <div class="col-lg-6">
+                      <center><h2>Contact Details</h2></center>
 											<table style="width:100%;border;" class="desc_table">
-												<tr>
-													<th width="100px">Contact Details</th>
-													<td><?php echo $row['photo_contact'] ?></td>
+                        <tr>
+                          <th>Name</th>
+													<td><?php echo $row['photo_name'] ?></td>
 												</tr>
+                        <tr>
+                          <th>Phone</th>
+                          <td><?php echo $row['photo_phone'] ?></td>
+                        </tr>
+                        <tr>
+                          <th>Email</th>
+                          <td><?php echo $row['photo_email'] ?></td>
+                        </tr>
+                        <tr>
+                          <th>Website</th>
+                          <td><?php echo $row['photo_website'] ?></td>
+                        </tr>
+                        <tr>
+                          <th>Address</th>
+                          <td><?php echo $row['photo_address'] ?></td>
+                        </tr>
+                        <tr>
+                          <th>District</th>
+                          <td><?php echo $row['district_name'] ?></td>
+                        </tr>
+                        <tr>
+                          <th>Pincode</th>
+                          <td><?php echo $row['photo_pin'] ?></td>
+                        </tr>
 
 											</table>
-                      <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
-                      <input type="hidden" name="temp_pic" value="<?php echo $row['photo_image']; ?>">
-
-                  </div>
-                </form>
+                    </div>
               <?php } ?>
             </div>
           </div>

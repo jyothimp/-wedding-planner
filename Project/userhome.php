@@ -199,13 +199,13 @@ else{
                 </div><!-- col -->
                 <div class="col-md-3 col-sm-6">
                   <div class="portfolio-item wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="portfolio-item-thumbnail btn_food">
+                    <div class="portfolio-item-thumbnail btn_photo">
                       <img src="images/photo_vdo/3.jpg" width="200"alt="Photograhy&videography in Kochi">
                       <div class="portfolio-item-hover">
                         <div class="portfolio-item-description">
                           <h3><a href="photography.php">Photography & Videography</a></h3>
                         </div><!-- portfolio-item-description -->
-                        <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th3.jpg"><i class="fa fa-plus"></i></a>
+                        <a class="fancybox-portfolio-gallery zoom-action" href="images/Angel/New folder/th2.jpg"><i class="fa fa-plus"></i></a>
                       </div><!-- portfolio-item-hover -->
                     </div><!-- portfolio-item-thumbnail -->
                   </div><!-- portfolio-item -->
@@ -461,6 +461,9 @@ else{
         })
         $('.btn_food').click(function(){
           window.location.href = "./catservice.php";
+        })
+        $('.btn_photo').click(function(){
+          window.location.href = "./photography.php";
         })
 
       })
