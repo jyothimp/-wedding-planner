@@ -57,4 +57,25 @@ $(document).ready(function(){
 			$('#food_add_popup').removeClass('is-visible');
 		}
 	});
+
+	$('#photo_add_button').on('click', function(event){
+		event.preventDefault();
+		$('#photo_add_popup').trigger('reset');
+		$('#photo_add_popup').addClass('is-visible');
+
+	});
+
+	//close popup-profile-pic
+	$('#photo_add_popup').on('click', function(event){
+		if( $(event.target).is('.cd-popup-close') || $(event.target).is('#photo_add_popup') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+		}
+	});
+	//close popup when clicking the esc keyboard button-profile-pic
+	$(document).keyup(function(event){
+		if(event.which=='27'){
+			$('#photo_add_popup').removeClass('is-visible');
+		}
+	});
 });

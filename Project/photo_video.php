@@ -4,19 +4,19 @@ include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
 <?php
-if(isset($_POST['submit_stage'])) {
+if(isset($_POST['submit_photo'])) {
 		//$image = $_POST['stage_image'];
 	//Stores the filename as it was on the client computer.
-	$imagename = $_FILES['stage_image']['name'];
+	$imagename = $_FILES['photo_image']['name'];
 	//Stores the filetype e.g image/jpeg
-	$imagetype = $_FILES['stage_image']['type'];
+	$imagetype = $_FILES['photo_image']['type'];
 	//Stores any error codes from the upload.
-	$imageerror = $_FILES['stage_image']['error'];
+	$imageerror = $_FILES['photo_image']['error'];
 	//Stores the tempname as it is given by the host when uploaded.
-	$imagetemp = $_FILES['stage_image']['tmp_name'];
+	$imagetemp = $_FILES['photo_image']['tmp_name'];
 
 	//The path you wish to upload the image to
-	$imagePath = "./images/stage/";
+	$imagePath = "./images/photo_vdo/";
 
 	if(is_uploaded_file($imagetemp)) {
 			if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
@@ -29,12 +29,15 @@ if(isset($_POST['submit_stage'])) {
 	else {
 			 // echo "Failed to upload your image.";
 	}
-	$stage_name= $_POST['stage_name'];
-	$stage_description = $_POST['stage_description'];
-	$stage_price = $_POST['stage_price'];
-	$result = mysqli_query($con, "INSERT INTO wp_stage(stage_name,stage_image,stage_description,stage_price) VALUES('$stage_name','$imagename','$stage_description','$stage_price')");
+	$photo_name= $_POST['photo_name'];
+	$photo_address = $_POST['photo_address'];
+	$photo_website = $_POST['photo_website'];
+	$photo_pin = $_POST['photo_pin'];
+	$photo_phone = $_POST['photo_phone'];
+	$photo_email = $_POST['photo_email'];
+	$result = mysqli_query($con, "INSERT INTO wp_photo(photo_name,photo_image,photo_address,photo_website,photo_pin,photo_phone,photo_email) VALUES('$photo_name','$imagename','$photo_address','$photo_website',$photo_pin,$photo_phone,$photo_email)");
 	if(!$result){
-		echo "<script>alert('Stage name already exists..!')</script>";
+		echo "<script>alert('Photo name already exists..!')</script>";
 	}
 }
 ?>
@@ -292,7 +295,7 @@ if(isset($_POST['submit_stage'])) {
 						</div><!-- container -->
 
 						<div class="container">
-								<input type="submit"  class="stage_button" name="button" id="stage_add_button" style="color:black;float:right" value="Add New Photos"
+								<input type="submit"  class="photo_button" name="button" id="photo_add_button" style="color:black;float:right" value="Add New Photos"
 							<div class="row">
 								<div class="col-sm-12">
 
@@ -307,23 +310,23 @@ if(isset($_POST['submit_stage'])) {
 							<div class="row">
 
 								<?php
-								$query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `stage_status`=1");
+								$query=mysqli_query($con,"SELECT * FROM `wp_photo` WHERE `photo_status`=1");
 								while ($row=mysqli_fetch_array($query)) {
 									?>
 									<div class="col-sm-4">
 
 										<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-											<form action="editstage.php" method="post">
+											<form action="editphoto.php" method="post">
 												<div class="about-me-thumbnail">
 
-													<img style="height:215px !important"src="images/stage/<?php echo $row['stage_image'] ?>" alt="best wedding planner in cochin">
+													<img style="height:215px !important"src="images/photi_vdo/<?php echo $row['photo_image'] ?>" alt="best wedding planner in cochin">
 
 													<div class="social-media">
 
-														<a ><?php echo $row['stage_name'] ?><br> </a>
-														<input type="hidden" name="item_id" value="<?php echo $row['stage_id'] ?>"
-														<left><input type="submit"  class="stage_button" name="button_edit" id="button" value="Edit"></left>
-														<right><input type="submit" class="stage_button"  name="button_delete" id="button" value="Delete"></right>
+														<a ><?php echo $row['photo_name'] ?><br> </a>
+														<input type="hidden" name="item_id" value="<?php echo $row['photo_id'] ?>"
+														<left><input type="submit"  class="photo_button" name="button_edit" id="button" value="Edit"></left>
+														<right><input type="submit" class="photo_button"  name="button_delete" id="button" value="Delete"></right>
 													</div>
 												</div>
 											</form>
@@ -484,21 +487,37 @@ if(isset($_POST['submit_stage'])) {
 
 							<div class="flyout" style="position: fixed; left: -5000px; top: - 5000px; color:#f5f5f5;"><h1><b>Wedding Planner in Cochin</b></h1><h1><b>Wedding planner in Kochi</b></h1><h1><b>Cochin weddings planners</b></h1><h1><b>cochin wedding planners</b></h1><h1><b>kochi weddings planner</b></h1><h1><b>kochi wedding planners</b></h1><h1><b>Wedding Planner in Ernakulam</b></h1><h1><b>wedding planner in angamaly</b></h1><h1><b>wedding planner in CIAL</b></h1><h1><b>Wedding planner in Bolgatty palace</b></h1><h1><b>Adlux wedding planner</b></h1><h1><b>Wedding planner in Kerala</b></h1><h1><b>best wedding planner in cochin</b></h1><h1><b>Best wedding planner in kochi</b></h1><h1><b>best wedding planner in kerala</b></h1><h1><b>Best wedding planners in cochin</b></h1><h1><b>Best wedding planners in kochi</b></h1><h1><b>best wedding planners in kerala</b></h1><h1><b>wedding company in kochi</b></h1><h1><b>wedding company in kerala</b></h1><h1><b>which is the number one wedding company in kerala</b></h1><h1><b>Beach wedding in Kochi</b></h1><h1><b>Beach weddings in Kochi</b></h1><h1><b>Wedding entertainment in Kochi</b></h1><h1><b>wedding planners in kochi</b></h1><h1><b>Wedding planners in Kerala</b></h1><h1><b>Wedding planners in ernakulam</b></h1><h1><b>destination wedding in kochi</b></h1><h1><b>Destination Weddings in Kochi</b></h1><h1><b>Destination wedding in Kerala</b></h1><h1><b>Destination weddings in Kerala</b></h1><h1><b>Best wedding event management companies in Cochin</b></h1><h1><b>Event Management Kochi</b></h1><h1><b>Event management ernakulam</b></h1><h1><b>Event Management Kerala</b></h1><h1><b>Wedding planners kochi</b></h1><h1><b>Wedding planners ernakulam</b></h1><h1><b>Wedding planners kerala</b></h1><h1><b>kerala wedding planners</b></h1><h1><b>Wedding venues in Kerala</b></h1><h1><b>Stage decoration in Kochi</b></h1><h1><b>Wedding stage decoration in kochi</b></h1><h1><b>wedding decorators in kochi</b></h1><h1><b>wedding decoration in kochi</b></h1><h1><b>Wedding Design and Decor in Kochi</b></h1><h1><b>Stage Design and Decor in Kochi</b></h1><h1><b>Invitation designing in Kochi</b></h1><h1><b>Invitation designing in Kerala</b></h1><h1><b>Catering services in Kochi</b></h1><h1><b>Catering service in Kochi</b></h1><h1><b>Wedding Photography in Kochi</b></h1><h1><b>Wedding videography in Kochi</b></h1><h1><b>wedding shopping assistance</b></h1><h1><b>wedding shopping assistance in kochi</b></h1>
 							</div>
-							<div class="cd-popup" id="stage_add_popup" role="alert">
+							<div class="cd-popup" id="photo_add_popup" role="alert">
 							  <div class="cd-popup-container">
-							    <h3>New Stage</h3>
+							    <h3>New Photos</h3>
 
 							      <hr>
-							    <form action="" class="form-pop" method="post" id="stage_add_form" enctype="multipart/form-data" onsubmit="return">
-										<input type="text" name="stage_name" id="stage_name"  placeholder="Name">
-										<span class="pop-error-message" id="stage_name_error">Error message here!</span>
-											<input type="file" name="stage_image" id="stage_image" placeholder="Imagefile">
-											<span class="pop-error-message" id="stage_image_error">Error message here!</span>
-										<input type="number" name="stage_price" id="stage_price" placeholder="Price">
-										<span class="pop-error-message" id="stage_price_error">Error message here!</span>
-										<textarea name="stage_description" rows="3" id="stage_description" placeholder="Description"></textarea>
-										<span class="pop-error-message" id="stage_description_error">Error message here!</span>
-											<input type="submit" name="submit_stage" id="submit_stage" Value="Submit">
+							    <form action="" class="form-pop" method="post" id="photo_add_form" enctype="multipart/form-data" onsubmit="return">
+										<input type="text" name="photo_name" id="photo_name"  placeholder="Name">
+										<span class="pop-error-message" id="photo_name_error">Error message here!</span>
+											<input type="file" name="photo_image" id="photo_image" placeholder="Imagefile">
+											<span class="pop-error-message" id="photo_image_error">Error message here!</span>
+										<textarea name="photo_address" rows="3" id="photo_address" placeholder="Address"></textarea>
+										<span class="pop-error-message" id="photo_address_error">Error message here!</span>
+										<select  name="district" id="district" class="form-control">
+											<?php
+												$quer=mysqli_query($con,"SELECT * FROM wp_district");
+												while ($rw=mysqli_fetch_array($quer)) {
+													?><option value="<?php echo $rw['district_id']?>"><?php echo $rw['district_name']?></option>
+												<?php
+											}
+											 ?>
+										</select>
+										<span class="pop-error-message" id="photo_district_error">Error message here!</span>
+										<input type="text" name="photo_website" id="photo_website"  placeholder="Website">
+										<span class="pop-error-message" id="photo_website_error">Error message here!</span>
+										<input type="number" name="photo_pin" id="photo_pin"  placeholder="Pin">
+										<span class="pop-error-message" id="photo_pin_error">Error message here!</span>
+										<input type="phone" name="photo_phone" id="photo_phone"  placeholder="Phone Number">
+										<span class="pop-error-message" id="photo_phone_error">Error message here!</span>
+										<input type="email" name="photo_email" id="photo_email"  placeholder="Email">
+										<span class="pop-error-message" id="photo_email_error">Error message here!</span>
+                    <input type="submit" name="submit_photo" id="submit_photo" Value="Submit">
 
 							  </form>
 

@@ -264,3 +264,26 @@ textarea.edit_details{
   display: inline-block;
   float: left;
 }
+.photo_button{
+  display: inline-block;
+  background-color: orange;
+}
+#photo_add_form{
+  padding: 10px;
+}
+#photo_add_form input,textarea{
+  width: 100%;
+  margin-bottom: 16px !important;
+}
+#submit_photo{
+  width: 223px !important;
+  background-color: blue;
+  color: white;
+}
+#photo_add_form{
+  text-align: -webkit-center;
+}
+hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
