@@ -331,7 +331,7 @@ $item_id=0;
             <div>
               <h2><center>Photo Description</center></h2>
               <?php
-              $query=mysqli_query($con,"SELECT * FROM `wp_photo` WHERE `photo_id`=$item_id");
+              $query=mysqli_query($con,"SELECT * FROM `wp_photo`,`wp_district` WHERE `photo_id`=$item_id and `photo_district` = `district_id`" );
               while ($row=mysqli_fetch_array($query)) {
                 ?>
                 <form action="./photography.php" method="post">
@@ -353,7 +353,11 @@ $item_id=0;
 													<th>Pin</th>
 													<td><?php echo $row['photo_pin'] ?></td>
 												</tr>
-                        
+                        <tr>
+													<th>District</th>
+													<td><?php echo $row['district_name'] ?></td>
+												</tr>
+
                         <tr>
 													<th>Website</th>
 													<td><?php echo $row['photo_website'] ?></td>

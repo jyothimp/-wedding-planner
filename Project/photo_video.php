@@ -31,11 +31,12 @@ if(isset($_POST['submit_photo'])) {
 	}
 	$photo_name= $_POST['photo_name'];
 	$photo_address = $_POST['photo_address'];
+	$photo_district = $_POST['district'];
 	$photo_website = $_POST['photo_website'];
 	$photo_pin = $_POST['photo_pin'];
 	$photo_phone = $_POST['photo_phone'];
 	$photo_email = $_POST['photo_email'];
-	$result = mysqli_query($con, "INSERT INTO wp_photo(photo_name,photo_image,photo_address,photo_website,photo_pin,photo_phone,photo_email) VALUES('$photo_name','$imagename','$photo_address','$photo_website','$photo_pin','$photo_phone','$photo_email')") or die(mysqli_error($con));
+	$result = mysqli_query($con, "INSERT INTO wp_photo(photo_name,photo_image,photo_address,photo_district,photo_website,photo_pin,photo_phone,photo_email) VALUES('$photo_name','$imagename','$photo_address',$photo_district,'$photo_website','$photo_pin','$photo_phone','$photo_email')") or die(mysqli_error($con));
 	// if(!$result){
 	// 	echo "<script>alert('Photo name already exists..!')</script>";
 	// }

@@ -341,6 +341,15 @@ if(isset($_POST['photo_edit_submit'])){
                       <span class="pop-error-message" id="photo_ename_error"></span>
                       <textarea name="photo_address" rows="3" id="photo_editaddress" placeholder="Address"><?php echo $row['photo_address'] ?></textarea>
                       <span class="pop-error-message" id="photo_eaddress_error"></span>
+                      <select  name="district" id="district" class="form-control">
+  											<?php
+  												$quer=mysqli_query($con,"SELECT * FROM wp_district");
+  												while ($rw=mysqli_fetch_array($quer)) {
+  													?><option value="<?php echo $rw['district_id']?>"><?php echo $rw['district_name']?></option>
+  												<?php
+  											}
+  											 ?>
+  										</select>
                       <input type="text" name="photo_website" id="photo_editwebsite" value="<?php echo $row['photo_website'] ?>" placeholder="Website">
                       <span class="pop-error-message" id="photo_ewebsite_error"></span>
                       <input type="file" name="photo_image" id="photo_editimage" placeholder="Imagefile">
