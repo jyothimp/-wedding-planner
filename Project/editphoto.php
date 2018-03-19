@@ -328,26 +328,32 @@ if(isset($_POST['photo_edit_submit'])){
             <div>
               <h2><center>Edit Items</center></h2>
               <?php
-              $query=mysqli_query($con,"SELECT * FROM `wp_stage` WHERE `photo_id`=$item_id");
+              $query=mysqli_query($con,"SELECT * FROM `wp_photo` WHERE `photo_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
                 <form action="" method="post" id="photo_edit_form" class="form-pop" enctype="multipart/form-data" onsubmit="return">
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
-                      <img src="images/stage/<?php echo $row['photo_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
+                      <img src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
                     </div>
                     <div class="col-lg-6">
                       <input type="text" name="photo_name" id="photo_editname" value="<?php echo $row['photo_name'] ?>"  placeholder="Name">
                       <span class="pop-error-message" id="photo_ename_error"></span>
-                      <textarea name="photo_description" rows="3" id="photo_editdescription" placeholder="Description"><?php echo $row['photo_description'] ?></textarea>
-                      <span class="pop-error-message" id="photo_edescription_error"></span>
-                      <input type="number" name="photo_price" id="photo_editprice" value="<?php echo $row['photo_price'] ?>" placeholder="Price">
-                      <span class="pop-error-message" id="photo_eprice_error"></span>
+                      <textarea name="photo_address" rows="3" id="photo_editaddress" placeholder="Address"><?php echo $row['photo_address'] ?></textarea>
+                      <span class="pop-error-message" id="photo_eaddress_error"></span>
+                      <input type="text" name="photo_website" id="photo_editwebsite" value="<?php echo $row['photo_website'] ?>" placeholder="Website">
+                      <span class="pop-error-message" id="photo_ewebsite_error"></span>
                       <input type="file" name="photo_image" id="photo_editimage" placeholder="Imagefile">
                       <span class="pop-error-message" id="photo_eimage_error"></span>
                       <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
                       <input type="hidden" name="temp_pic" value="<?php echo $row['photo_image'] ?>">
-                      <input type="submit" name="photo_edit_submit" id="submit_editstage" Value="Submit">
+                      <input type="text" name="photo_pin" id="photo_editpin" value="<?php echo $row['photo_pin'] ?>" placeholder="Pin">
+                      <span class="pop-error-message" id="photo_epin_error"></span>
+                      <input type="text" name="photo_phone" id="photo_editphone" value="<?php echo $row['photo_phone'] ?>" placeholder="Phone Number">
+                      <span class="pop-error-message" id="photo_ephone_error"></span>
+                      <input type="text" name="photo_email" id="photo_editemail" value="<?php echo $row['photo_email'] ?>" placeholder="Email">
+                      <span class="pop-error-message" id="photo_eemail_error"></span>
+                     <input type="submit" name="photo_edit_submit" id="submit_editphoto" Value="Submit">
                     </div>
                   </div>
                 </form>

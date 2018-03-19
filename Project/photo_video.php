@@ -35,10 +35,10 @@ if(isset($_POST['submit_photo'])) {
 	$photo_pin = $_POST['photo_pin'];
 	$photo_phone = $_POST['photo_phone'];
 	$photo_email = $_POST['photo_email'];
-	$result = mysqli_query($con, "INSERT INTO wp_photo(photo_name,photo_image,photo_address,photo_website,photo_pin,photo_phone,photo_email) VALUES('$photo_name','$imagename','$photo_address','$photo_website',$photo_pin,$photo_phone,$photo_email)");
-	if(!$result){
-		echo "<script>alert('Photo name already exists..!')</script>";
-	}
+	$result = mysqli_query($con, "INSERT INTO wp_photo(photo_name,photo_image,photo_address,photo_website,photo_pin,photo_phone,photo_email) VALUES('$photo_name','$imagename','$photo_address','$photo_website','$photo_pin','$photo_phone','$photo_email')") or die(mysqli_error($con));
+	// if(!$result){
+	// 	echo "<script>alert('Photo name already exists..!')</script>";
+	// }
 }
 ?>
 <!doctype html>
@@ -319,7 +319,7 @@ if(isset($_POST['submit_photo'])) {
 											<form action="editphoto.php" method="post">
 												<div class="about-me-thumbnail">
 
-													<img style="height:215px !important"src="images/photi_vdo/<?php echo $row['photo_image'] ?>" alt="best wedding planner in cochin">
+													<img style="height:215px !important"src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="best wedding planner in cochin">
 
 													<div class="social-media">
 
@@ -511,7 +511,7 @@ if(isset($_POST['submit_photo'])) {
 										<span class="pop-error-message" id="photo_district_error">Error message here!</span>
 										<input type="text" name="photo_website" id="photo_website"  placeholder="Website">
 										<span class="pop-error-message" id="photo_website_error">Error message here!</span>
-										<input type="number" name="photo_pin" id="photo_pin"  placeholder="Pin">
+										<input type="text" name="photo_pin" id="photo_pin"  placeholder="Pin">
 										<span class="pop-error-message" id="photo_pin_error">Error message here!</span>
 										<input type="phone" name="photo_phone" id="photo_phone"  placeholder="Phone Number">
 										<span class="pop-error-message" id="photo_phone_error">Error message here!</span>

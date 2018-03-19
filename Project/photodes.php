@@ -12,7 +12,7 @@ $item_id=0;
     $item_id=$_POST['item_id'];
   }
   if(isset($_POST['photo_edit_submit'])){
-    $imagename="1.jpg";
+    $imagename="default.png";
     $item_id=$_POST['item_id'];
     if(!$_FILES['photo_image']['name']==""){
       //Stores the filename as it was on the client computer.
@@ -24,7 +24,7 @@ $item_id=0;
       //Stores the tempname as it is given by the host when uploaded.
       $imagetemp = $_FILES['photo_image']['tmp_name'];
       //The path you wish to upload the image to
-      $imagePath = "./images/photo_vdo/";
+      $imagePath = "./images/photo/";
       if(is_uploaded_file($imagetemp)) {
         if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
           // echo "Sussecfully uploaded your image.";
@@ -41,8 +41,12 @@ $item_id=0;
       $imagename = $_POST['temp_pic'];
     }
     $photo_name= $_POST['photo_name'];
-    $photo_contact = $_POST['photo_contact'];
-    $result = mysqli_query($con, "SELECT * FROM `wp_photo` WHERE `photo_id`=$item_id `photo_status`=1") or die(mysqli_error($con));
+  	$photo_address = $_POST['photo_address'];
+  	$photo_website = $_POST['photo_website'];
+  	$photo_pin = $_POST['photo_pin'];
+  	$photo_phone = $_POST['photo_phone'];
+  	$photo_email = $_POST['photo_email'];
+    $result = mysqli_query($con, "SELECT * FROM `wp_addtocart` WHERE `photo_id`=$item_id `photo_status`=1") or die(mysqli_error($con));
   }
   ?>
 
@@ -175,8 +179,8 @@ $item_id=0;
 
                       <ul>
 
-                        <li><a href="design-photo.php">photo Decoration</a></li>
-                        <li><a href="design-decor.php">Hall Decoration</a></li>
+                        <li><a href="design-stage.php">Stage Decoration</a></li>
+                        <li><a href="design-decor.php">photo Decoration</a></li>
 
                       </ul>
 
@@ -195,13 +199,13 @@ $item_id=0;
 
                       </ul>
                     </div>
+
                     <div class="section">
                       <h5>Media</h5>
                       <ul>
                         <li><a href="photography.php">Photograhy&Videography</a></li>
                       </ul>
                     </div><!-- section -->
-
                   <li class="megamenu ">
 
   									<div class="dropdown">
@@ -252,8 +256,8 @@ $item_id=0;
 
 
   										<div class="dropdown-content">
-  											<a href="photo.php">photos</a>
-  											<a href="hall.php">Hall</a>
+  											<a href="stage.php">Stages</a>
+  											<a href="photo.php">photo</a>
   											<a href="catering.php">Food</a>
                         <a href="photo_video.php">Photo&Video</a>
   										</div>
@@ -327,20 +331,32 @@ $item_id=0;
             <div>
               <h2><center>Photo Description</center></h2>
               <?php
-              $query=mysqli_query($con,"SELECT * FROM `wp_photo`,`wp_district` WHERE `photo_district`=`district_id` and `photo_id`=$item_id");
+              $query=mysqli_query($con,"SELECT * FROM `wp_photo` WHERE `photo_id`=$item_id");
               while ($row=mysqli_fetch_array($query)) {
                 ?>
-
+                <form action="./photography.php" method="post">
                   <div class="col-lg-12" >
                     <div class="col-lg-6">
                       <img src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="Image loading.." height="280px" style="border:1px solid red;">
                     </div>
                     <div class="col-lg-6">
-                      <center><h2>Contact Details</h2></center>
 											<table style="width:100%;border;" class="desc_table">
-                        <tr>
-                          <th>Name</th>
+												<tr>
+													<th>Name</th>
 													<td><?php echo $row['photo_name'] ?></td>
+												</tr>
+												<tr>
+													<th>Address</th>
+													<td><?php echo $row['photo_address'] ?></td>
+												</tr>
+												<tr>
+													<th>Pin</th>
+													<td><?php echo $row['photo_pin'] ?></td>
+												</tr>
+                        
+                        <tr>
+													<th>Website</th>
+													<td><?php echo $row['photo_website'] ?></td>
 												</tr>
                         <tr>
                           <th>Phone</th>
@@ -350,25 +366,13 @@ $item_id=0;
                           <th>Email</th>
                           <td><?php echo $row['photo_email'] ?></td>
                         </tr>
-                        <tr>
-                          <th>Website</th>
-                          <td><?php echo $row['photo_website'] ?></td>
-                        </tr>
-                        <tr>
-                          <th>Address</th>
-                          <td><?php echo $row['photo_address'] ?></td>
-                        </tr>
-                        <tr>
-                          <th>District</th>
-                          <td><?php echo $row['district_name'] ?></td>
-                        </tr>
-                        <tr>
-                          <th>Pincode</th>
-                          <td><?php echo $row['photo_pin'] ?></td>
-                        </tr>
-
 											</table>
+                      <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
+                      <input type="hidden" name="temp_pic" value="<?php echo $row['photo_image']; ?>">
+
                     </div>
+                  </div>
+                </form>
               <?php } ?>
             </div>
           </div>
@@ -512,7 +516,7 @@ $item_id=0;
 
   </footer><!-- FOOTER -->
 
-  <div class="flyout" style="position: fixed; left: -5000px; top: - 5000px; color:#f5f5f5;"><h1><b>Wedding Planner in Cochin</b></h1><h1><b>Wedding planner in Kochi</b></h1><h1><b>Cochin weddings planners</b></h1><h1><b>cochin wedding planners</b></h1><h1><b>kochi weddings planner</b></h1><h1><b>kochi wedding planners</b></h1><h1><b>Wedding Planner in Ernakulam</b></h1><h1><b>wedding planner in angamaly</b></h1><h1><b>wedding planner in CIAL</b></h1><h1><b>Wedding planner in Bolgatty palace</b></h1><h1><b>Adlux wedding planner</b></h1><h1><b>Wedding planner in Kerala</b></h1><h1><b>best wedding planner in cochin</b></h1><h1><b>Best wedding planner in kochi</b></h1><h1><b>best wedding planner in kerala</b></h1><h1><b>Best wedding planners in cochin</b></h1><h1><b>Best wedding planners in kochi</b></h1><h1><b>best wedding planners in kerala</b></h1><h1><b>wedding company in kochi</b></h1><h1><b>wedding company in kerala</b></h1><h1><b>which is the number one wedding company in kerala</b></h1><h1><b>Beach wedding in Kochi</b></h1><h1><b>Beach weddings in Kochi</b></h1><h1><b>Wedding entertainment in Kochi</b></h1><h1><b>wedding planners in kochi</b></h1><h1><b>Wedding planners in Kerala</b></h1><h1><b>Wedding planners in ernakulam</b></h1><h1><b>destination wedding in kochi</b></h1><h1><b>Destination Weddings in Kochi</b></h1><h1><b>Destination wedding in Kerala</b></h1><h1><b>Destination weddings in Kerala</b></h1><h1><b>Best wedding event management companies in Cochin</b></h1><h1><b>Event Management Kochi</b></h1><h1><b>Event management ernakulam</b></h1><h1><b>Event Management Kerala</b></h1><h1><b>Wedding planners kochi</b></h1><h1><b>Wedding planners ernakulam</b></h1><h1><b>Wedding planners kerala</b></h1><h1><b>kerala wedding planners</b></h1><h1><b>Wedding venues in Kerala</b></h1><h1><b>photo decoration in Kochi</b></h1><h1><b>Wedding photo decoration in kochi</b></h1><h1><b>wedding decorators in kochi</b></h1><h1><b>wedding decoration in kochi</b></h1><h1><b>Wedding Design and Decor in Kochi</b></h1><h1><b>photo Design and Decor in Kochi</b></h1><h1><b>Invitation designing in Kochi</b></h1><h1><b>Invitation designing in Kerala</b></h1><h1><b>Catering services in Kochi</b></h1><h1><b>Catering service in Kochi</b></h1><h1><b>Wedding Photography in Kochi</b></h1><h1><b>Wedding videography in Kochi</b></h1><h1><b>wedding shopping assistance</b></h1><h1><b>wedding shopping assistance in kochi</b></h1>
+  <div class="flyout" style="position: fixed; left: -5000px; top: - 5000px; color:#f5f5f5;"><h1><b>Wedding Planner in Cochin</b></h1><h1><b>Wedding planner in Kochi</b></h1><h1><b>Cochin weddings planners</b></h1><h1><b>cochin wedding planners</b></h1><h1><b>kochi weddings planner</b></h1><h1><b>kochi wedding planners</b></h1><h1><b>Wedding Planner in Ernakulam</b></h1><h1><b>wedding planner in angamaly</b></h1><h1><b>wedding planner in CIAL</b></h1><h1><b>Wedding planner in Bolgatty palace</b></h1><h1><b>Adlux wedding planner</b></h1><h1><b>Wedding planner in Kerala</b></h1><h1><b>best wedding planner in cochin</b></h1><h1><b>Best wedding planner in kochi</b></h1><h1><b>best wedding planner in kerala</b></h1><h1><b>Best wedding planners in cochin</b></h1><h1><b>Best wedding planners in kochi</b></h1><h1><b>best wedding planners in kerala</b></h1><h1><b>wedding company in kochi</b></h1><h1><b>wedding company in kerala</b></h1><h1><b>which is the number one wedding company in kerala</b></h1><h1><b>Beach wedding in Kochi</b></h1><h1><b>Beach weddings in Kochi</b></h1><h1><b>Wedding entertainment in Kochi</b></h1><h1><b>wedding planners in kochi</b></h1><h1><b>Wedding planners in Kerala</b></h1><h1><b>Wedding planners in ernakulam</b></h1><h1><b>destination wedding in kochi</b></h1><h1><b>Destination Weddings in Kochi</b></h1><h1><b>Destination wedding in Kerala</b></h1><h1><b>Destination weddings in Kerala</b></h1><h1><b>Best wedding event management companies in Cochin</b></h1><h1><b>Event Management Kochi</b></h1><h1><b>Event management ernakulam</b></h1><h1><b>Event Management Kerala</b></h1><h1><b>Wedding planners kochi</b></h1><h1><b>Wedding planners ernakulam</b></h1><h1><b>Wedding planners kerala</b></h1><h1><b>kerala wedding planners</b></h1><h1><b>Wedding venues in Kerala</b></h1><h1><b>Stage decoration in Kochi</b></h1><h1><b>Wedding stage decoration in kochi</b></h1><h1><b>wedding decorators in kochi</b></h1><h1><b>wedding decoration in kochi</b></h1><h1><b>Wedding Design and Decor in Kochi</b></h1><h1><b>Stage Design and Decor in Kochi</b></h1><h1><b>Invitation designing in Kochi</b></h1><h1><b>Invitation designing in Kerala</b></h1><h1><b>Catering services in Kochi</b></h1><h1><b>Catering service in Kochi</b></h1><h1><b>Wedding Photography in Kochi</b></h1><h1><b>Wedding videography in Kochi</b></h1><h1><b>wedding shopping assistance</b></h1><h1><b>wedding shopping assistance in kochi</b></h1>
   </div>
 
 </div><!-- PAGE-WRAPPER -->

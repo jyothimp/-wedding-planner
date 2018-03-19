@@ -2,8 +2,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <?php
 if(isset($_POST['login_submit'])){
-	$un=$_POST['signin-username'];
-	$pw=$_POST['signin-password'];
+	$un=mysqli_real_escape_string($con,$_POST['signin-username']);
+	$pw=mysqli_real_escape_string($con,$_POST['signin-password']);
 	$pw=SHA1($pw);
 	$query=mysqli_query($con,"select * from wp_login where login_username='$un' and (login_password='$pw' OR login_reset_password='$pw')  and login_status=1");
 	if(mysqli_num_rows($query)>0){

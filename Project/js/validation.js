@@ -956,7 +956,7 @@ $(document).ready(function() {
       return false;
     }
     else {
-  
+
       return true;
     }
   });
@@ -1043,6 +1043,332 @@ $(document).ready(function() {
       $(this).css('border','1px solid #cccccc');
       $('#holdername_error').html("");
       $('#holdername_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_add_form").on("submit", function(){
+    var val_name= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_image=/\.(jpe?g|png|gif|bmp)$/i;
+    var val_address= /^[^&]{10,300}$/;
+    var val_website= /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}$/;
+    var val_pin= /^[0-9]{1,6}$/;
+    var val_phone= /^[0-9]{9,12}$/;
+    var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    $name = $('#photo_name').val();
+    $image = $('#photo_image').val();
+    $address= $('#photo_address').val();
+    $website = $('#photo_website').val();
+    $pin = $('#photo_pin').val();
+    $phone = $('#photo_phone').val();
+    $email = $('#photo_email').val();
+
+    if(!val_name.test($name)){
+      $("#photo_name").focusout();
+      return false;
+    }
+    else if(!val_image.test($image)){
+      $("#photo_image").focusout();
+      return false;
+    }
+    else if(!val_address.test($address)){
+      $("#photo_address").focusout();
+      return false;
+    }
+    else if(!val_website.test($website)){
+      $("#photo_website").focusout();
+      return false;
+    }
+    else if(!val_pin.test($pin)){
+      $("#photo_pin").focusout();
+      return false;
+    }
+    else if(!val_phone.test($phone)){
+      $("#photo_phone").focusout();
+      return false;
+    }
+    else if(!val_email.test($email)){
+      $("#photo_email").focusout();
+      return false;
+    }
+    else {
+      return true;
+    }
+  });
+
+  $("#photo_image").change(function() {
+    var val = $(this).val();
+    switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
+      case 'gif': case 'jpg': case 'png':
+      $('#photo_image_error').html("");
+      $('#photo_image_error').removeClass('is-visible');
+      return true;
+      break;
+      default:
+      $("#photo_image_error").html("Invalid image");
+      $('#photo_image_error').addClass('is-visible');
+      return false;
+      break;
+    }
+  });
+  $("#photo_name").focusout(function() {
+    var val_name=  /^[A-Za-z0-9_.]{3,30}$/;
+    $name = $(this).val();
+    if(!val_name.test($name)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_name_error').html("Invalid name");
+      $('#photo_name_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_name_error').html("");
+      $('#photo_name_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_address").focusout(function() {
+    var val_address=/^[^&]{10,300}$/;
+    $address = $(this).val();
+    if(!val_address.test($address)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_address_error').html("Invalid address");
+      $('#photo_address_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_address_error').html("");
+      $('#photo_address_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_website").focusout(function() {
+    var val_website= /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}$/;
+    $website = $(this).val();
+    if(!val_website.test($website)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_website_error').html("Invalid website");
+      $('#photo_website_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_website_error').html("");
+      $('#photo_website_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_pin").focusout(function() {
+    var val_pin= /^[0-9]{1,6}$/;
+    $pin = $(this).val();
+    if(!val_pin.test($pin)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_pin_error').html("Invalid pin");
+      $('#photo_pin_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_pin_error').html("");
+      $('#photo_pin_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_phone").focusout(function() {
+    var val_phone=  /^[0-9]{9,12}$/;
+    $phone = $(this).val();
+    if(!val_phone.test($phone)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_phone_error').html("Invalid phone");
+      $('#photo_phone_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_phone_error').html("");
+      $('#photo_phone_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_email").focusout(function() {
+    var val_email= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    $email = $(this).val();
+    if(!val_email.test($email)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_email_error').html("Invalid email");
+      $('#photo_email_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_email_error').html("");
+      $('#photo_email_error').removeClass('is-visible');
+      return true;
+    }
+  });
+   $("#photo_edit_form").on("submit", function(){
+    var val_ename= /^[A-Za-z0-9_.]{3,30}$/;
+    var val_eaddress= /^[^&]{10,300}$/;
+    var val_ewebsite= /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}$/;
+    var val_epin= /^[0-9]{1,6}$/;
+    var val_ephone= /^[0-9]{9,12}$/;
+    var val_eemail= /^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    var val_eimage=/\.(jpe?g|png|gif|bmp)$/i;
+    $ename = $('#photo_editname').val();
+    $eaddress = $('#photo_editaddress').val();
+    $ewebsite= $('#photo_editwebsite').val();
+    $epin= $('#photo_editpin').val();
+    $ephone= $('#photo_editphone').val();
+    $eemail= $('#photo_editemail').val();
+    $eimage = $('#photo_editimage').val();
+    if(!val_ename.test($ename)){
+      $("#photo_editname").focusout();
+      return false;
+    }
+    else if(!val_eaddress.test($eaddress)){
+      $("#photo_editaddress").focusout();
+      return false;
+    }
+    else if(!val_ewebsite.test($ewebsite)){
+      $("#photo_editwebsite").focusout();
+      return false;
+    }
+    else if(!val_epin.test($epin)){
+      $("#photo_editpin").focusout();
+      return false;
+    }
+    else if(!val_ephone.test($ephone)){
+      $("#photo_editphone").focusout();
+      return false;
+    }
+    else if(!val_eemail.test($eemail)){
+      $("#photo_editemail").focusout();
+      return false;
+    }
+    else {
+      return true;
+    }
+  });
+  $("#photo_editimage").change(function() {
+    var val = $(this).val();
+    switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
+      case 'gif': case 'jpg': case 'png':
+      $('#photo_eimage_error').html("");
+      $('#photo_eimage_error').removeClass('is-visible');
+      return true;
+      break;
+      default:
+      $("#photo_eimage_error").html("Invalid image");
+      $('#photo_eimage_error').addClass('is-visible');
+      return false;
+      break;
+    }
+  });
+  $("#photo_editname").focusout(function() {
+    var val_ename=  /^[A-Za-z0-9_.]{3,30}$/;
+    $ename = $(this).val();
+    if(!val_ename.test($ename)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_ename_error').html("Invalid name");
+      $('#photo_ename_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_ename_error').html("");
+      $('#photo_ename_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_editaddress").focusout(function() {
+    var val_eaddress=  /^[A-Za-z0-9_.]{3,30}$/;
+    $eaddress = $(this).val();
+    if(!val_eaddress.test($eaddress)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_eaddress_error').html("Invalid address");
+      $('#photo_eaddress_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_eaddress_error').html("");
+      $('#photo_eaddress_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_editpin").focusout(function() {
+    var val_epin= /^[0-9]{1,6}$/;
+    $epin = $(this).val();
+    if(!val_epin.test($epin)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_epin_error').html("Invalid pin");
+      $('#photo_epin_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_epin_error').html("");
+      $('#photo_epin_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_editwebsite").focusout(function() {
+    var val_ewebsite=/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}$/;phone
+    $ewebsite = $(this).val();
+    if(!val_ewebsite.test($ewebsite)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_ewebsite_error').html("Invalid website");
+      $('#photo_ewebsite_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_ewebsite_error').html("");
+      $('#photo_ewebsite_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_editphone").focusout(function() {
+    var val_ephone=/^[0-9]{9,12}$/;
+    $ephone = $(this).val();
+    if(!val_ephone.test($ephone)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_ephone_error').html("Invalid phone");
+      $('#photo_ephone_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_ephone_error').html("");
+      $('#photo_ephone_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_editemail").focusout(function() {
+    var val_eemail=/^[A-Za-z0-9._]*\@[A-Za-z0-9._]*\.[A-Za-z]{2,5}$/;
+    $eemail = $(this).val();
+    if(!val_eemail.test($eemail)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#photo_eemail_error').html("Invalid email");
+      $('#photo_eemail_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#photo_eemail_error').html("");
+      $('#photo_eemail_error').removeClass('is-visible');
       return true;
     }
   });

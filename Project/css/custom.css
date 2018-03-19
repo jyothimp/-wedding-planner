@@ -287,3 +287,18 @@ hr{
   margin-top: 0px;
   margin-bottom: 0px;
 }
+#photo_edit_form{
+  padding: 10px;
+}
+#photo_edit_form input,textarea{
+  width: 100%;
+  margin-bottom: 16px !important;
+}
+#submit_editphoto{
+  width: 223px !important;
+  background-color: blue;
+  color: white;
+}
+#photo_edit_form{
+  text-align: -webkit-center;
+}
