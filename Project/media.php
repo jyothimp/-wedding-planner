@@ -4,19 +4,19 @@ include_once 'check_logout.php';
 ?>
 <?php
 
-if(isset($_POST['submit_food'])) {
-	// $image = $_POST['food_image'];
+if(isset($_POST['submit_photo'])) {
+	// $image = $_POST['media_image'];
 	//Stores the filename as it was on the client computer.
-	$imagename = $_FILES['food_image']['name'];
+	$imagename = $_FILES['photo_image']['name'];
 	//Stores the filetype e.g image/jpeg
-	$imagetype = $_FILES['food_image']['type'];
+	$imagetype = $_FILES['photo_image']['type'];
 	//Stores any error codes from the upload.
-	$imageerror = $_FILES['food_image']['error'];
+	$imageerror = $_FILES['photo_image']['error'];
 	//Stores the tempname as it is given by the host when uploaded.
-	$imagetemp = $_FILES['food_image']['tmp_name'];
+	$imagetemp = $_FILES['photo_image']['tmp_name'];
 
 	//The path you wish to upload the image to
-	$imagePath = "./images/food/";
+	$imagePath = "./images/photo_vdo/";
 
 	if(is_uploaded_file($imagetemp)) {
 		if(move_uploaded_file($imagetemp, $imagePath . $imagename)) {
@@ -29,13 +29,12 @@ if(isset($_POST['submit_food'])) {
 	else {
 		// echo "Failed to upload your image.";
 	}
-	$food_name= $_POST['food_name'];
-	$food_description = $_POST['food_description'];
-	$food_price = $_POST['food_price'];
-	$food_type=$_POST['food_type'];
-	$result = mysqli_query($con, "INSERT INTO wp_food(food_name,food_image,food_description,food_price,food_type) VALUES('$food_name','$imagename','$food_description','$food_price',$food_type)");
+	$photo_name= $_POST['photo_name'];
+	$photo_type = $_POST['photo_type'];
+	$photo_status = $_POST['photo_status'];
+	$result = mysqli_query($con, "INSERT INTO wp_media(photo_name,photo_image,photo_type,photo_status) VALUES('$photo_name','$imagename','$photo_type','$photo_status')");
 	if(!$result){
-		echo "<script>alert('Food name already exists..!')</script>";
+		echo "<script>alert('Photo name already exists..!')</script>";
 	}
 }
 ?>
@@ -295,13 +294,13 @@ if(isset($_POST['submit_food'])) {
 						</div><!-- container -->
 
 						<div class="container">
-							<input type="submit"  class="food_button" name="button" id="food_add_button" style="color:black;float:right" value="Add New Media">
+							<input type="submit"  class="media_button" name="button" id="media_add_button" style="color:black;float:right" value="Add New Media">
 							<div class="row">
 								<div class="col-sm-12">
 
 									<h2>Gallery</h2>
 
-									<p> wedding catering is one of the importent thing. Images below show a few of the food items done by us for our customers.</p>
+									<p>THE ENTIRE TEAM OF   professional cinematographers and still photographers who can blot each moments to a  visual treat  for ever as a fondly caring document that may bring back every moment in future as lively as on that day of importance.The event venue can even extend to exotic locations where no one had ever picturised an event like this in the past.</p>
 									<div class="tab">
 										<button class="tablinks" onclick="openCity(event, 'Photo')" id="defaultOpen">Photo</button>
 										<button class="tablinks" onclick="openCity(event, 'Video')" id="defaultOpen">Video</button>
@@ -310,18 +309,18 @@ if(isset($_POST['submit_food'])) {
 										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 										<p>
 											<?php
-											$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=5")or die(mysqli_error($con));
+											$query=mysqli_query($con,"SELECT * FROM `wp_media` WHERE `photo_status`=1 AND `photo_type`=1")or die(mysqli_error($con));
 											while ($row=mysqli_fetch_array($query)) {
 												?>
 												<div class="col-sm-4">
 													<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-														<form action="editcatering.php" method="post">
+														<form action="editphoto.php" method="post">
 															<div class="about-me-thumbnail">
-																<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+																<img style="height:215px !important"src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="best wedding planner in cochin">
 																<div class="social-media">
-																	<a ><?php echo $row['food_name'] ?><br> </a>
-																	<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
-																	<left><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+																	<a ><?php echo $row['photo_name'] ?><br> </a>
+																	<input type="hidden" name="item_id" value="<?php echo $row['photo_id'] ?>"
+																	<left><input type="submit" class="media_button"  name="button_delete" id="button" value="Delete"></right>
 																</div>
 															</div>
 														</form>
@@ -337,18 +336,18 @@ if(isset($_POST['submit_food'])) {
 										<span onclick="this.parentElement.style.display='none'" class="topright"></span>
 										<p>
 											<?php
-											$query=mysqli_query($con,"SELECT * FROM `wp_food` WHERE `food_status`=1 AND `food_type`=1")or die(mysqli_error($con));
+											$query=mysqli_query($con,"SELECT * FROM `wp_media` WHERE `photo_status`=1 AND `photo_type`=2")or die(mysqli_error($con));
 											while ($row=mysqli_fetch_array($query)) {
 												?>
 												<div class="col-sm-4">
 													<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
-														<form action="editcatering.php" method="post">
+														<form action="editphoto.php" method="post">
 															<div class="about-me-thumbnail">
-																<img style="height:215px !important"src="images/food/<?php echo $row['food_image'] ?>" alt="best wedding planner in cochin">
+																<img style="height:215px !important"src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="best wedding planner in cochin">
 																<div class="social-media">
-																	<a ><?php echo $row['food_name'] ?><br> </a>
-																	<input type="hidden" name="item_id" value="<?php echo $row['food_id'] ?>"
-																	<left><input type="submit" class="food_button"  name="button_delete" id="button" value="Delete"></right>
+																	<a ><?php echo $row['photo_name'] ?><br> </a>
+																	<input type="hidden" name="item_id" value="<?php echo $row['photo_id'] ?>"
+																	<left><input type="submit" class="media_button"  name="button_delete" id="button" value="Delete"></right>
 																</div>
 															</div>
 														</form>
@@ -511,30 +510,23 @@ if(isset($_POST['submit_food'])) {
 
 							<div class="flyout" style="position: fixed; left: -5000px; top: - 5000px; color:#f5f5f5;"><h1><b>Wedding Planner in Cochin</b></h1><h1><b>Wedding planner in Kochi</b></h1><h1><b>Cochin weddings planners</b></h1><h1><b>cochin wedding planners</b></h1><h1><b>kochi weddings planner</b></h1><h1><b>kochi wedding planners</b></h1><h1><b>Wedding Planner in Ernakulam</b></h1><h1><b>wedding planner in angamaly</b></h1><h1><b>wedding planner in CIAL</b></h1><h1><b>Wedding planner in Bolgatty palace</b></h1><h1><b>Adlux wedding planner</b></h1><h1><b>Wedding planner in Kerala</b></h1><h1><b>best wedding planner in cochin</b></h1><h1><b>Best wedding planner in kochi</b></h1><h1><b>best wedding planner in kerala</b></h1><h1><b>Best wedding planners in cochin</b></h1><h1><b>Best wedding planners in kochi</b></h1><h1><b>best wedding planners in kerala</b></h1><h1><b>wedding company in kochi</b></h1><h1><b>wedding company in kerala</b></h1><h1><b>which is the number one wedding company in kerala</b></h1><h1><b>Beach wedding in Kochi</b></h1><h1><b>Beach weddings in Kochi</b></h1><h1><b>Wedding entertainment in Kochi</b></h1><h1><b>wedding planners in kochi</b></h1><h1><b>Wedding planners in Kerala</b></h1><h1><b>Wedding planners in ernakulam</b></h1><h1><b>destination wedding in kochi</b></h1><h1><b>Destination Weddings in Kochi</b></h1><h1><b>Destination wedding in Kerala</b></h1><h1><b>Destination weddings in Kerala</b></h1><h1><b>Best wedding event management companies in Cochin</b></h1><h1><b>Event Management Kochi</b></h1><h1><b>Event management ernakulam</b></h1><h1><b>Event Management Kerala</b></h1><h1><b>Wedding planners kochi</b></h1><h1><b>Wedding planners ernakulam</b></h1><h1><b>Wedding planners kerala</b></h1><h1><b>kerala wedding planners</b></h1><h1><b>Wedding venues in Kerala</b></h1><h1><b>Stage decoration in Kochi</b></h1><h1><b>Wedding stage decoration in kochi</b></h1><h1><b>wedding decorators in kochi</b></h1><h1><b>wedding decoration in kochi</b></h1><h1><b>Wedding Design and Decor in Kochi</b></h1><h1><b>Stage Design and Decor in Kochi</b></h1><h1><b>Invitation designing in Kochi</b></h1><h1><b>Invitation designing in Kerala</b></h1><h1><b>Catering services in Kochi</b></h1><h1><b>Catering service in Kochi</b></h1><h1><b>Wedding Photography in Kochi</b></h1><h1><b>Wedding videography in Kochi</b></h1><h1><b>wedding shopping assistance</b></h1><h1><b>wedding shopping assistance in kochi</b></h1>
 							</div>
-							<div class="cd-popup" id="food_add_popup" role="alert">
+							<div class="cd-popup" id="media_add_popup" role="alert">
 								<div class="cd-popup-container">
-									<h3>New Food Items</h3>
+									<h3>New Media Items</h3>
 
 									<hr>
-									<form action="" method="post" id="food_add_form" class="form-pop" enctype="multipart/form-data" onsubmit="return ">
-										<input type="text" name="food_name" id="food_name"  placeholder="Name">
-										<span class="pop-error-message" id="food_name_error"></span>
-										<select name="food_type" id="food_type">
-											<option selected disabled>Food Type</option>
-											<option value="5">Welcome Drink</option>
-											<option value="1">Vegetarian</option>
-											<option value="2">Non-Veg</option>
-											<option value="3">Snacks</option>
-											<option value="4">Ice Cream</option>
+									<form action="" method="post" id="media_add_form" class="form-pop" enctype="multipart/form-data" onsubmit="return ">
+										<input type="text" name="photo_name" id="photo_name"  placeholder="Name">
+										<span class="pop-error-message" id="media_name_error"></span>
+										<select name="photo_type" id="photo_type">
+											<option selected disabled> Type</option>
+											<option value="1">Photo</option>
+											<option value="2">Video</option>
 										</select>
-										<span class="pop-error-message" id="food_type_error"></span>
-										<input type="file" name="food_image" id="food_image" placeholder="Imagefile">
-										<span class="pop-error-message" id="food_image_error"></span>
-										<input type="number" name="food_price" id="food_price" placeholder="Price">
-										<span class="pop-error-message" id="food_price_error"></span>
-										<textarea name="food_description" rows="3" id="food_description" placeholder="Description"></textarea>
-										<span class="pop-error-message" id="food_description_error"></span>
-										<input type="submit" name="submit_food" id="submit_food" Value="submit">
+										<span class="pop-error-message" id="media_type_error"></span>
+										<input type="file" name="photo_image" id="photo_image" placeholder="Imagefile">
+										<span class="pop-error-message" id="media_image_error"></span>
+										<input type="submit" name="submit_photo" id="submit_photo" Value="submit">
 
 									</form>
 									<a href="#0" class="cd-popup-close img-replace">Close</a>

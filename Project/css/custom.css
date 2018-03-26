@@ -304,3 +304,23 @@ hr{
 #photo_edit_form{
   text-align: -webkit-center;
 }
+.media_button{
+  display: inline-block;
+  background-color: orange;
+  margin-bottom: inherit   10px;
+}
+#media_add_form{
+  padding: 10px;
+}
+#media_add_form input,textarea,select{
+  width: 100%;
+  margin-bottom: 16px !important;
+}
+#submit_photo{
+  width: 223px !important;
+  background-color: blue;
+  color: white;
+}
+#media_add_form{
+  text-align: -webkit-center;
+}

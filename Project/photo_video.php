@@ -277,7 +277,7 @@ if(isset($_POST['submit_photo'])) {
 								<div class="row">
 									<div class="col-sm-6">
 
-										<h4>Add Photos</h4>
+										<h4>Add Photography</h4>
 
 									</div><!-- col -->
 
@@ -296,7 +296,7 @@ if(isset($_POST['submit_photo'])) {
 						</div><!-- container -->
 
 						<div class="container">
-							<input type="submit"  class="photo_button" name="button" id="photo_add_button" style="color:black;float:right" value="Add New Photos"
+							<input type="submit"  class="photo_button" name="button" id="photo_add_button" style="color:black;float:right" value="Add New Photography"
 							<div class="row">
 								<div class="col-sm-12">
 

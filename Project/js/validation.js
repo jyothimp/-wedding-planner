@@ -1372,4 +1372,76 @@ $(document).ready(function() {
       return true;
     }
   });
+  $("#media_add_form").on("submit", function(){
+    var val_mname= /^[^~]{3,30}$/;
+    var val_mtype= /^[0-9]{1,2}$/;
+    var val_mimage=/\.(jpe?g|png|gif|bmp)$/i;
+    $mname = $('#photo_name').val();
+    $mtype= $('#photo_type').val();
+    $mimage = $('#photo_image').val();
+    if(!val_mname.test($mname)){
+      $("#photo_name").focusout();
+      return false;
+    }
+    else if(!val_mtype.test($mtype)){
+      $("#photo_type").focusout();
+      return false;
+    }
+    else if(!val_mimage.test($mimage)){
+      $("#photo_image").focusout();
+      return false;
+    }
+    else {
+      return true;
+    }
+  });
+  $("#photo_image").change(function() {
+    var val = $(this).val();
+    switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
+      case 'gif': case 'jpg': case 'png':
+      $('#media_image_error').html("");
+      $('#media_image_error').removeClass('is-visible');
+      return true;
+      break;
+      default:
+      $("#media_image_error").html("Invalid image");
+      $('#media_image_error').addClass('is-visible');
+      return false;
+      break;
+    }
+  });
+  $("#photo_name").focusout(function() {
+    var val_mname=  /^[^~]{3,30}$/;
+    $mname = $(this).val();
+    if(!val_mname.test($mname)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#media_name_error').html("Invalid name");
+      $('#media_name_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#media_name_error').html("");
+      $('#media_name_error').removeClass('is-visible');
+      return true;
+    }
+  });
+  $("#photo_type").focusout(function() {
+    var val_mtype= /^[1-9]{1,2}$/;
+    $mtype = $(this).val();
+    if(!val_mtype.test($mtype)){
+      $(this).focus();
+      $(this).css('border','1px solid red');
+      $('#media_type_error').html("Invalid type");
+      $('#media_type_error').addClass('is-visible');
+      return false;
+    }
+    else {
+      $(this).css('border','1px solid #cccccc');
+      $('#media_type_error').html("");
+      $('#media_type_error').removeClass('is-visible');
+      return true;
+    }
+  });
 })
