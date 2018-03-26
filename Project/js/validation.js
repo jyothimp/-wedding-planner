@@ -1375,7 +1375,7 @@ $(document).ready(function() {
   $("#media_add_form").on("submit", function(){
     var val_mname= /^[^~]{3,30}$/;
     var val_mtype= /^[0-9]{1,2}$/;
-    var val_mimage=/\.(jpe?g|png|gif|bmp)$/i;
+    var val_mimage=/\.(jpe?g|png|gif|bmp|mp4|3gp|avi)$/i;
     $mname = $('#photo_name').val();
     $mtype= $('#photo_type').val();
     $mimage = $('#photo_image').val();
@@ -1398,16 +1398,16 @@ $(document).ready(function() {
   $("#photo_image").change(function() {
     var val = $(this).val();
     switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
-      case 'gif': case 'jpg': case 'png':
-      $('#media_image_error').html("");
-      $('#media_image_error').removeClass('is-visible');
-      return true;
-      break;
+      case 'gif': case 'jpg': case 'png': case 'mp4': case '3gp': case 'avi':
+        $('#media_image_error').html("");
+        $('#media_image_error').removeClass('is-visible');
+        return true;
+        break;
       default:
-      $("#media_image_error").html("Invalid image");
-      $('#media_image_error').addClass('is-visible');
-      return false;
-      break;
+        $("#media_image_error").html("Invalid media file");
+        $('#media_image_error').addClass('is-visible');
+        return false;
+        break;
     }
   });
   $("#photo_name").focusout(function() {

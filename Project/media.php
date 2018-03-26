@@ -3,7 +3,9 @@ include_once 'db_connect.php';
 include_once 'check_logout.php';
 ?>
 <?php
-
+if(isset($_POST['button_delete'])){
+	
+}
 if(isset($_POST['submit_photo'])) {
 	// $image = $_POST['media_image'];
 	//Stores the filename as it was on the client computer.
@@ -31,8 +33,7 @@ if(isset($_POST['submit_photo'])) {
 	}
 	$photo_name= $_POST['photo_name'];
 	$photo_type = $_POST['photo_type'];
-	$photo_status = $_POST['photo_status'];
-	$result = mysqli_query($con, "INSERT INTO wp_media(photo_name,photo_image,photo_type,photo_status) VALUES('$photo_name','$imagename','$photo_type','$photo_status')");
+	$result = mysqli_query($con, "INSERT INTO wp_media(photo_name,photo_image,photo_type,photo_status) VALUES('$photo_name','$imagename','$photo_type',1)");
 	if(!$result){
 		echo "<script>alert('Photo name already exists..!')</script>";
 	}
@@ -343,7 +344,12 @@ if(isset($_POST['submit_photo'])) {
 													<div class="about-me wow fadeInLeft animated animated" style="visibility: visible;">
 														<form action="editphoto.php" method="post">
 															<div class="about-me-thumbnail">
-																<img style="height:215px !important"src="images/photo_vdo/<?php echo $row['photo_image'] ?>" alt="best wedding planner in cochin">
+																<video style="height:215px !important; width:335px !important" controls>
+																	<source src="images/photo_vdo/<?php echo $row['photo_image'];?>" type="video/mp4">
+																	</video>
+                           </form>
+                        	<form action="" method="post" class="photo_button">
+																<!-- <video style="height:215px !important" alt="best wedding planner in cochin"> -->
 																<div class="social-media">
 																	<a ><?php echo $row['photo_name'] ?><br> </a>
 																	<input type="hidden" name="item_id" value="<?php echo $row['photo_id'] ?>"
