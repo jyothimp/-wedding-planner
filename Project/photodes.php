@@ -357,7 +357,6 @@ $item_id=0;
 													<th>District</th>
 													<td><?php echo $row['district_name'] ?></td>
 												</tr>
-
                         <tr>
 													<th>Website</th>
 													<td><?php echo $row['photo_website'] ?></td>

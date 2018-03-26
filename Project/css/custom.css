@@ -150,7 +150,9 @@
   div.tab button.active {
     background-color: #ccc;
   }
-
+  .form-inline{
+    display: inline-block;
+  }
   /* Style the tab content */
   .tabcontent {
     display: none;

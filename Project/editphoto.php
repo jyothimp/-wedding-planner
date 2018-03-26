@@ -5,8 +5,9 @@ $item_id=0;
 if(isset($_POST['button_delete'])){
   $item_id=$_POST['item_id'];
   mysqli_query($con,"UPDATE wp_photo SET photo_status=0 WHERE photo_id=$item_id");
-  header('location:./photography.php');
+  header('location:./photo_video.php');
 }
+
 if(!(isset($_POST['item_id']) || isset($_POST['photo_edit_submit']))){
   header('location:./');
 }
